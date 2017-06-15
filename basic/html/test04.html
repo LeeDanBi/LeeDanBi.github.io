@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style>
+  *{margin:0; padding:0; border:0;}
+  #wrap{width:600px;height:500px; background-color:#aaa;}
+    .box{width:inherit;height:100px;color:#fff;}
+   #headBox{background-color:#f0a;}
+     #headBox h1{height:100px; float:left; background-color:#fff;color:#f0a;}
+      #gnb{width:500px; height:50px; margin-top:50px; float:left;background-color:#fff;color:#f0a;}
+      .clearfix::after{content:" "; width:0; height:0; display:block; clear:both;}
+    #contentBox{height:300px; background-color:#af0;}
+    #footBox{background-color:#0af;}
+</style>
+<body>
+  <div id="wrap">
+    <header id="headBox" class="box clearfix">
+      <h1>h1</h1>
+      <nav id="gnb">navigation</nav>
+    </header>
+    <section id="contentBox" class="box">section</section>
+    <footer id="footBox" class="box">footer</footer>
+  </div>  
+</body>
+</html>
