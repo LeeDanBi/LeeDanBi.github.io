@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; border:0;}
+    body{background-color:#33a;}
+    #wrap{width:600px; height:auto; margin:100px auto;}
+    #headBox{width:inherit; height:auto;}
+    h1{float:left; width:80px; height:100px; background-color:#fff;}
+    .nav_group{width:520px; height:50px;}
+    #gnb{float:left;background-color:#f0a;}
+    #unb{float:left;background-color:#ed0;}
+    #headBox ul{width:auto; height:auto;} /*height에 픽셀값을 줬을때와 auto로 했을때...*/
+    #headBox li{list-style:none;
+      width:-webkit-calc(520px / 6);
+      width:-moz-calc(520px / 6);
+      width:-ms-calc(520px / 6);
+      width:-o-calc(520px / 6);
+      width:calc(520px / 6); 
+      height:50px; float:left;}
+      li>p{border:5px solid #00a;}
+    .clearfix::after{content:" "; display:block; width:0; height:0; clear:both;}
+    
+
+    footer{width:inherit; height:100px; background-color:#aaa;}
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox" class="clearfix">
+      <h1>h1</h1>
+      <nav id="gnb" class="nav_group">
+        <ul class="clearfix">
+          <li><p>li</p></li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+        </ul>
+      </nav>
+      <nav id="unb" class="nav_group">
+        <ul class="clearfix">
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+          <li>li</li>
+        </ul>
+      </nav>
+    </header>
+    <footer> clearfix 테스트용 박스</footer>
+  </div>
+</body>
+</html>

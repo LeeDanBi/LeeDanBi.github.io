@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0; border:0;}
+    body{background-color:#335;}
+    #wrap{width:600px; height:auto; margin:200px auto;}
+    #headBox{width:inherit; height:100px;}
+    .header_box{float:left; background-color:#fff; text-align:center; color:#f0a;}
+    h1{width:80px; height:100px; float:left; border:1px solid #f0a;}
+    #gnb{width:516px; height:49px; float:left; border:1px solid #f0a;}
+    #unb{width:516px; height:49px; float:left; border:1px solid #f0a;}
+    #clearfix::after{content:" "; display:block; width:0; height:0; clear:both; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox" class="clearfix">
+      <h1 class="header_box">h1</h1>
+      <nav id="gnb" class="header_box">nav</nav>
+      <nav id="unb" class="header_box">sub_nav</nav>
+    </header>
+  </div>
+</body>
+</html>
