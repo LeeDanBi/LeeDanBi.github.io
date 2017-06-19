@@ -7,27 +7,28 @@
     <style>
     /*resetcss*/
       html,body{width:100%; height:100%;}
-      html,body,h1,h2,h3,h4,h5,h6,p,div,header,article,section,footer
+      html,body,h1,h2,h3,h4,h5,h6,p,div,header,article,section,footer, hr
       {margin:0; padding:0; border:0;}
       ul,li,ol{list-style:none;}
-      .clearfix{content:" "; display:block; width:0; height:0; clear:both;}
+      .clearfix:after{content:" "; display:block; width:0; height:0; clear:both;}
       a:link{text-decoration:none; color:#000;}
 
     /* ------------------------------ */
     /* design */
       #wrap{width:978px; height:auto; margin:0 auto;}
       .innerBox{background-color: #fff;}
-      #headerBox{width:299px; height:auto; float:left; border-right-color:#aaa; border-right-width:1px;} /*질문1. h1과 unb는 오른쪽 위로 보내고 싶은데 묶여져서 다같이 왼쪽으로 와버렸다 .ㅠ... */
+      #headerBox{width:299px; height:auto; float:left; border-right-color:#aaa; border-right-width:1px; position:fixed;}
         h1{font-size: 2.5rem; color:#f00; margin:10px;}
         #headerBox input[type="search"]{margin-left:10px;}
         #headerBox>ul{width:80%; height:600px;}
         article#banner {width:271px; height:100px; margin:20px 18px 20px 10px; background-color:#ccc;}
-      #contentBox{width:678px; height: auto; min-height:600px; float:right; background-color:#777;}
-        #contentBox>#randomMusic, #footerBox h2{margin-top:40px; margin-left:40px;} /* hr만 빼고 선택하는 방법? */
-        #contentBox h2{width:inherit; height:50px; font-size:1.5rem; color:#fff; margin-bottom:60px;}
+      #contentBox{width:678px; height: auto; min-height:1500px; float:right; background-color:#777;}
+        #contentBox>#randomMusic, #footerBox h2{margin-top:40px; margin-left:40px;} 
+        #contentBox h2{width:inherit; height:50px; font-size:1.5rem; color:#fff; margin-bottom:10px;}
+        #contentBox hr{margin:10px 0px 50px;}
         #contentBox img{width:110px; height:110px;}
-        #contentBox img:first-child{width:200px; height:200px;} /* 질문2. 첫번째 요소에만 적용되는 선택자? 인데 안먹음 */
-        #wrap #randomMusic embed[alt="music"]{width:400px; height:50px; margin:150px auto;} /* 질문3. margin 했는데 가운데로 안오는 이유.. */
+        #contentBox img:first-of-type{width:200px; height:200px;} 
+        #wrap #randomMusic p{width:400px; height:50px; margin:150px auto;} 
       #footerBox{width:678px; height: 200px; float:right;}
         #footerBox h2, #footerBox address {float:left;}
         #footerBox h2{width:100px; height:100px; margin-right:40px;}
@@ -39,9 +40,9 @@
     <div id="wrap" class="clearfix">
       <header id="headerBox" class="innerBox"> <!-- #headerBox --> 
         <h1>Octo!</h1>
-        <p><input type="image" alt="barMenu" src="#" /></p>
-        <p><input type="search" id="search" name="" value="" placeholder="검색단어" />
-        <label for="search"><input type="button" value="search" src="#" /></label></p>
+        <form><input type="image" alt="barMenu" src="#" /></form>
+        <form><input type="search" id="search" name="" value="" placeholder="검색단어" />
+        <label for="search"><input type="button" value="search" /></label></form>
         <article id="banner"></article>
         <hr />
         <nav id="gnb" class="margin">
@@ -64,12 +65,17 @@
       </header>
       <div id="contentBox" class="innerBox"> <!-- #contentBox -->
         <article id="randomMusic">
-          <h2>랜덤뮤직<hr /></h2>
+          <h2>랜덤뮤직</h2><hr />
+          <div>
           <img src="../album_img/album_1.jpg" alt="music1">
           <img src="../album_img/album_2.jpg" alt="music2">
           <img src="../album_img/album_3.jpg" alt="music3">
           <img src="../album_img/album_4.jpg" alt="music4">
-          <p><embed alt="music" src="./the_floodgates_free.wav" /></p>
+          </div>
+          <p></p>
+          <div>
+            <embed alt="music" src="./the_floodgates_free.wav" />
+          </div>
         </article>
       </div>
       <footer id="footerBox" class="innerBox clearfix"> <!-- #footerBox -->
