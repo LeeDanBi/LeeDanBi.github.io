@@ -11,7 +11,7 @@
           background-color: #f06; margin-bottom: 20px;
 
            }
-        #unb{width: 500px; height: 0px; float:right;
+        #unb{width: 500px; height: 25px; float:right;
         }
         #unb>ul{width: 100%; height: 100%;}
         #unb>ul>li{width: 24%; height: 100%; float:left; margin-left: 1.3%; background-color:#fff;}
@@ -26,6 +26,22 @@
 
       /* #contentBox_______________________________ */
       #contentBox{width: 100%; height: 520px; background-color: #2a7;}
+        #contentBox>.login{width: 200px; height: 250px; float:left; background-color:#0fa;}
+          #contentBox>.login>div{width: 50%; height: 100%; float:left;}
+          #contentBox>.login>div>div{width:100%; height:83.333333px;}
+        #contentBox>.banner_box{width: 760px; height: 250px; float:left; background-color:#f0a;}
+          #contentBox>.banner_box>div#topBox{width:100%; height:150px; background-color:#a0f;}
+          #contentBox>.banner_box>div#bottomBox{width:100%; height:100px; background-color:#00f;}
+        #contentBox>.news_box{width:100%; height:270px; float:left; background-color:#ccc;}
+          #contentBox>.news_box>div{width: 25%; height:100%; float:left;}
+          #contentBox>.news_box>div#box1{background-color:#f00;}
+          #contentBox>.news_box>div#box2{background-color:#f55;}
+          #contentBox>.news_box>div#box3{background-color:#f99;}
+          #contentBox>.news_box>div#box4{background-color:#fcc;}
 
       /* #footBox_______________________________ */
-      #footBox{width: 100%; height: 80px; background-color: #f73;}
+      #footBox{width: 100%; height: 80px; background-color: #f73;
+        padding:20px 30px; box-sizing:border-box;}
+        #footBox>h2.sub_logo{width:100px; height: 30px; float:left; margin-left:100px; background-color:#fff;}
+        #footBox>address{width:300px; height: 30px; float:left; margin-left:100px; background-color:#fff;}
+        #footBox>div.family{width:100px; height: 30px; float:left; margin-left:100px; background-color:#fff;}
