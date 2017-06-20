@@ -6,6 +6,7 @@
     padding:15px; box-sizing:border-box;}
     h1{width:100px; height:50px; float:left; background-color:#fff;}
     #gnb{width:430px; height:auto; float:right; margin-top:20px;}
+      #gnb>ul{width:100%; height: 100%;}
       #gnb>ul>li{width:100px; height:30px; float: left; margin-left:10px; background-color:#fff;}
   #contentBox{width: 100%; height: auto;}
     #banner{width:100%; height: 250px; float:left; background-color: #ffa;}
