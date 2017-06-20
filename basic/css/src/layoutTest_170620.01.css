@@ -9,7 +9,7 @@
       #gnb>ul>li{width:100px; height:30px; float: left; margin-left:10px; background-color:#fff;}
   #contentBox{width: 100%; height: auto;}
     #banner{width:100%; height: 250px; float:left; background-color: #ffa;}
-    #asideBox{width:100%; height: 35px; float:left; background-color: #22a;}
+    #asideBox{width:100%; height: 35px; float:left; background-color: #557; color:#fff;}
     #articleBox1{width:50%; height: 300px; float:left; background-color: #e88;
       padding:5px; box-sizing:border-box;}
       #articleBox1>article{width:50%; height:50%; float:left; border:10px solid #e88; 
@@ -18,4 +18,4 @@
       padding: 40px 46px; box-sizing:border-box;}
       #articleBox2>article{width: 258px; height: 50px; margin-bottom:30px; background-color: #fff;}
       #articleBox2>article.vartical_box{margin-bottom: 0px;}
-  #footBox{width: 100%; height: 80px; background-color:#af2;}
+  #footBox{width: 100%; height: 80px; background-color:#fa2;}

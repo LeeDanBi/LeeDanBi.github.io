@@ -6,7 +6,8 @@
   <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
   <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
   <link rel="stylesheet" type="text/css" href="../css/src/layoutTest_170620.01.css" />
-  <!--[if lte IE 9]>    <scipt src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <!--[if lte IE 9]>    
+  <scipt src="../ie/html5shiv/dist/html5shiv.min.js"></script>
   <![endif]-->
   <title>test01</title>
 </head>
@@ -15,6 +16,7 @@
     <header id="headBox" class="clearfix">
       <h1>logo</h1>
       <nav id="gnb">
+      <h2 class="hidden">global navigation</h2>
         <ul class="clearfix">
           <li class="first_li">navi</li>
           <li>navi</li>
@@ -23,22 +25,32 @@
         </ul>
       </nav>
     </header>
-    <div id="contentBox" class="clearfix">
-      <article id="banner">banner</article>
-      <aside id="asideBox">aside</aside>
+    <article id="contentBox" class="clearfix">
+      <h2 class="hidden">content 내용</h2>
+      <article id="banner">
+        <h3 class="hidden">배너</h3>
+        banner
+      </article>
+      <aside id="asideBox">
+      <h3 class="hidden">사이드</h3>
+      aside</aside>
       <article id="articleBox1" class="clearfix">
+        <h3 class="hidden">articleBox1</h3>
         <article>article</article>
         <article>article</article>
         <article>article</article>
         <article>article</article>
       </article>
       <article id="articleBox2">
+        <h3 class="hidden">articleBox2</h3>
         <article>article</article>
         <article>article</article>
         <article class="vartical_box">article</article>
       </article>
-    </div>
-    <footer id="footBox">footer</footer>
+    </article>
+    <footer id="footBox">
+    <h2 class="hidden">foot box 내용</h2>
+    footer</footer>
   </div>
 </body>
 </html>
