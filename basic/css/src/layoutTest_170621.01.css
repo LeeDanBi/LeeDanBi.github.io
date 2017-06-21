@@ -1,0 +1,69 @@
+/*  layoutTest_170621.01.css */
+@charset:"utf-8";
+#wrap{width:978px; height:auto; margin:0 auto;}
+
+/* 공통 */
+#headBox,#boxFirst,#boxSecond,#boxThird,#boxFourth{
+	margin-bottom:20px; background-color:#ccc;
+}
+/* headBox----------------------------------------------- */
+	#headBox, #footBox{width:100%; height:150px;  padding:12.5px; box-sizing:border-box;}
+		h1{width:125px; height:125px; float:left; background-color:#fff;
+			margin-right:10px;}
+		#gnb{width:650px; height:60px; float:left; margin-top:30px;background-color:#caa;}
+		#unb{width:95px; height:40px; float:right; margin-top:2.5px;}
+			#unb>ul{width:95px; height:40px;}
+			#unb>ul>li{width:40px; height:40px; float:left; margin-left:15px;
+				background-color:#a88;}
+/* contentBox----------------------------------------------- */
+	#contentBox{width:100%; height:auto;}
+		#boxFirst{width:100%; height:200px;}
+			#boxFirst>ul{width:100%; height:200px; padding:25px 0;}
+				#boxFirst>ul>li{width:150px; height:150px; float:left; margin-left:24.666666px; background-color:#fff;}
+				#boxFirst>ul>li.box1_small{width:40px; height:50px; margin-top:55px; background-color:#a88;}
+				#boxFirst>ul>li#box1back {float:right;}
+		#boxSecond{width:100%; height:300px;}
+			#box2front{width:175px; height:inherit; float:left; background-color:#caa; padding:37.5px; box-sizing:border-box;}
+				#box2front>article{width:100px; height:100px; background-color:rgba(255,255,255,0.6);}
+			#box2menu{width:738px; height:inherit; float:left;}
+				#box2menu>ul{width:inherit; height:inherit;}
+				#box2menu>ul>li{width:140px; height:140px; float:left; margin-left:79.6px; margin-bottom:6.666666px;background-color:#fff;}
+				#box2menu>ul>li.top_box{margin-top:6.666666px;}
+			#box2back{width:65px; height:inherit; float:right;}
+				#box2back>ul{width:inherit; height:inherit;}
+				#box2back>ul>li{width:100%; height:50px; margin-top:10px; background-color:#caa;}
+		#boxThird{width:100%; height:140px;}
+			#box3front{width:215px; height:inherit; float:left; background-color: #caa;}
+				#box3front>ul{width:175px; height:140px; padding: 14px 12px; box-sizing:border-box; }
+				#box3front>ul>li{width:190px; height:50px; float:left; background-color:#fff;}
+				#box3front>ul>li#box3fLiLast{background-color:#a88; margin-top:12px;}
+			#box3back{width:763px; height:inherit; float:left; }
+				#box3back>ul{width:inherit; height:inherit; padding:13px; box-sizing:border-box;}
+				#box3back>ul>li{height:50px; float:left; background-color:#a88; margin-left:10px;}
+				#box3back>ul>.top_box{margin-bottom:13.333333px;}
+				#box3li1{width:165px;}
+				#box3li2{width:300px;}
+				#box3li3{width:250px;}
+				#box3li4{width:600px;}
+				#box3li5{width:125px;}
+			body .box_small_black{width:40px; height:40px;margin-right:5px; margin-top:5px; float:right; background-color:#222;}
+		#boxFourth{width:100%; height:700px; padding:20px; box-sizing:border-box;}
+			#boxFourth .color_black{background-color:#a88;}
+			#box4front{width:inherit; height:45px;}
+				#box4f1{width:390px; height:auto; float:left;}
+					#box4f1_1{width:100px; height:45px; margin-right:20px; float:left;}
+					#box4f1_2{width:250px; height:30px; float:left;}
+				#box4f2{width:140px; height: 45px; float:right;}
+					#box4f2>article{width:60px; height:30px; float:left;}
+					#box4f2>article#second_a{margin-left:20px;}
+			#box4back{width:inherit; height:615px;}
+				#box4back>ul{width:inherit; height:515px;}
+					#box4back>ul>li{width:150px; height:150px; float:left; background-color:#fff; margin-top:50px; margin-left:70px;}
+				#box4virtical{width:inherit; height:140px;}
+					#box4virtical>ul{width:280px; height:40px; margin-left:349px; background-color:#333;}
+					#box4virtical>ul>li{width:40px; height:40px; float:left; background-color:#fff; margin-left:8px;}
+
+/* footBox----------------------------------------------- */
+	#footBox{padding-top:25px; box-sizing:border-box; background-color:#ccc;}
+		h2{width:100px;height:100px; float:left; background-color:#fff; margin-left:130px; margin-right:10px;}
+		#inb{width:600px;height:100px; float:left; background-color:#fff;}
