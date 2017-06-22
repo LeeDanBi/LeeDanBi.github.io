@@ -1,0 +1,59 @@
+/* ! layoutTest_170622.01.css */
+@charset:"utf-8";
+#wrap{width:960px; height:auto; margin:0px auto;}
+	#headBox{width:inherit; height:50px; background-color:#dff;padding:10px 10px; box-sizing:border-box;}
+		h1{width:100px;height:40px; float:left; font-size:1rem;}
+		h1>span{color:#fa0;}
+
+		#gnb{width:300px;height:40px; float:left;}
+			#gnb>ul{width:inherit;height:inherit; margin-top:10px; margin-left:100px;}
+			#gnb>ul>li{width: 60px; height: inherit; font-size:0.8rem; float:left;}
+
+		#unb{width:120px;height:40px; float:right;}
+			#unb>ul{width:inherit; height:inherit;}
+			#unb>ul>li{width: 40px; height: inherit; font-size:0.5rem; float:left;}
+
+	#contentBox{width:inherit; height:auto;}
+		#banner{width:inherit; height:250px;background-color:#dfd; padding-top:100px; padding-left:600px; box-sizing:border-box;}
+			#banner>div{width:600px; height:200px; }
+			#banner>div>p>span{font-size:1.3rem;}
+
+		#searchBox{width:inherit; height:200px;background-color:#ffd; padding-top:30px; box-sizing:border-box;}
+			#searchBox>dl{width:600px; height:50px; text-align:center; margin-left:180px;}
+			#searchBox>dl>dt{}
+			#searchBox>dl>dt>#dd{font-size:0.6rem;}
+			#selectBox{width:960px; height:auto; margin-top:20px; margin-left:20px;}
+				#selectBox>select{width:300px; height:30px;}
+				#buttonBox>input{width:200px; height:30px; margin:20px 380px;}
+
+		#carMenu{width:inherit; height:1400px;background-color:#fdf; padding:50px 30px; box-sizing:border-box;}
+			#boxCarmenu{width:900px; height:1250px;}
+				#boxCarmenu>ul{width:inherit;height:inherit;}
+			 	#boxCarmenu>ul>li{width:290px; height:290px; float:left; margin-left:15px; margin-bottom:15px; background-color:#fff;}
+			#more{width:900px; height:30px;text-align:center; padding-top:3px; box-sizing:border-box; background-color:#fff;}
+
+		#calcMenu{width:inherit; height:200px; padding-top:30px; box-sizing:border-box; background-color:#bbb;}
+			#calcMenu>div{width:400px; height:inherit; margin-left:600px;}
+			#calcMenu>div>dl{width:inherit; height:100px;}
+			#calcMenu>div>dl>dt{font-size:2rem;}
+			#calcMenu>div>dl>dd{font-size:0.8rem;} 
+			/* Q. dt는 폰트 사이즈 먹었는데.. .왜 dd는 안먹는거ㅈ죠 ..? 
+			A. dd는 dt안에 들어가는 것이 아니라 dl안에 들어가는 것이다. */
+			#go{width:150px; height:30px; font-size:0.8rem; text-align:center; color:#fff; padding-top:5px; box-sizing:border-box; background-color:#555;}
+
+		#addressBox{width:inherit; height:100px;background-color:#eee;}
+			#addressBox>div{width:230px;height:80px;float:left; margin-left:8px; margin-top:10px; background-color:#eee;}
+			#addressBox>div>h3{font-size:0.8rem;}
+
+	#footBox{width:inherit; height:80px; font-size:0.5rem; background-color:#ddd; padding:10px; box-sizing:border-box;}
+		#information{width:800px; height:auto;float:left;}
+			#inb{width:inherit; height:auto;}
+			#inb>ul{width:inherit; height:auto;}
+			#inb>ul>li{width:auto; height:auto; float:left; margin-left:5px;}
+			address{width:auto; height:auto; margin-top:10px;}
+			address>#copy{width:auto; height:auto; margin-top:2px;}
+		#back{width:100px; height:auto; float:left;}
+			#sns{width:50px;height:20px; margin-left:55px;}
+				img{width:20px; height:20px; margin-right:5px; float:left;}
+			#family{width:100px;height:25px;}
+				#family>select{width:60px;height:15px; font-size:0.5rem; margin:15px; margin-left:40px;}
