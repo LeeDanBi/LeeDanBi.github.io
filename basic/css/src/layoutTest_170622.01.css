@@ -30,6 +30,7 @@
 			#boxCarmenu{width:900px; height:1250px;}
 				#boxCarmenu>ul{width:inherit;height:inherit;}
 			 	#boxCarmenu>ul>li{width:290px; height:290px; float:left; margin-left:15px; margin-bottom:15px; background-color:#fff;}
+			 	#boxCarmenu>ul>li>img{width:inherit; height:200px;}
 			#more{width:900px; height:30px;text-align:center; padding-top:3px; box-sizing:border-box; background-color:#fff;}
 
 		#calcMenu{width:inherit; height:200px; padding-top:30px; box-sizing:border-box; background-color:#bbb;}
@@ -44,6 +45,16 @@
 		#addressBox{width:inherit; height:100px;background-color:#eee;}
 			#addressBox>div{width:230px;height:80px;float:left; margin-left:8px; margin-top:10px; background-color:#eee;}
 			#addressBox>div>h3{font-size:0.8rem;}
+				#ab_1>div>p{font-size:0.4rem;}
+				#addressBox #phoneNum{font-size:1rem;}
+			#addressBox>div>div{width:180px; height:30px; margin-top:10px; font-size:0.7rem; text-align:center;}
+				#addressBox>div>div #addressTime{margin-top:-5px;}
+			#addressBox>#ab_4>div{width:230px;}
+				#ab_4>div>div{width:100px; height:20px; margin-top:10px; margin-right:10px; float:left; background-color:#fff;}
+			#addressBox #ab_1>div{background-color:#fff; text-align:left;}	
+			#ab_2>div{padding-top:5px; box-sizing:border-box; color:#fff; background-color:#666;}
+			#ab_2>div span{color:#fa0;}
+			#ab_3>div{color:#fff; background-color:#fa0;}
 
 	#footBox{width:inherit; height:80px; font-size:0.5rem; background-color:#ddd; padding:10px; box-sizing:border-box;}
 		#information{width:800px; height:auto;float:left;}
