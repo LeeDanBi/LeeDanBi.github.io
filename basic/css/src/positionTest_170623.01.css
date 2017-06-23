@@ -1,0 +1,8 @@
+/* ! positionTest_170623.01.css */
+@charset:"utf-8";
+body{background-color: #aac;}
+#wrap{width:960px; height:3000px; margin:0 auto; background-color:#fff; padding:20px; box-sizing:border-box;}
+    #popup{width:700px; height:400px; position:fixed; z-index:200; top:50%; left:50%; margin-top:-200px; margin-left:-350px; background-color:#fff;}
+        #boxButton{width:50px; height:50px; position:absolute; top:0; right:0; margin-top:-20px; margin-right:-20px; z-index:300; border: 0;
+            border-radius:25px; background-color: #000; color:#fff;}
+#back{width:100%; height:100%; top:0; left:0; background-color: rgba(100,100,100,0.7); position:fixed; z-index:100;}
