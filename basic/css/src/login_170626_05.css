@@ -1,0 +1,11 @@
+/* ! login_170626_05.css */
+@charset:"utf-8";
+body{background-color: #ddd;}
+    #wrap{width:300px; height:400px; background-color: #a0f; margin:50px auto;}
+        form{width:100%; height:100%;}
+         fieldset{width:100%; height:100%; padding:50px; box-sizing:border-box; border:none;}
+            div{width:100%; height:30px; margin-bottom:30px; color:#fff;}
+            div>label{font-size:0.7rem;}
+            div>.boxin{width:100%; height:100%; background-color:transparent; border:1px solid #fff;}
+            div>#boxButton{border:none; background-color: #4a4; color:#fff;}
+            div>#checkRemember{width:15px;margin-top:5px; margin-right:5px;}

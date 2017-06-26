@@ -1,0 +1,15 @@
+/* ! login_170626_01.css */
+@charset:"utf-8";
+
+    form{width:700px; height:300px; margin:100px auto; padding:10px; box-sizing:border-box; background-color:#eee;}
+        form>fieldset{width:680px; height:280px; padding-left:100px; padding-top:60px; box-sizing:border-box; background-color:#fff;}
+        form div{margin-top:10px;}
+        form #loginButton{margin-top:20px; }
+        form input{border:2px solid #ccc; border-radius:5px; height:20px;}
+        form input[type="text"],form input[type="password"]{width:300px; margin-left:50px;}
+        form input[type="checkbox"],form input[type="submit"]{margin-left:120px;}
+        label{font-weight:bold;}
+        input[type="submit"]{background-color: #fff; border-radius:5px; border:1px solid #ccc; padding:0.5em; width:60px; height:40px;}
+        label{width:70px;}
+
+        
