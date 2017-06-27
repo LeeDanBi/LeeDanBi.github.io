@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!--[if lte IE 9]>
+    <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+  <title>my awesome test</title>
+  <style>
+      #wrap{width: 960px; height: auto; margin: 0 auto;}
+      h1{text-align: center; padding: 1em; background-color: #acf;}
+      ul{width:80%; margin: 0 auto;}
+      li{width: 100%; height: auto; margin-bottom: 0.5em; border-bottom: 1px solid #777;}
+      li:hover{border-bottom-color: #f06;}
+      .blue_man{font-size:2em; color:#0af;}
+      .red_woman{font-size:2em; color:#f0a;}
+      button{background-color: #f07; color:#fff; padding: 0.5em; transition: all 1000ms ease-out;}
+      button:hover{box-shadow:0.2em 0.2em 0.2em #751;}
+      .fa-link:hover::after{content:" link";}
+      .fa-phone:hover::after{content:" call";}
+      .fa-info-circle:hover::after{content:" info";}
+      .fa-heart:hover::after{content:" love"; color: #f4a; font-size:0.8em;}
+      .fa-envelope-o:hover::after{content:" E-mail";}
+      .fa-thumbs-o-down{color:#fa0; font-size:2em;}
+      .fa-thumbs-o-down:hover::after{content:" badddd";}
+  </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>fontawesome</h1>
+        <ul>
+            <li><i class="fa fa-users" aria-hidden="true"></i> people</li>
+            <li>sns link icon
+                <a href="#"><i class="fa fa-facebook-square"></i><span class="hidden">facebook</span></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span class="hidden">instagram</span></a>
+                <a href="#"><i class="fa fa-pinterest fa-3x" aria-hidden="true"></i><span class="hidden">pinterest</span></a>
+            </li>
+            <li>
+            <span class="blue_man"><i class="fa fa-male"></i>man</span>
+            <span class="red_woman"><i class="fa fa-female"></i>woman</span>
+            </li>
+            <li><button type="button"><span class="fa fa-sign-in"></span> log in</button></li>
+            <li><span class="fa fa-link"></span><span class="hidden">link</span></li>
+            <li><span class="fa fa-phone"></span><span class="hidden">call</span></li>
+            <li><span class="fa fa-info-circle"></span><span class="hidden">info</span></li>
+            <li><span class="fa fa-heart"></span><span class="hidden">good</span></li>
+            <li><span class="fa fa-envelope-o"></span><span class="hidden">email</span></li>
+            <li><span class="fa fa-thumbs-o-down"></span><span class="hidden">random</span></li>
+        </ul>
+    </div>
+</body>
+</html>

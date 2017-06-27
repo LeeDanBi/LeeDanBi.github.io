@@ -10,7 +10,16 @@ body{background-color: #ddd;}
             div>#boxButton{height:35px; border:none; background-color: #4a4; color:#fff;}
             .check_id{position:relative;}
                 div>#checkRemember{width:15px;margin-top:5px; margin-right:5px; position:absolute; top:0; left:0; z-index:-100;}
-                label:before{content: url( "../img/loginTest_img.png" );}
-                #checkRemember:checked+label:before{
-                    content: url("../img/loginTest_img_checked.png");
+                .check_id>label:before{    content: " ";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-image: url(../../img/loginTest_img.png);
+    background-size: 100%; margin-right:5px}
+                #checkRemember:checked+label:before{content: " ";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-image: url(../../img/loginTest_img_checked.png);
+    background-size: 100%; margin-right:5px);
                 }

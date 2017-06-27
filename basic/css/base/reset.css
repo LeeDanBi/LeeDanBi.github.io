@@ -7,7 +7,12 @@
   article,section,header,footer,input,legend,button{margin: 0; padding: 0;}
   ul, ol, li {list-style:none; border:0;}
 
-  a{text-decoration:none;color:#999;}
+  a{text-decoration:none; color:#inherit;}
+  a:hover{color: #a00;}
+
+  button,input{background-color: transparent; border: 0;}
+  input[type="text"],input[type="password"],
+  input[type="search"],input[type="email"],input[type="tel"]{border: 1px solid #777; text-indent:5px;}
 
     hr{width:100%; border-bottom:1px solid #555;}
 
