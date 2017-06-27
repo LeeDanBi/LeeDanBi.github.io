@@ -1,18 +1,21 @@
 /* ! login_170626_06.css */
 @charset:"utf-8";
-body{background-color: #fbd;}
-    #wrap{width:300px;height:auto; margin:50px auto; background-color: #666; border-radius:5px;}
-        h1{width:100%;height:40px; background-color: #222; color: #ddd; text-align: center; font-size:0.8rem; padding:10px; box-sizing:border-box; border-radius:5px 5px 0px 0px;}
+body{width:100%; height:100%; background: linear-gradient(180deg, #da0, #608) no-repeat fixed;}
+    #wrap{width:300px;height:auto; margin:70px auto; background-color: #444; border-radius:5px;box-shadow:1px 1px 3px 3px rgba(0,0,0,0.6);}
+        h1{width:100%;height:40px; background-image: linear-gradient(180deg,#444,#111); color: #ddd; text-align: center; font-size:0.8rem; padding:10px; box-sizing:border-box; border-radius:5px 5px 0px 0px;}
         form{width:100%; height:200px;}
-            fieldset{width:100%;height:100%;border:none; padding:20px; box-sizing:border-box;}
-                div{width:100%; height:30px;}
-                 .input_box{width:100%;height:100%;background-color: #000; color:#fff; border:0;}
-                 #userName{border-radius:5px 5px 0px 0px;}
-                 #userPWD{border-radius:0px 0px 5px 5px;}
-                 #boxsubmit{background-color: #3a6; height:40px; border-radius:5px;}
+            fieldset{width:100%;height:100%;border:none; padding:20px; box-sizing:border-box; border-top:1px solid #666;}
+                div{width:100%; height:35px;}
+                 .input_box{width:100%;height:100%;background-color: #222; color:#fff; border:0;}
+                 #userName{border-radius:5px 5px 0px 0px; box-shadow:1px 1px 2px 1px #000 inset; border-bottom:1px solid #666;border-right:1px solid #555; padding-left:25px; box-sizing:border-box;}
+                 .username_box{position:relative;}
+                 .password_box{position:relative;}
+                    .fa{position:absolute; top:8px; left:10px; color:#444;}
+                 #userPWD{border-radius:0px 0px 5px 5px; box-shadow:1px 1px 2px 1px #000 inset; border-bottom:1px solid #666;border-right:1px solid #555; padding-left:25px; box-sizing:border-box;}
+                 #boxsubmit{background-color: #3a9; height:40px; border-radius:5px; margin-top:10px;}
 
 
-
+                  
 /* .slideOne */
 .slideOne {
   width: 50px;
@@ -40,3 +43,7 @@ body{background-color: #fbd;}
     visibility: hidden;}
     &:checked+label {left: 37px;}  
 /* end .slideOne */
+
+.box_checkbox{width:100%; height:auto;}
+                  .slideOne{display:block; float:left;}
+                  .a_tag{ width: auto; height:auto; float:right; color:#999; font-size:0.7rem; margin-top:15px;}

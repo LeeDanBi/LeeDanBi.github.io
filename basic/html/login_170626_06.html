@@ -12,24 +12,28 @@
 </head>
 <body>
     <div id="wrap">
-        <h1><i class="fa fa-id-badge" aria-hidden="true"></i>User Login</h1>
+        <h1>User Login</h1>
         <form action="#" method="post">
             <fieldset>
                 <legend class="hidden">로그인</legend>
-                <div>
+                <div class="username_box">
                     <label class="hidden" for="userName">사용자명</label>
                     <!-- <i class="fa fa-id-badge" aria-hidden="true"></i> -->
                     <input type="text" id="userName" name="userName" value="" placeholder="username" class="input_box" />
+                    <i class="fa fa-user" aria-hidden="true"></i>
                 </div>
-                <div>
+                <div class="password_box">
                     <label class="hidden" for="userPWD">비밀번호</label>
                     <input type="password" id="userPWD" name="userPWD" value="" placeholder="password" class="input_box" />
+                    <i class="fa fa-key" aria-hidden="true"></i>
                 </div>
-                <div class="slideOne">
-
-      <input type="checkbox" value="None" id="slideOne" name="check" checked />
-      <label for="slideOne"></label>
-    </div>
+                <div class="box_checkbox clearfix">
+                    <div class="slideOne"><!-- .slideOne체크박스 -->
+                        <input type="checkbox" value="None" id="slideOne" name="check" checked />
+                        <label for="slideOne"></label>
+                    </div><!-- // .slideOne체크박스 -->
+                    <div class="a_tag"><a href="#">forgot details?</a></div>
+                </div>
                 <div id="loginButton">
                     <input type="submit" value="Sign in" class="input_box" id="boxsubmit" />
                 </div>
