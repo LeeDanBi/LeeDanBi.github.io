@@ -2,5 +2,6 @@
 @charset:"utf-8";
 
 .clearfix:after{content:" "; display: block; width: 0; height: 0; clear:both;}
-.hidden{display: inline-block; width: 0; height: 0; overflow: hidden;}
+.hidden{display: block; width: 0; height: 0; overflow: hidden;}
+.hidden_wrap a>span{display: block;  width: 0; height: 0; overflow: hidden;}
 #wrap .first_li{margin-left:0;}
