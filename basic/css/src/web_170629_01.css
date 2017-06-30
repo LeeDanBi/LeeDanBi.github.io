@@ -46,11 +46,17 @@
 
              /* ______________noticeBox끝_____________ */
             #news{width: 100%;height: auto; padding-left: 6px; box-sizing:border-box; margin-top: 28px;}
-              #news>div{width: 226px;height: 192px; float: left; background-image: url("../../img/web_170629/kwater/img/article.jpg"); background-repeat: no-repeat; margin-right: 14px;}
-                #news>div:nth-of-type(1){background-position: -6px -240px;}
-                #news>div:nth-of-type(2){background-position: -246px -240px;}
-                #news>div:nth-of-type(3){background-position: -486px -240px;}
-                #news>div:nth-of-type(4){background-position: -726px -240px; margin: 0;}
+            #news>.etc_news{width:226px; height: 196px; float: left; margin-right: 12px;}
+              #news>.etc_news>.news_img{width: 226px;height: 142px; background-image: url("../../img/web_170629/kwater/img/article.jpg"); background-repeat: no-repeat; }
+               #news>.etc_news:nth-of-type(1)>.news_img{background-position: -6px -240px;}
+               #news>.etc_news:nth-of-type(2)>.news_img{background-position: -246px -240px;}
+               #news>.etc_news:nth-of-type(3)>.news_img{background-position: -486px -240px;}
+               #news>.etc_news:nth-of-type(4)>.news_img{background-position: -726px -240px; margin: 0;}
+               #news .more_btn{width: 100%; height: 16px; }
+               #news .more_btn>a{width: 60px; height: 16px;  display: block; font-size:0.8em; text-align: center; background-color: #999; border-radius:8px; margin-top: 5px; line-height:12px; color: #fff; font-weight:bold; float:right;}
+                    #news dl{width: 100%;}
+                    #news dt{width: 100%; font-weight: bold;}
+                    #news dd{width: 100%; color:#999;}
 
              /* ______________news끝_____________ */
             #contentInfo{width: 100%;height: auto; padding-left: 6px; box-sizing:border-box; margin-top: 8px;}
@@ -75,19 +81,21 @@
                  #support>div:nth-of-type(3) li{float: left;}
             #support h4{font-family:sans-serif; font: bolder 1rem 'Noto Sans KR', sans-serif; }
             #support ul{margin-top: 10px; font-size:0.7rem;}
-            #support li{width: 150px;height: 16px;list-style-type:disc; margin-left: 15px; font-family:'Noto Sans KR', sans-serif;}
+            #support li{width: 150px;height: 16px;list-style-type:disc; margin-left: 15px; }
+            #support li a{font-family:'Noto Sans KR', sans-serif; color:#333;}
             #support li:last-child{width: 200px;}
 
              /* ______________support끝_____________ */
         #footBox{width: 100%;height: 210px; background-color: #f7f7f7;padding-top: 22px; padding-left: 6px; border-top: 1px solid #e8e8e8;} /* footBox시작------------ */
             #footBox>h2{width: 92px;height: 66px;float: left; background-image: url("../../img/web_170629/kwater/img/footer/h2.jpg"); background-repeat: no-repeat; margin-right: 20px;}
             #infoBox{width: 508px;height: 66px;float: left; }
-                #inb{width:100%; height: 38px; padding-top: 20px; box-sizing:border-box;}
-                    #inb>ul>li{width: auto; height: 20px; float: left; background-repeat: no-repeat; margin-right: 13px;position:relative; font-size:0.7rem; font-weight:bold;}
-                    #inb>ul>li::after{content:" "; display: block; width: 0; height: 15px; border-right: 1px solid #000; position:absolute; top:0;right:-6px;}
+                #inb{width:100%; height: 38px; padding-top: 20px; box-sizing:border-box; word-spacing:-0.2em; font-weight:bold;}
+                    #inb>ul>li{width: auto; height: 20px; float: left; background-repeat: no-repeat; margin-right: 13px;position:relative; font-size:0.7rem; font-weight:bold; font-family:'Noto Sans KR', sans-serif;}
+                    #inb a{color:#333;}
+                    #inb>ul>li::after{content:" "; display: block; width: 0; height: 15px; border-right: 1px solid #000; position:absolute; top:0;right:-6px; margin-top: 3px;}
                     #inb>ul>li:last-child::after{display:none;}
                 address{width: 508px;height: 28px; float: left; background-image: url("../../img/web_170629/kwater/img/footer/address.jpg");}
             #mark{width: 188px;height: 96px;float: right;}
-                #mark li{width: auto;height: auto; float: left; background-repeat: no-repeat;}
+                #mark li{width: auto;height: auto; float: left; background-repeat: no-repeat; }
                 #mark li:first-child{width: 90px; height: 94px; background-image: url("../../img/web_170629/kwater/img/footer/mark_01.jpg");}
                 #mark li:nth-child(2){width: 80px; height: 94px; background-image: url("../../img/web_170629/kwater/img/footer/mark_02.jpg");}
