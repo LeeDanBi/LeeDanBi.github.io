@@ -1,6 +1,6 @@
 /* ! web_170629_01.css */
 @charset:"utf-8";
-    a{display:block; width: 100%;height: 100%;}
+    a{display:block; width: 100%;height: 100%;}/* 모든a */
     #wrap{width: 960px;height: auto;background-color: #fff; margin: 0 auto;}
         #headBox{width: 100%;height: 92px; padding-top: 17px;padding-left: 6px;box-sizing:border-box;} /* headBox시작------- */
             h1{width: 98px;height: 54px; float: left;background-image: url("../../img/web_170629/kwater/img/header/logo.jpg"); background-repeat: no-repeat;}
@@ -25,7 +25,7 @@
         #contentBox{width: 100%;height: auto;} /* contentBox시작-------- */
             #banner{width: 100%;height: 498px; background-image: url("../../img/web_170629/kwater/img/banner.jpg"); background-repeat: no-repeat;}
             /* ________________banner____________________끝 */
-            #lnb{width: 100%;height: 110px; padding-top:6px; padding-left: 6px;box-sizing:border-box; background-color: #fff;}
+            #lnb{width: 100%;height: 110px; border-bottom: 1px solid #eee; padding-top:6px; padding-left: 6px;box-sizing:border-box; background-color: #fff;}
                 #lnb>ul>li{width: 94px;height: 94px; float: left; background-image: url("../../img/web_170629/kwater/img/lnb/lnb.png"); background-repeat: no-repeat; }
                 #lnb>ul>li:nth-child(1){background-position: -6px -6px;}
                 #lnb>ul>li:nth-child(2){background-position: -110px -6px;}
@@ -78,7 +78,7 @@
             #support li:last-child{width: 200px;}
 
              /* ______________support끝_____________ */
-        #footBox{width: 100%;height: 210px; background-color: #f7f7f7;padding-top: 22px; padding-left: 6px;} /* footBox시작------------ */
+        #footBox{width: 100%;height: 210px; background-color: #f7f7f7;padding-top: 22px; padding-left: 6px; border-top: 1px solid #e8e8e8;} /* footBox시작------------ */
             #footBox>h2{width: 92px;height: 66px;float: left; background-image: url("../../img/web_170629/kwater/img/footer/h2.jpg"); background-repeat: no-repeat; margin-right: 20px;}
             #infoBox{width: 508px;height: 66px;float: left; }
                 #inb{width:100%; height: 38px; padding-top: 20px; box-sizing:border-box;}
