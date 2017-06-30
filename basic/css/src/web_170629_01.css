@@ -1,6 +1,5 @@
 /* ! web_170629_01.css */
 @charset:"utf-8";
-    a{display:block; width: 100%;height: 100%;}/* 모든a */
     #wrap{width: 960px;height: auto;background-color: #fff; margin: 0 auto;}
         #headBox{width: 100%;height: 92px; padding-top: 17px;padding-left: 6px;box-sizing:border-box;} /* headBox시작------- */
             h1{width: 98px;height: 54px; float: left;background-image: url("../../img/web_170629/kwater/img/header/logo.jpg"); background-repeat: no-repeat;}
@@ -13,7 +12,7 @@
                 #unb>ul>li:nth-child(2){width: 49px;background-image: url("../../img/web_170629/kwater/img/header/unb/unb_2.jpg");}
                 #unb>ul>li:nth-child(3){width: 56px;background-image: url("../../img/web_170629/kwater/img/header/unb/unb_3.jpg");}
                 #unb>ul>li:nth-child(4){width: 73px;background-image: url("../../img/web_170629/kwater/img/header/unb/unb_4.jpg");}
-            #gnb{width: 792px;height: 36px; float: right;}
+            #gnb{width: 792px;height: 36px; float: right; padding-top: 10px; box-sizing:border-box;}
                 #gnb>ul>li{height:100%;float:left; background-repeat: no-repeat; margin-right: 28px;}
                 #gnb>ul>li:nth-child(1){width: 135px; background-image: url("../../img/web_170629/kwater/img/gnb/gnb_01.jpg"); }
                 #gnb>ul>li:nth-child(2){width: 78px;background-image: url("../../img/web_170629/kwater/img/gnb/gnb_02.jpg");}
@@ -26,7 +25,7 @@
             #banner{width: 100%;height: 498px; background-image: url("../../img/web_170629/kwater/img/banner.jpg"); background-repeat: no-repeat;}
             /* ________________banner____________________끝 */
             #lnb{width: 100%;height: 110px; border-bottom: 1px solid #eee; padding-top:6px; padding-left: 6px;box-sizing:border-box; background-color: #fff;}
-                #lnb>ul>li{width: 94px;height: 94px; float: left; background-image: url("../../img/web_170629/kwater/img/lnb/lnb.png"); background-repeat: no-repeat; }
+                #lnb>ul>li{width: 94px;height: 94px; float: left; background-image: url("../../img/web_170629/kwater/img/lnb/lnb.png"); background-repeat: no-repeat; padding: 1px; box-sizing:border-box;}
                 #lnb>ul>li:nth-child(1){background-position: -6px -6px;}
                 #lnb>ul>li:nth-child(2){background-position: -110px -6px;}
                 #lnb>ul>li:nth-child(3){background-position: -216px -6px;}
@@ -55,16 +54,18 @@
 
              /* ______________news끝_____________ */
             #contentInfo{width: 100%;height: auto; padding-left: 6px; box-sizing:border-box; margin-top: 8px;}
-                #contentInfo li{width: 220px;height: 75px;float: left;background-repeat: no-repeat; margin-right: 22px; font:bold 1rem 'Noto Sans KR', sans-serif;}
+                #contentInfo li{width: 220px;height: 75px;float: left;background-repeat: no-repeat; margin-right: 22px; font:bold 1rem 'Noto Sans KR', sans-serif; position:relative;}
+                #contentInfo li::after{content:" "; display: block; width: 100%;height: 100%; position:absolute; z-index:100; top:0;left:0; background-color: transparent; transition: all 0.3s;}
+                 #contentInfo li:hover::after{background-color: rgba(50,50,50,0.7);}
                 #contentInfo li:nth-child(1){background-image: url("../../img/web_170629/kwater/img/content/content_info_1.png");}
                 #contentInfo li:nth-child(2){background-image: url("../../img/web_170629/kwater/img/content/content_info_2.png");}
                 #contentInfo li:nth-child(3){background-image: url("../../img/web_170629/kwater/img/content/content_info_3.png");}
                 #contentInfo li:nth-child(4){background-image: url("../../img/web_170629/kwater/img/content/content_info_4.png"); margin: 0;}
-                #contentInfo a{padding:30px 10px; box-sizing:border-box; color:#333;}
+                #contentInfo a{line-height:75px; padding-left: 1em; box-sizing:border-box; color:#333; position:absolute; top:0; left:0; z-index:200;}
                 #contentInfo a:hover{color:#333;}
                 #contentInfo a:active{color:#333;}
-
              /* ______________contentInfo끝_____________ */
+
             #support{width: 100%;height: auto; padding-left: 6px; box-sizing:border-box; margin-top: 36px; margin-bottom: 46px;}
             #support>div{width: 220px;height: 112px; float: left;}
             #support>div:nth-of-type(1){}
@@ -82,14 +83,11 @@
             #footBox>h2{width: 92px;height: 66px;float: left; background-image: url("../../img/web_170629/kwater/img/footer/h2.jpg"); background-repeat: no-repeat; margin-right: 20px;}
             #infoBox{width: 508px;height: 66px;float: left; }
                 #inb{width:100%; height: 38px; padding-top: 20px; box-sizing:border-box;}
-                    #inb>ul>li{width: auto; height: 20px; float: left; background-repeat: no-repeat; margin-right: 13px;position:relative;}
-                    #inb>ul>li::after{content:" "; display: block; width: 13px; height: 19px; background-image: url("../../img/web_170629/kwater/img/footer/f_map-30.jpg");position:absolute;top:0;right:-13px;}
+                    #inb>ul>li{width: auto; height: 20px; float: left; background-repeat: no-repeat; margin-right: 13px;position:relative; font-size:0.7rem; font-weight:bold;}
+                    #inb>ul>li::after{content:" "; display: block; width: 0; height: 15px; border-right: 1px solid #000; position:absolute; top:0;right:-6px;}
                     #inb>ul>li:last-child::after{display:none;}
-                    #inb>ul>li:nth-child(1){width: 90px; height: 20px;background-image: url("../../img/web_170629/kwater/img/footer/f_map.jpg"); }
-                    #inb>ul>li:nth-child(2){width: 77px; height: 20px;background-image: url("../../img/web_170629/kwater/img/footer/f_map-31.jpg"); }
-                    #inb>ul>li:nth-child(3){width: 68px; height: 20px;background-image: url("../../img/web_170629/kwater/img/footer/f_map-32.jpg"); }
                 address{width: 508px;height: 28px; float: left; background-image: url("../../img/web_170629/kwater/img/footer/address.jpg");}
-            #mark{width: 188px;height: 96px;float: right; }
+            #mark{width: 188px;height: 96px;float: right;}
                 #mark li{width: auto;height: auto; float: left; background-repeat: no-repeat;}
                 #mark li:first-child{width: 90px; height: 94px; background-image: url("../../img/web_170629/kwater/img/footer/mark_01.jpg");}
                 #mark li:nth-child(2){width: 80px; height: 94px; background-image: url("../../img/web_170629/kwater/img/footer/mark_02.jpg");}
