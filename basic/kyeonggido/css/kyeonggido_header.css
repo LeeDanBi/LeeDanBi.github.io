@@ -46,14 +46,15 @@ body{font-family: 'Nanum Gothic', sans-serif;}
                         #mailMenu li::after{content:" "; width: 20px; height: 14px; border-right: 1px solid #ddd; display: block; position:absolute; top:0; right: -10px; margin-top: 3px;}
                         #mailMenu li:last-child{margin-right: 0;}
                         #mailMenu li:last-child::after{display: none;}
-                #search{clear: both; margin-top: 36px;}
-                    #search>form{width: auto;height: auto;}
-                    #search fieldset{width: auto;height: auto;}
-                        #searchDiv{width: 100%; height: 40px; margin-left: 404px; position:relative;}
+                #search{width: 370px; float: left; margin-top: 36px;}
+                    #search>form{width: 370px;height: auto; margin-left: 404px;}
+                    #search fieldset{width: inherit;height: auto; margin: 0; padding: 0;}
+                        #searchDiv{width: 380px; height: 40px; position:relative;}
                             #search input[type="search"]{width: 302px; height: 40px; border:3px solid #ff8903; margin-right: 4px; padding-left: 30px; padding-right: 30px; box-sizing:border-box;}
                             #searchDiv>.fa-search{font-size:20px; position:absolute; top:10px; left:10px;}
                             #searchDiv>.fa-caret-down{font-size:20px;position:absolute; top:10px; left:280px; color: #ff8805;}
                              #search button{width: 54px; height: 40px; background-color: #ff8903; color:#fff; font-size:1rem; font-weight: bold;}
-                            
+                #weather{width: 360px; height: 40px; float: right; }
+                     #weather>div{float: left;}
                             
 
