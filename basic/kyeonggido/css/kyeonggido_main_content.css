@@ -1,0 +1,97 @@
+/* ! kyeonggido_main_content.css */
+@charset:"utf-8";
+    #contentBox {width: 100%;height: auto;}
+        #Stardew{width:100%; height: 416px; margin-bottom: 80px;}
+        #Stardew>div:first-of-type{width: 986px; height: 100%; float: left;background-image: url("../img/content/stardew.png");}
+        #StardewMenu{width:174px; height: 100%; float: left;background-color: #0385d9;}
+            #StardewMenu>ul{width: 100%;height: 100%; padding: 60px 34px 0px 40px; box-sizing:border-box;}
+            #StardewMenu li{width: 100px; height: 40px; float: left; border-bottom:1px solid rgba(255,255,255,0.3); text-align: left; text-indent:5px; line-height:40px; color:#fff; font-size:0.9rem; box-sizing:border-box;}
+            #StardewMenu li:last-child{border-bottom: 0;}
+    /* ___ //#Stardew ____________________ */
+    #newsBox{width: 100%;height: 248px;}
+        #dataBox{width:566px; height: 100%; float: left; position:relative;}
+            #dataBox>div{width: 25%; height: 100%; float: left;}
+                #dataBox h4{width: 100%; height: 48px;background-color: #fafafa; border: 1px solid #ccc; box-sizing:border-box; text-align: center; line-height:48px;}
+                #dataBox div:nth-of-type(2) h4, #dataBox div:nth-of-type(3) h4, #dataBox div:nth-of-type(4) h4{border-left: 0;}
+                #dataBox h4:hover{background-color: #fff; border-bottom: 0; position:relative; z-index:100;}
+                #dataBox  p{width:0; height: 0; overflow:hidden; position:absolute; top:0; left:0; margin-top: 48px; background-color: #fff; background-image: url("../img/content/news_article.png"); background-position: 0 -50px;}
+                #dataBox  div:first-of-type p{width:566px; height: 200px;}
+                #dataBox h4:hover+p{width:566px; height: 200px;}
+                #dataBox h4:active+p{width:566px; height: 200px;}
+            #newsPage{width:566px; height: 100%; float: right;}
+            /* ___ //#newsBox ____________________ */
+    #lnb{width: 100%; height: 162px; padding-top: 36px; box-sizing:border-box;}
+        #lnb>ul{width: 100%; height: 90px;}
+            #lnb li{width: 90px;height: 100%; background-image: url("../img/site_icon/lnb.png"); background-repeat: no-repeat; float: left; margin-right: 34px;}
+            #lnb li:nth-child(1){;background-position: -6px 0; margin-left: 6px;}
+            #lnb li:nth-child(2){ background-position: -124px 0;}
+            #lnb li:nth-child(3){ background-position: -250px 0;}
+            #lnb li:nth-child(4){ background-position: -366px 0;}
+            #lnb li:nth-child(5){ background-position: -478px 0;}
+            #lnb li:nth-child(6){ background-position: -598px 0;}
+            #lnb li:nth-child(7){ background-position: -714px 0;}
+            #lnb li:nth-child(8){ background-position: -826px 0;}
+            #lnb li:nth-child(9){ background-position: -940px 0;}
+            #lnb li:nth-child(10){background-position: -1602px 0; margin-right: 0;}
+              #lnb li:nth-child(1):hover{ background-position: -6px -102px;}
+              #lnb li:nth-child(2):hover{ background-position: -124px -102px;}
+              #lnb li:nth-child(3):hover{ background-position: -250px -102px;}
+              #lnb li:nth-child(4):hover{ background-position: -366px -102px;}
+              #lnb li:nth-child(5):hover{ background-position: -478px -102px;}
+              #lnb li:nth-child(6):hover{ background-position: -598px -102px;}
+              #lnb li:nth-child(7):hover{ background-position: -714px -102px;}
+              #lnb li:nth-child(8):hover{ background-position: -826px -102px;}
+              #lnb li:nth-child(9):hover{ background-position: -940px -102px;}
+              #lnb li:nth-child(10):hover{background-position: -1602px -102px;}
+    /* ___ //#lnb ____________________ */
+    #kyeonggiToday{width: 100vw;height: 538px; background-image: url("../img/content/k_today_bgi.png"); background-repeat: no-repeat; position:relative; top:0; left: 50%; margin-left: -50vw; background-position: top center;}
+        #kyeonggiToday>h3{width: 140px;height: 70px; position:absolute; top: 60px; left:50%; margin-left: -70px; font-size:1.2rem; color: #fff; text-align: center;}
+        #kyeonggiToday>h3::after{content:" "; display: block; width: 60px; height: 30px; border-bottom: 2px solid #fff; margin-left: 40px;}
+        #todayBox{width: 1160px; height: 286px; position:absolute; top: 178px; left: 50%; margin-left: -580px;}
+            #todayBox>ul{width: 100%; height: 100%;}
+            #todayBox li{width: 270px; height: 100%;float: left; margin-right: 26px;}
+                .newsImg{width:100%; height: 168px; background-repeat: no-repeat; background-image: url("../img/content/k_today.png");}
+                #todayBox li:nth-child(1)>.newsImg{background-position: 0 -220px;}
+                #todayBox li:nth-child(2)>.newsImg{background-position:-298px -220px;}
+                #todayBox li:nth-child(3)>.newsImg{background-position: -596px -220px;}
+                #todayBox li:nth-child(4)>.newsImg{background-position: -890px -220px;}
+                #todayBox li:nth-child(4){margin-right: 0;}
+            #todayBox dl{width: 100%;height: 118px;border: 1px solid #ccc; border-top: 0; box-sizing:border-box; padding:22px 10px 0px 26px;}
+                #todayBox dt{font-size:0.9rem; margin-bottom: 0.6rem; font-weight: bold;}
+                #todayBox dd{font-size:0.8rem;}
+    /* ___ //#kyeonggiToday ____________________ */
+     #morningNews{width: 100%; height: 900px; padding-top: 60px;}
+        #morningNews>h3{width: 140px;height: 70px; font-size:1.2rem; text-align: center; margin-left: 510px;}
+        #morningNews>h3::after{content:" "; display: block; width: 60px; height: 30px; border-bottom: 2px solid #333; margin-left: 40px;}
+        #morningNwrap{width: 100%; height: auto; margin-top: 40px;}
+            #morningNwrap>ul{width: 100%; height: 290px;}
+            #morningNwrap li{width: 270px; height: 100%; float: left; margin-right: 26px; margin-bottom: 100px;}
+                .mornigImg{width:100%; height: 168px; background-repeat: no-repeat; background-image: url("../img/content/news_morning.png");}
+                #morningNwrap li:nth-child(1)>.mornigImg{background-position: 0 -164px;}
+                #morningNwrap li:nth-child(2)>.mornigImg{background-position:-298px -164px;}
+                #morningNwrap li:nth-child(3)>.mornigImg{background-position: -596px -164px;}
+                #morningNwrap li:nth-child(4)>.mornigImg{background-position: -890px -164px;}
+                #morningNwrap li:nth-child(4n){margin-right: 0;}
+                #morningNwrap li:nth-child(5)>.mornigImg{background-position: 0 -550px;}
+                #morningNwrap li:nth-child(6)>.mornigImg{background-position:-298px -550px;}
+                #morningNwrap li:nth-child(7)>.mornigImg{background-position: -596px -550px;}
+                #morningNwrap li:nth-child(8)>.mornigImg{background-position: -890px -550px;}
+            #morningNwrap dl{width: 100%;height: 118px;border: 1px solid #ccc; border-top: 0; box-sizing:border-box; padding:22px 10px 0px 26px;}
+                #morningNwrap dt{font-size:0.9rem; margin-bottom: 0.6rem; font-weight: bold;}
+                #morningNwrap dd{font-size:0.8rem;}
+     /* ___ //#morningNews ____________________ */
+      #justiceInfoBox{width: 100vw; height: 344px; background-repeat: no-repeat; background-image: url("../img/content/justice.jpg"); position:relative; top:0; left: 50%; margin-left: -50vw; background-position: top center;}
+        #jIboxwrap{width: 1160px; height: 100%; position:absolute; top:0; left: 50%; margin-left: -580px;}
+            #articleInfoNB{width: 222px; height: 100%; float: left; background-color: rgba(0,116,225,0.6);}
+                #articleInfoNB>ul{width: 100%; height: 150px; padding-top: 110px; padding-left: 30px; box-sizing: border-box;}
+                #articleInfoNB li{width:100%; height: 34px; color: #fff; margin-bottom: 16px; position:relative;}
+                #articleInfoNB li:hover::after{content:">"; display: block; color:#fff; position:absolute; top:0; right: 0; margin-right: 30px; font-size:1.1rem;}
+                #articleInfoNB li>a{font-size:1.2rem;}
+            #jIboxContent{width:938px; height: 100%; float: left; color: #fff; text-align: center; margin-left: -111px; padding-top: 50px; box-sizing:border-box;}
+                #jIboxContent>p{font-size: 1.2rem}
+                #jIboxContent>dl{width: auto;height: auto;}
+                #jIboxContent dt{font-size:1.7rem; font-weight: bold; margin: 20px 0px;}
+                #jIboxContent dd{font-size:1.1rem;}
+
+
+        
