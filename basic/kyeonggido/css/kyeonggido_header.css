@@ -29,7 +29,7 @@ body{font-family: 'Nanum Gothic', sans-serif;}
 
              /* ____________________//#hMiddle ____________________ */
             #hBottom{width: 100%;height: 144px;padding-top: 20px; box-sizing:border-box; font-size:0.8rem;}
-                #totalMenu{width: auto; height: 18px; float: left; margin-right: 110px;}
+                #totalMenu{width: auto; height: 18px; float: left; margin-right: 90px;}
                     #totalMenu>ul{width: 100%;height: 100%;}
                         #totalMenu li{float: left; margin-right: 20px; position:relative;}
                         #totalMenu li:after{content:" "; display: block; width:20px; height: 14px; position:absolute; top:0; right:-10px; border-right: 1px solid #ddd; margin-top: 2px;}
