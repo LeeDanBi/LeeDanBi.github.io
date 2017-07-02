@@ -1,6 +1,8 @@
 /* ! kyeonggido_header.css */
 @charset:"utf-8";
-#wrap{width: 1160px;    height: auto;   margin: 0 auto; font-family:sans-serif;}
+body{font-family: 'Nanum Gothic', sans-serif;}
+
+#wrap{width: 1160px;    height: auto;   margin: 0 auto;}
         #headBox{width: 100%;   height: auto;}
             #potal{width:100vw; height: 46px; background-color: #004c9c; position:relative; top:0; left: 50%; margin-left:-50vw;}
                     #potal>ul{width:1160px; height: 100%;    border-left:1px solid rgba(255,255,255,0.4); box-sizing:border-box; position:absolute; top:0; left:50%; margin-left:-580px;}
@@ -8,7 +10,7 @@
                     #potal li:hover{background-color: #fa0;}
                     #potal li>a{font-size:0.7rem;}
              /* ____________________//#potal ____________________ */
-            #hMiddle{width: 100%;  height: 76px; padding-top: 28px; border-bottom:1px solid #ddd;}
+            #hMiddle{width: 100%;  height: 76px; padding-top: 28px;}
                     h1{width: 166px; height: 100%;  float:left; background-image: url("../img/site_icon/h1_logo.png"); margin-top: -28px;}
                     #gnb{width: auto; height: 18px; float:  left;}
                         #gnb>ul{width: 100%;height: 100%;}
@@ -22,6 +24,9 @@
                             #iconNation li:nth-child(2){background-position:    -26px 0;}
                             #iconNation li:nth-child(3){background-position:    -52px 0;}
                             #iconNation li:nth-child(4){background-position:    -78px 0; margin-right: 0;}
+
+#hMiddle+hr{width: 100vw; height: 0; border: 1px solid #ddd; position:relative; top: 0; left: 50%;margin-left: -50vw;}
+
              /* ____________________//#hMiddle ____________________ */
             #hBottom{width: 100%;height: 144px;padding-top: 20px; box-sizing:border-box; font-size:0.8rem;}
                 #totalMenu{width: auto; height: 18px; float: left; margin-right: 110px;}
@@ -29,12 +34,18 @@
                         #totalMenu li{float: left; margin-right: 20px; position:relative;}
                         #totalMenu li:after{content:" "; display: block; width:20px; height: 14px; position:absolute; top:0; right:-10px; border-right: 1px solid #ddd; margin-top: 2px;}
                         #totalMenu li:last-child:after{display: none;}
-                #newsMenu{ width: auto;height: 18px; float: left; margin-right: 96px;}
+                #newsMenu{ width: auto;height: 18px; float: left; margin-right: 40px;}
                     #newsMenu>ul{width: 100%;height: 100%;}
-                        #newsMenu li{float: left;}
+                        #newsMenu li{float: left; margin-right: 14px;}
+                        #newsMenu li:last-child{margin-right: 0;}
+                        #newsMenu li:last-child>button{width: 16px;height: 16px; border: 1px solid #ccc;}
+                        #newsMenu li:last-child>button:first-of-type{border-right: 0;}
                 #mailMenu{width: auto;height: 18px; float: right;}
                     #mailMenu>ul{width: 100%;height: 100%;}
-                        #mailMenu li{float: left;}
+                        #mailMenu li{float: left; margin-right: 20px; position:relative;}
+                        #mailMenu li::after{content:" "; width: 20px; height: 14px; border-right: 1px solid #ddd; display: block; position:absolute; top:0; right: -10px; margin-top: 3px;}
+                        #mailMenu li:last-child{margin-right: 0;}
+                        #mailMenu li:last-child::after{display: none;}
                 #search{clear: both; margin-top: 36px;}
                     #search>form{width: auto;height: auto;}
                     #search fieldset{width: auto;height: auto;}

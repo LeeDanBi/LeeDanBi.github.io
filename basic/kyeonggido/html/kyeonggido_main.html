@@ -8,6 +8,7 @@
     <script src="../ie/ie7/IE9.js"></script>
     <script src="../ie/css3PIE/PIE_IE9.js"></script>
   <![endif]-->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
   <link rel="stylesheet" type="text/css" href="../../css/base/reset.css" />
   <link rel="stylesheet" type="text/css" href="../../css/base/normalize.css" />
   <link rel="stylesheet" type="text/css" href="../../fontAwesome/css/font-awesome.min.css" />
@@ -52,6 +53,7 @@
                             <li><a href="#"><span>일본어</span></a></li>
                     </ul>
             </div>
+            <hr />
             <div id="hBottom">
                 <div id="totalMenu">
                     <ul class="clearfix">
@@ -73,9 +75,9 @@
                 </div>
                 <div id="mailMenu">
                     <ul class="clearfix">
-                        <li>전자우편</li>
-                        <li>뉴스레터</li>
-                        <li>부서안내</li>
+                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i> 전자우편</li>
+                        <li><i class="fa fa-file-text-o" aria-hidden="true"></i> 뉴스레터</li>
+                        <li><i class="fa fa-user-o" aria-hidden="true"></i> 부서안내</li>
                     </ul>
                 </div>
                 <div id="search">
@@ -104,13 +106,13 @@
                 <div></div>
                 <nav id="StardewMenu">
                     <ul class="clearfix">
-                        <li>분야별 소식</li>
-                        <li>조직도</li>
-                        <li>정보공개</li>
-                        <li>채용정보</li>
-                        <li>시험정보</li>
-                        <li>경기도보</li>
-                        <li>주요업무일정</li>
+                        <li><a href="#"><i class="fa fa-file-o" aria-hidden="true"></i> 분야별 소식</a></li>
+                        <li><a href="#"><i class="fa fa-building-o" aria-hidden="true"></i> 조직도</a></li>
+                        <li><a href="#"><i class="fa fa-info" aria-hidden="true"></i> 정보공개</a></li>
+                        <li><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i> 채용정보</a></li>
+                        <li><a href="#"><i class="fa fa-check-circle" aria-hidden="true"></i> 시험정보</a></li>
+                        <li><a href="#"><i class="fa fa-book" aria-hidden="true"></i> 경기도보</a></li>
+                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i> 주요업무일정</a></li>
                     </ul>
                 </nav>
             </article>
@@ -131,16 +133,16 @@
                     </div>
                 </section>
                 <aticle id="newsPage">
-                    <div class="newsPotal">
-                        <div class="img"></div>
+                    <div class="newsPotal clearfix">
+                        <div class="newsPotal_img"></div>
                         <dl>
                             <dt>경기도 뉴스포털</dt>
                             <dd>개그우먼 김미화와 함께하는 장 만들기 체험~</dd>
                         </dl>
                         <button type="button">&gt;</button>
                     </div>
-                    <div class="newsPotal">
-                        <div class="img"></div>
+                    <div class="newsPotal clearfix">
+                        <div class="newsPotal_img"></div>
                         <dl>
                             <dt>혁신!열린도지사실</dt>
                             <dd>
@@ -291,52 +293,65 @@
                 </div>
             </article>
             <!-- __________________________//#articleInfoNB __________________________ -->
-            <article id="centerBox">
-                <div class="centerwrap">
-                    <div class="centerImg"></div>
-                    <ul>
-                        <li>2017년 1분기 관광(단)지 지정현황</li>
-                        <li>2017년 1분기 관광특구 지정현황</li>
-                        <li>2017년 1분기 등록 양영장 현황</li>
-                        <li>환경오염물질 배출업소 현황</li>
-                        <li>환경오염물질 배출업소 현황</li>
-                    </ul>
-                </div>
+            <article id="centerBox" class="clearfix">
+                <div class="center_wrap">
+                    <h3>통합자료실</h3>
+                    <div class="center_img_wrap clearfix">
+                        <div class="center_Img"></div>
+                        <ul>
+                            <li>2017년 1분기 관광(단)지 지정현황</li>
+                            <li>2017년 1분기 관광특구 지정현황</li>
+                            <li>2017년 1분기 등록 양영장 현황</li>
+                            <li>환경오염물질 배출업소 현황</li>
+                            <li>환경오염물질 배출업소 현황</li>
+                        </ul>
+                    </div>
                 <button type="button">더보기 &gt;</button>
+                </div>
 
-                <div class="centerwrap">
-                    <div class="centerImg"></div>
-                    <dl>
-                        <dt>숫자로 보는 경기도</dt>
-                        <dd>
-                            <p><span class="thList">경기도 총인구수</span>: 12,699,920 명</p>
-                            <p><span class="thList">경제활동 인구</span>: 692만 </p>
-                            <p><span class="thList">벤처기업 현황</span>: 10,250개</p>
-                            <p><span class="thList">자동차 등록 현황</span>: 521만대</p>
-                        </dd>
-                    </dl>
-                </div>
+                <div class="center_wrap clearfix">
+                    <h3>이달의 통계</h3>
+                    <div class="center_img_wrap">
+                        <div class="center_Img"></div>
+                        <dl>
+                            <dt><span class="color_orange">숫자로 보는 경기도</span></dt>
+                            <dd>
+                                <p><span class="thList">경기도 총인구수</span>: 12,699,920 명</p>
+                                <p><span class="thList">경제활동 인구</span>: 692만 </p>
+                                <p><span class="thList">벤처기업 현황</span>: 10,250개</p>
+                                <p><span class="thList">자동차 등록 현황</span>: 521만대</p>
+                            </dd>
+                        </dl>
+                    </div>
                 <button type="button">더보기 &gt;</button>
+                </div>
 
-                <div class="centerwrap">
-                    <div class="centerImg"></div>
-                    <dl>
-                        <dt>청렴경기는 <br />경기도민과 홤께 <br />소통합니다.</dt>
-                        <dd>도민과 함께 만드는 청렴한 경기도</dd>
-                    </dl>
-                </div>
+                <div class="center_wrap clearfix">
+                    <h3>청렴경기</h3>
+                    <div class="center_img_wrap">
+                        <div class="center_Img"></div>
+                        <dl>
+                            <dt><span class="color_blue">청렴경기는 <br />경기도민과 홤께 <br />소통합니다.</span></dt>
+                            <dd>도민과 함께 만드는 청렴한 경기도</dd>
+                        </dl>
+                    </div>
                 <button type="button">더보기 &gt;</button>
+                </div>
 
-                <div class="centerwrap hidden_wrap">
-                    <div class="centerImg"></div>
-                    <ul>
-                        <li><a href="#"><span>페이스북 상담하기</span></a></li>
-                        <li><a href="#"><span>트위터 상담하기</span></a></li>
-                    </ul>
-                </div>
+                <div class="center_wrap hidden_wrap clearfix">
+                    <h3>콜센터</h3>
+                    <div class="center_img_wrap">
+                        <div class="center_Img"></div>
+                        <ul class="clearfix">
+                            <li><a href="#"><span>페이스북 상담하기</span></a></li>
+                            <li><a href="#"><span>트위터 상담하기</span></a></li>
+                        </ul>
+                    </div>
                 <button type="button">더보기 &gt;</button>
+                </div>
 
             </article>
+            <!-- __________________________//#centerBox __________________________ -->
         </section>
         <!-- ___________________________//#contentBox -->
         <div id="footWrap">

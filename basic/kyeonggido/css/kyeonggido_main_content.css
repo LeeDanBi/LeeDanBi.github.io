@@ -4,9 +4,11 @@
         #Stardew{width:100%; height: 416px; margin-bottom: 80px;}
         #Stardew>div:first-of-type{width: 986px; height: 100%; float: left;background-image: url("../img/content/stardew.png");}
         #StardewMenu{width:174px; height: 100%; float: left;background-color: #0385d9;}
-            #StardewMenu>ul{width: 100%;height: 100%; padding: 60px 34px 0px 40px; box-sizing:border-box;}
-            #StardewMenu li{width: 100px; height: 40px; float: left; border-bottom:1px solid rgba(255,255,255,0.3); text-align: left; text-indent:5px; line-height:40px; color:#fff; font-size:0.9rem; box-sizing:border-box;}
+            #StardewMenu>ul{width: 100%;height: 100%; padding: 60px 0 0px 30px; box-sizing:border-box;}
+            #StardewMenu li{width: 110px; height: 40px; float: left; border-bottom:1px solid rgba(255,255,255,0.3); text-align: left; text-indent:5px; line-height:40px; color:#fff; font-size:0.9rem; box-sizing:border-box;}
             #StardewMenu li:last-child{border-bottom: 0;}
+            #StardewMenu i{display: inline-block;width: 20px; height: auto; margin-left: -10px;}
+            #StardewMenu a {width: auto; height: auto; display: inline;}
     /* ___ //#Stardew ____________________ */
     #newsBox{width: 100%;height: 248px;}
         #dataBox{width:566px; height: 100%; float: left; position:relative;}
@@ -19,6 +21,18 @@
                 #dataBox h4:hover+p{width:566px; height: 200px;}
                 #dataBox h4:active+p{width:566px; height: 200px;}
             #newsPage{width:566px; height: 100%; float: right;}
+                .newsPotal{width: 268px; height: 100%; float: left; margin-left: 30px;border: 1px solid #ddd; border-top: 0; box-sizing:border-box; background-color: #fafafa;}
+                .newsPotal:nth-of-type(1){margin-left: 0;}
+                    .newsPotal_img{width: 100%; height: 114px; background-image: url("../img/content/news_article.png"); background-repeat: no-repeat; }
+                .newsPotal:nth-of-type(1) .newsPotal_img{background-position: -594px -2px;}
+                .newsPotal:nth-of-type(2) .newsPotal_img{background-position: -892px -2px;}
+                .newsPotal>dl{width: 100%; height: 100px; padding: 20px 30px 5px 30px; box-sizing:border-box; }
+                    .newsPotal dt{width: auto;height: auto; font-size:1rem; margin-bottom: 10px;}
+                    .newsPotal dd{width: auto;height: auto;font-size:0.85rem;}
+                    .newsPotal ul{width: auto;height: auto;}
+                    .newsPotal li{width: auto;height: auto; list-style:disc; margin-left: 16px;}
+                .newsPotal button{float: right; margin-right: 16px;}
+
             /* ___ //#newsBox ____________________ */
     #lnb{width: 100%; height: 162px; padding-top: 36px; box-sizing:border-box;}
         #lnb>ul{width: 100%; height: 90px;}
@@ -92,6 +106,33 @@
                 #jIboxContent>dl{width: auto;height: auto;}
                 #jIboxContent dt{font-size:1.7rem; font-weight: bold; margin: 20px 0px;}
                 #jIboxContent dd{font-size:1.1rem;}
+    /* ___ //#justiceInfoBox ____________________ */
+            #centerBox{width: 100%; height: 460px; margin-top: 66px;}
+                .center_wrap{width: 270px; height: 100%; float: left; margin-right: 26px;}
+                .center_wrap:last-of-type{margin-right: 0;}
+                    .center_wrap>h3{font-size:1rem; margin-bottom: 22px;}
+                    .center_img_wrap{width: 100%; height: 360px; border: 1px solid #ddd; box-sizing:border-box; font-size:0.89rem;}
+                      .center_Img{width: 100%; height: 190px; background-repeat: no-repeat; background-image: url("../img/content/data_ect.png"); margin-bottom: 30px;}
+                        .center_wrap:nth-of-type(1) .center_Img{background-position: 0 -70px;}
+                        .center_wrap:nth-of-type(2) .center_Img{background-position: -298px -70px;}
+                        .center_wrap:nth-of-type(3) .center_Img{background-position: -594px -70px;}
+                        .center_wrap:nth-of-type(4) .center_Img{background-position: -890px -70px;}
+                    .center_wrap>button{float:right; margin-top: 24px; font-size:0.8rem;}
+                    .center_img_wrap>ul, .center_img_wrap>dl{padding:0px 10px 5px 30px; box-sizing:border-box; line-height: 1.2rem; font-size:0.7rem;}
+                    .center_img_wrap>dl>dt{font-size:1rem; margin-bottom: 10px; font-weight: bold;}
+                    .center_img_wrap .thList{width:104px; height: auto; display: inline-block;}
+                    .center_img_wrap>dl .color_orange{color: #fa0;}
+                    .center_img_wrap>dl .color_blue{color: #5dcff3;}
+                    .center_wrap:nth-of-type(4) .center_img_wrap{padding: 0;}
+                    .center_wrap:nth-of-type(4) .center_img_wrap>ul{width: 100%; height: 92px;}
+                    .center_wrap:nth-of-type(4) .center_img_wrap li{width: 106px;height: 100%; background-repeat: no-repeat; background-image: url("../img/content/data_ect.png"); float: left;}
+                    .center_wrap:nth-of-type(4) .center_img_wrap li:nth-child(1){background-position: -918px -274px;}
+                    .center_wrap:nth-of-type(4) .center_img_wrap li:nth-child(2){background-position: -1026px -274px;}
+                    .center_wrap:nth-of-type(4) .center_img{margin: 0;}
+
+                    
+
+
 
 
         
