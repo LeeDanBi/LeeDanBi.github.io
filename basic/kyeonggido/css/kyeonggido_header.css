@@ -54,7 +54,8 @@ body{font-family: 'Nanum Gothic', sans-serif;}
                             #searchDiv>.fa-search{font-size:20px; position:absolute; top:10px; left:10px;}
                             #searchDiv>.fa-caret-down{font-size:20px;position:absolute; top:10px; left:280px; color: #ff8805;}
                              #search button{width: 54px; height: 40px; background-color: #ff8903; color:#fff; font-size:1rem; font-weight: bold;}
-                #weather{width: 360px; height: 40px; float: right; }
-                     #weather>div{float: left;}
-                            
-
+                #weather{width: 360px; height: 40px; float: left; margin-top: -30px; margin-left: 800px}
+                     #weather>div{float: left; margin-right: 20px; font-size:0.9rem;}
+                     #weather .color_orange{color:#fa0;}
+                     .color_darkBlue{color:#00c;}
+                     #weather>div:last-of-type{width:192px; height: 26px; margin-right: 0; border:1px solid #ddd; border-radius:13px; font-size: 0.7rem; text-align: center; line-height: 26px; margin-top: -3px;}
