@@ -46,16 +46,16 @@ body{font-family: 'Nanum Gothic', sans-serif;}
                         #mailMenu li::after{content:" "; width: 20px; height: 14px; border-right: 1px solid #ddd; display: block; position:absolute; top:0; right: -10px; margin-top: 3px;}
                         #mailMenu li:last-child{margin-right: 0;}
                         #mailMenu li:last-child::after{display: none;}
-                #search{width: 370px; float: left; margin-top: 36px;}
-                    #search>form{width: 370px;height: auto; margin-left: 404px;}
+                #search{width: 100%; float: left; margin-top: 36px;}
+                    #search>form{width: 370px;height: auto; margin-left: 404px; float: left;}
                     #search fieldset{width: inherit;height: auto; margin: 0; padding: 0;}
                         #searchDiv{width: 380px; height: 40px; position:relative;}
                             #search input[type="search"]{width: 302px; height: 40px; border:3px solid #ff8903; margin-right: 4px; padding-left: 30px; padding-right: 30px; box-sizing:border-box;}
                             #searchDiv>.fa-search{font-size:20px; position:absolute; top:10px; left:10px;}
                             #searchDiv>.fa-caret-down{font-size:20px;position:absolute; top:10px; left:280px; color: #ff8805;}
                              #search button{width: 54px; height: 40px; background-color: #ff8903; color:#fff; font-size:1rem; font-weight: bold;}
-                #weather{width: 360px; height: 40px; float: left; margin-top: -30px; margin-left: 800px}
-                     #weather>div{float: left; margin-right: 20px; font-size:0.9rem;}
-                     #weather .color_orange{color:#fa0;}
+                    #weather{width: 360px; height: 40px; float: right; margin-top: 10px;}
+                        #weather>div{float: left; margin-right: 20px; font-size:0.9rem;}
+                         #weather .color_orange{color:#fa0;}
                      .color_darkBlue{color:#00c;}
-                     #weather>div:last-of-type{width:192px; height: 26px; margin-right: 0; border:1px solid #ddd; border-radius:13px; font-size: 0.7rem; text-align: center; line-height: 26px; margin-top: -3px;}
+                         #weather>div:last-of-type{width:192px; height: 26px; margin-right: 0; border:1px solid #ddd; border-radius:13px; font-size: 0.7rem; text-align: center; line-height: 26px; margin-top: -3px;}
