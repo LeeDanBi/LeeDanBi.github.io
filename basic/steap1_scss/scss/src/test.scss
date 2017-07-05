@@ -1,0 +1,13 @@
+/* test.scss */
+// 할줄 주석은 css로 변환되지 않습니다.
+/* 한글도 주석이 표현될까?*/
+
+$test:#a06;
+
+
+body{background-color: #ccd;
+margin: 0;
+padding: 0;}
+h1{padding: 1em;
+color: #fff;
+background-color: $test;}
