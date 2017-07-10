@@ -1,0 +1,10 @@
+/* ! footBox.css */
+#footBox { width: 100%; height: auto; }
+
+#inbBoxWrap { width: 100vw; height: 60px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #464646; }
+
+#inbBox { width: 950px; height: 60px; position: absolute; top: 0; left: 50%; margin-left: -475px; }
+
+#logoAddressWrap { width: 100vw; height: 162px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #606060; }
+
+#logoAddress { width: 950px; height: 162px; position: absolute; top: 0; left: 50%; margin-left: -475px; }

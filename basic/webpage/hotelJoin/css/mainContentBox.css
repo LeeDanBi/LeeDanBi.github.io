@@ -1,0 +1,107 @@
+/* ! mainContentBox.css */
+#contentBox { width: 950px; height: 100%; }
+
+#adBox { width: 100vw; height: 510px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-image: url("../img/contentBox/adBox.png"); background-repeat: no-repeat; background-position: top center; z-index: -100; }
+
+/* // _________ #adBox __________ */
+#bestHotel { width: 100%; height: auto; }
+
+#bestHotel > dl { width: auto; height: auto; margin-top: 64px; text-align: center; }
+
+#bestHotel > dl > dt { width: auto; height: auto; font-size: 1.4rem; }
+
+#bestHotel > dl > dd { width: auto; height: auto; font-size: 1.1rem; margin-top: 14px; }
+
+#bestHotel > dl > dd > ul { width: 280px; height: 30px; margin-top: 26px; margin-left: 340px; }
+
+#bestHotel > dl > dd > ul > li { width: auto; height: auto; float: left; }
+
+#bestHotel > dl > dd > ul > li:first-child { color: #0fa9a9; margin-right: 42px; position: relative; }
+
+#bestHotel > dl > dd > ul > li:first-child::after { content: " "; width: 22px; height: 16px; display: block; position: absolute; top: 6px; right: -22px; border-right: 1px solid #797979; }
+
+#best4 { width: 950px; height: 762px; margin-top: 22px; }
+
+#best4 > li { width: 304px; height: 440px; float: left; margin-right: 18px; }
+
+#best4 > li:first-child { width: 100%; height: 302px; margin-right: 0; margin-bottom: 18px; }
+
+#best4 > li:last-child { margin-right: 0; }
+
+#best4 > li > .bestImg { width: 304px; height: 304px; transition: all 3s; background-size: 100%; }
+
+#best4 > li > .bestImg:hover { background-size: 120%; }
+
+#best4 > li:first-child > .bestImg { width: 100%; height: 100%; background-position: center top; background-image: url("../img/contentBox/bestHotel/bestHotelImg.png"); background-repeat: no-repeat; }
+
+#best4 > li:nth-child(2) > .bestImg { background-position: left bottom; background-image: url("../img/contentBox/bestHotel/bestImg2.png"); background-repeat: no-repeat; }
+
+#best4 > li:nth-child(3) > .bestImg { background-position: center bottom; background-image: url("../img/contentBox/bestHotel/bestImg3.png"); background-repeat: no-repeat; }
+
+#best4 > li:last-child > .bestImg { background-position: right bottom; background-image: url("../img/contentBox/bestHotel/bestImg4.png"); background-repeat: no-repeat; }
+
+/* // _________ #bestHotel __________ */
+#popularHotel > dl { width: auto; height: auto; margin-top: 64px; text-align: center; }
+
+#popularHotel > dl > dt { width: auto; height: auto; font-size: 1.4rem; }
+
+#popularHotel > dl > dd { width: auto; height: auto; font-size: 1.1rem; margin-top: 14px; }
+
+#popularHotel > dl > dd > ul { width: 400px; height: 30px; margin-top: 26px; margin-left: 282px; }
+
+#popularHotel > dl > dd > ul > li { width: auto; height: auto; float: left; }
+
+#popularHotel > dl > dd > ul > li:first-child { color: #0fa9a9; margin-right: 42px; position: relative; }
+
+#popularHotel > dl > dd > ul > li:first-child::after { content: " "; width: 22px; height: 16px; display: block; position: absolute; top: 6px; right: -22px; border-right: 1px solid #797979; }
+
+/* // _________ #popularHotel ___________ */
+#specialBenefit > dl { width: auto; height: auto; margin-top: 64px; text-align: center; }
+
+#specialBenefit > dl > dt { width: auto; height: auto; font-size: 1.4rem; }
+
+#specialBenefit > dl > dd { width: auto; height: auto; font-size: 1.1rem; margin-top: 14px; }
+
+#specialBenefit > dl > dd > ul { width: 400px; height: 30px; margin-top: 26px; margin-left: 282px; }
+
+#specialBenefit > dl > dd > ul > li { width: auto; height: auto; float: left; }
+
+#specialBenefit > dl > dd > ul > li:first-child { color: #0fa9a9; margin-right: 42px; position: relative; }
+
+#specialBenefit > dl > dd > ul > li:first-child::after { content: " "; width: 22px; height: 16px; display: block; position: absolute; top: 6px; right: -22px; border-right: 1px solid #797979; }
+
+/* // _________ #specialBenefit ___________ */
+/* // _________ #adBox2 ___________ */
+#hotHotel > dl { width: auto; height: auto; margin-top: 64px; text-align: center; }
+
+#hotHotel > dl > dt { width: auto; height: auto; font-size: 1.4rem; }
+
+#hotHotel > dl > dd { width: auto; height: auto; font-size: 1.1rem; margin-top: 14px; }
+
+#hotHotel > dl > dd > ul { width: 400px; height: 30px; margin-top: 26px; margin-left: 282px; }
+
+#hotHotel > dl > dd > ul > li { width: auto; height: auto; float: left; }
+
+#hotHotel > dl > dd > ul > li:first-child { color: #0fa9a9; margin-right: 42px; position: relative; }
+
+#hotHotel > dl > dd > ul > li:first-child::after { content: " "; width: 22px; height: 16px; display: block; position: absolute; top: 6px; right: -22px; border-right: 1px solid #797979; }
+
+/* // _________ #hotHotel ___________ */
+#postScript > dl { width: auto; height: auto; margin-top: 64px; text-align: center; }
+
+#postScript > dl > dt { width: auto; height: auto; font-size: 1.4rem; }
+
+#postScript > dl > dd { width: auto; height: auto; font-size: 1.1rem; margin-top: 14px; }
+
+#postScript > dl > dd > ul { width: 400px; height: 30px; margin-top: 26px; margin-left: 282px; }
+
+#postScript > dl > dd > ul > li { width: auto; height: auto; float: left; }
+
+#postScript > dl > dd > ul > li:first-child { color: #0fa9a9; margin-right: 42px; position: relative; }
+
+#postScript > dl > dd > ul > li:first-child::after { content: " "; width: 22px; height: 16px; display: block; position: absolute; top: 6px; right: -22px; border-right: 1px solid #797979; }
+
+/* // _________ #postScript ___________ */
+/* // _________ #snsBox ___________ */
+/* // _________ #siteInfo ___________ */
+/* // _________ #lnb ___________ */

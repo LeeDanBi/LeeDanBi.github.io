@@ -1,0 +1,87 @@
+/* ! mainContentBox.css */
+@import "_base/base";
+@import "_base/mixin";
+
+#contentBox{width: 950px; height: 100%;}
+
+	#adBox{
+		@include fullVW($h:510px,$t:0);
+		@include  background($u:$url,$f:"contentBox/adBox.png",$bgr:no-repeat);
+		background-position: top center;
+		z-index: -100;
+	}
+/* // _________ #adBox __________ */
+
+	#bestHotel{width: 100%; height: auto;
+		@include boxTitle($ulW:280px,$ulMl:340px); 
+	}
+		#best4{width: 950px; height: 762px; margin-top: 22px;
+			>li{width: 304px; height: 440px; float: left; margin-right: 18px;}
+			>li:first-child{width: 100%; height: 302px; margin-right: 0; margin-bottom: 18px;}
+			>li:last-child{margin-right: 0;}
+				>li>.bestImg{width: 304px; height: 304px; 
+					@include hoverBigImg();}
+				>li:first-child>.bestImg{width: 100%; height: 100%; background-position: center top;
+				@include background($f:"contentBox/bestHotel/bestHotelImg.png");}
+				>li:nth-child(2)>.bestImg{background-position: left bottom;
+				@include background($f:"contentBox/bestHotel/bestImg2.png");}
+				>li:nth-child(3)>.bestImg{background-position: center bottom;
+				@include background($f:"contentBox/bestHotel/bestImg3.png");}
+				>li:last-child>.bestImg{background-position: right bottom;
+				@include background($f:"contentBox/bestHotel/bestImg4.png");}
+			
+		}
+
+/* // _________ #bestHotel __________ */
+
+	#popularHotel{
+		@include boxTitle();
+
+	}
+
+/* // _________ #popularHotel ___________ */
+	
+	#specialBenefit{
+		@include boxTitle();
+
+	}
+
+/* // _________ #specialBenefit ___________ */
+	
+	#adBox2{
+
+	}
+
+/* // _________ #adBox2 ___________ */
+	
+	#hotHotel{
+		@include boxTitle();
+
+	}
+
+/* // _________ #hotHotel ___________ */
+	
+	#postScript{
+		@include boxTitle();
+
+	}
+
+/* // _________ #postScript ___________ */
+	
+	#snsBox{
+
+	}
+
+/* // _________ #snsBox ___________ */
+	
+	#siteInfo{
+
+	}
+
+/* // _________ #siteInfo ___________ */
+	
+	#lnb{
+
+	}
+
+/* // _________ #lnb ___________ */

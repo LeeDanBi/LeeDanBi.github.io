@@ -1,0 +1,49 @@
+// _mixin.scss
+
+// 가로나열 네비게이션
+@mixin nav($w:100%,$h:100%,$mr:18px){
+	ul{width: $w; height: $h;
+	>li{width: auto; height: auto; float: left; margin-right: $mr;}
+	 &:last-child{margin-right: 0;}
+	 }//ul
+}
+// 가로 풀사이즈 Box
+@mixin fullVW($h:auto,$p:relative,$t:0){
+	width: 100vw; height: $h; position:$p; top: $t; left: 50%; margin-left: -50vw;
+}
+// 풀사이즈 안 박스
+@mixin fullVWin($h){
+	width: 950px; height: $h; position:absolute; top: 0; left: 50%; margin-left: -475px;
+}
+
+//after, before 선택자
+@mixin afterB($w:inherit,$h:inherit){
+	content:" "; display: block; width: $w; height: $h; position:absolute;
+}
+
+// background
+@mixin background($u:$url,$f:none,$bgr:no-repeat){
+	background-image: url($u + $f); background-repeat: $bgr;
+}
+
+// 제목
+@mixin boxTitle($ulW:400px, $ulMl:282px){
+	>dl{
+	width: auto; height: auto;
+	margin-top: 64px; text-align: center;
+	>dt{width: auto; height: auto; font-size: 1.4rem;}
+	>dd{width: auto; height: auto; font-size: 1.1rem; margin-top: 14px;}
+	>dd>ul{width: $ulW; height: 30px; margin-top: 26px; margin-left: $ulMl}
+	>dd>ul>li{width: auto; height: auto; float: left;}
+	>dd>ul>li:first-child{color: #0fa9a9; margin-right: 42px; position:relative;}
+	>dd>ul>li:first-child::after{content:" "; width: 22px; height: 16px; display: block; position:absolute; top:6px; right: -22px; border-right: 1px solid lighten($mainGray,20%);}
+	}
+}
+
+// hoverBigImg
+
+@mixin hoverBigImg(){
+	transition: all 3s ;
+	background-size: 100%;
+	&:hover{background-size: 120%;}
+}
