@@ -1,0 +1,43 @@
+/* ! main_content.css */
+@charset "utf-8";
+
+body{background-color: #292929;}
+#wrap{width: 960px; height: auto; margin: 0 auto;}
+
+  #headBox{width: 100%; height: auto; background-color: #333; color: #ddd;}
+  #headBox a{width: 100%; height: 100%; display: block;}
+
+    #subHbox{width: 100%; height: 30px; padding-left: 6px; padding-top: 6px; box-sizing:border-box;}
+      #subHbox>h2{float: left; font-size: 0.9rem; color: #999;}
+      #messageBox{float: right;}
+        #messageBox>li{float: left; margin-right: 10px; font-size: 0.8rem; margin-top: 4px;}
+        #messageBox>li:last-child{margin-right: 6;}
+/* //#subHbox ___________________ */
+
+    #mainHbox{width: 100%; height: 80px;background-color: #030303; padding-top: 10px; padding-left: 5px; box-sizing:border-box;}
+      h1{float: left;}
+      #unb{float: right; margin-top: 40px; font-size: 0.9rem;}
+        #unb>ul{width: 100%;}
+        #unb>ul>li{float: left; margin-right: 10px;}
+/* //#mainHbox ___________________ */
+
+    #gnb{width: 100%; height: 50px; padding: 0 200px; box-sizing:border-box;}
+      #gnb>ul{width: 100%; height: 100%;}
+      #gnb>ul>li{float: left; width: 100px; height: 48px; background-color: #555; margin-right: 2px; text-align: center; line-height: 48px;}
+/* //#gnb ___________________ */
+
+    #searchBox{width: 100%; height: 40px; border-bottom: 1px solid #ab060c; padding-top: 4px; box-sizing:border-box;}
+      #misshaR{width: 200px; height: 26px; float: left; text-align: center;}
+      #searchBox>form{float: left; margin-left: 54px;}
+      #searchBox>form input{width: 400px; height: 26px; background-color: #fff;}
+      #recommendBox{width: 200px; height: 26px; float: right; text-align: center;}
+/* //#searchBox ___________________ */
+
+    #siteNBbox{width: 100%; height: 40px; font-size: 0.75rem; padding-top: 10px; box-sizing:border-box; border-bottom: 1px solid #666;}
+      #misshaInfo{float: left;}
+        #misshaInfo>li{float: left;}
+      #memberInfo{float: right;}
+        #memberInfo>li{float: left;}
+        #siteNBbox li{margin-right: 10px;}
+        #siteNBbox li:last-child{margin-right: 0;}
+
