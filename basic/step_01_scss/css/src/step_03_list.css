@@ -1,0 +1,22 @@
+/* step_03_list.css */
+li:nth-child(1) { width: 100px; }
+
+li:nth-child(2) { width: 200px; }
+
+li:nth-child(3) { width: 150px; }
+
+li:nth-child(4) { width: 30px; }
+
+li:nth-child(5) { width: 15px; }
+
+div { list: 5; }
+
+li:nth-child() > a { background-image: url("../img/test/image1.png"); }
+
+li:nth-child() > a { background-image: url("../img/test/ibo.png"); }
+
+li:nth-child() > a { background-image: url("../img/test/dfe.png"); }
+
+li:nth-child() > a { background-image: url("../img/test/dfef.png"); }
+
+li:nth-child() > a { background-image: url("../img/test/dfefd.png"); }

@@ -1,0 +1,14 @@
+/* step_03_operator */
+.box { width: 300px; }
+
+.box2 { width: 350px; }
+
+.color { color: white; }
+
+.color { color: #ddffff; }
+
+.color { color: white; }
+
+.color { color: #000033; }
+
+.two { width: 33.33333px; height: 43.33333em; font-size: 3rem; }

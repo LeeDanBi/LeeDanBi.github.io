@@ -1,0 +1,29 @@
+// step_03_list.scss
+/* step_03_list.css */
+
+ // list: 목록
+
+ $width: (100, 200, 150, 30, 15);
+
+// nth(변수이름, 변수의 순서번호);
+ li:nth-child(1){width: nth($width,1) + px;}
+ li:nth-child(2){width: nth($width,2) + px;}
+ li:nth-child(3){width: nth($width,3) + px;}
+ li:nth-child(4){width: nth($width,4) + px;}
+ li:nth-child(5){width: nth($width,5) + px;}
+
+ //image list
+ $url:"../img/test/";
+ $imgFile:("image1.png",
+          "ibo.png",
+          "dfe.png",
+          "dfef.png",
+          "dfefd.png");
+ div{list:length($imgFile);}
+//nth(사용할변수명, 항목위치숫자) <-li기법을 쓰겠다는 명령어
+ li:nth-child()>a{background-image: url($url+nth($imgFile,1));}
+ li:nth-child()>a{background-image: url($url+nth($imgFile,2));}
+ li:nth-child()>a{background-image: url($url+nth($imgFile,3));}
+ li:nth-child()>a{background-image: url($url+nth($imgFile,4));}
+ li:nth-child()>a{background-image: url($url+nth($imgFile,5));}
+

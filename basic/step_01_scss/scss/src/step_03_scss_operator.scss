@@ -1,0 +1,23 @@
+// scss
+/* step_03_operator */
+
+// +, -, *, /
+
+$width1: 100px; $width2: 200px;
+
+.box{width: $width1 + $width2;}
+.box2{width: ( 150 + 200 ) + px;}
+
+
+// ------------------------------------------
+
+.color{color:#ddd + #afc;}
+.color{color:#3d3 + #a3c;}
+.color{color:#f00 + #00f + #ff0;}
+.color{color:#001 + #002;}
+
+// ------------------------------------------
+
+.two{width: (100/3) + px;
+    height: ((100 + 30) / 3) + em;
+    font-size:(16*3/16) + rem;}
