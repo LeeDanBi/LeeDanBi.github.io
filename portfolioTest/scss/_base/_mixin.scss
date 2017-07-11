@@ -1,0 +1,21 @@
+// _mixin.scss
+
+// inner a
+@mixin innera($w:100%, $h:100%){
+  width: $w; height: $h; display: block;
+}
+
+//한줄 innerBox text
+@mixin innerT($w:inherit, $h:inherit, $ta:center){
+  width: $w; height: $h; text-align: $ta; line-height: $h;
+}
+
+// 좌우 overflow
+@mixin overflowBox($w:inherit, $h:420px, $inw:1200px, $inh:400px, $imgh:280px, $texth:120px){width: $w; height: $h; overflow-x: auto;
+      >ul{width: $inw; height: $inh;
+      >li{width: 280px; height: 100%; float: left;}
+      >li:last-child{margin-right: 0;}
+        >li>.innerImg{width: 100%; height: $imgh;}
+        >li>.contentText{width: 100%; height: $texth;}
+        }//ul
+      }
