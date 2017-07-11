@@ -1,0 +1,23 @@
+// sub_new.scss
+/* ! sub_new.css */
+
+@import "../_base/base";
+@import "../_base/mixin";
+
+#contentBox{width: 100%; height: auto; color: #fff;}
+
+  #adBannerBox{@include innerT($w:100%, $h:320px);background-color: #666; font-size: 2rem;}
+  
+  #goodsBox{width: 100%; height: auto;}
+    #memberButton{width: 100%; height: 60px; padding-top: 30px; box-sizing:border-box; border-bottom: 1px solid #666;
+      >ul{width: 180px; height: 30px; float: right;
+        >li{@include innerT($w:80px, $h:30px);float: left; background-color: #666;}
+        >li:first-child{margin-right: 20px;}
+      }//ul
+    }//#memberButton
+
+    #goodsMEnu{width: 100%; height: 500px;
+      >ul{width: 100%; height: 100%; margin-top: 80px;
+        >li{width: 200px; height: 200px; float: left; margin: 0 20px 40px; background-color: #fff;}
+      }//ul
+    }//#goodsMEnu
