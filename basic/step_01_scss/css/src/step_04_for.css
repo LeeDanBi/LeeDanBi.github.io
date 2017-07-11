@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* step_04_for.css */
+/*
+@for $임의변수 from 시작값 to through 마지막값 {
+
+}
+*/
+li:nth-child(1) { background-image: url("img_1.png"); }
+
+li:nth-child(1):hover { background-image: url("img_1_on.png"); }
+
+li:nth-child(2) { background-image: url("img_2.png"); }
+
+li:nth-child(2):hover { background-image: url("img_2_on.png"); }
+
+li:nth-child(3) { background-image: url("img_3.png"); }
+
+li:nth-child(3):hover { background-image: url("img_3_on.png"); }
+
+li:nth-child(4) { background-image: url("img_4.png"); }
+
+li:nth-child(4):hover { background-image: url("img_4_on.png"); }
+
+li:nth-child(5) { background-image: url("img_5.png"); }
+
+li:nth-child(5):hover { background-image: url("img_5_on.png"); }
+
+li:nth-child(6) { background-image: url("img_6.png"); }
+
+li:nth-child(6):hover { background-image: url("img_6_on.png"); }
+
+li:nth-child(7) { background-image: url("img_7.png"); }
+
+li:nth-child(7):hover { background-image: url("img_7_on.png"); }
+
+li:nth-child(8) { background-image: url("img_8.png"); }
+
+li:nth-child(8):hover { background-image: url("img_8_on.png"); }
+
+li:nth-child(9) { background-image: url("img_9.png"); }
+
+li:nth-child(9):hover { background-image: url("img_9_on.png"); }
+
+li:nth-child(10) { background-image: url("img_10.png"); }
+
+li:nth-child(10):hover { background-image: url("img_10_on.png"); }
+
+li:nth-child(11) { background-image: url("img_11.png"); }
+
+li:nth-child(11):hover { background-image: url("img_11_on.png"); }
+
+li:nth-child(12) { background-image: url("img_12.png"); }
+
+li:nth-child(12):hover { background-image: url("img_12_on.png"); }
+
+li:nth-child(13) { background-image: url("img_13.png"); }
+
+li:nth-child(13):hover { background-image: url("img_13_on.png"); }
+
+li:nth-child(14) { background-image: url("img_14.png"); }
+
+li:nth-child(14):hover { background-image: url("img_14_on.png"); }
+
+li:nth-child(15) { background-image: url("img_15.png"); }
+
+li:nth-child(15):hover { background-image: url("img_15_on.png"); }
+
+li:nth-child(16) { background-image: url("img_16.png"); }
+
+li:nth-child(16):hover { background-image: url("img_16_on.png"); }
+
+li:nth-child(17) { background-image: url("img_17.png"); }
+
+li:nth-child(17):hover { background-image: url("img_17_on.png"); }
+
+li:nth-child(18) { background-image: url("img_18.png"); }
+
+li:nth-child(18):hover { background-image: url("img_18_on.png"); }
+
+li:nth-child(19) { background-image: url("img_19.png"); }
+
+li:nth-child(19):hover { background-image: url("img_19_on.png"); }
+
+li:nth-child(20) { background-image: url("img_20.png"); }
+
+li:nth-child(20):hover { background-image: url("img_20_on.png"); }
+
+li:nth-child(21) { background-image: url("img_21.png"); }
+
+li:nth-child(21):hover { background-image: url("img_21_on.png"); }
+
+li:nth-child(22) { background-image: url("img_22.png"); }
+
+li:nth-child(22):hover { background-image: url("img_22_on.png"); }
+
+li:nth-child(23) { background-image: url("img_23.png"); }
+
+li:nth-child(23):hover { background-image: url("img_23_on.png"); }
+
+li:nth-child(24) { background-image: url("img_24.png"); }
+
+li:nth-child(24):hover { background-image: url("img_24_on.png"); }
+
+li:nth-child(25) { background-image: url("img_25.png"); }
+
+li:nth-child(25):hover { background-image: url("img_25_on.png"); }
+
+li:nth-child(26) { background-image: url("img_26.png"); }
+
+li:nth-child(26):hover { background-image: url("img_26_on.png"); }
+
+li:nth-child(27) { background-image: url("img_27.png"); }
+
+li:nth-child(27):hover { background-image: url("img_27_on.png"); }
+
+li:nth-child(28) { background-image: url("img_28.png"); }
+
+li:nth-child(28):hover { background-image: url("img_28_on.png"); }
+
+li:nth-child(29) { background-image: url("img_29.png"); }
+
+li:nth-child(29):hover { background-image: url("img_29_on.png"); }
+
+li:nth-child(30) { background-image: url("img_30.png"); }
+
+li:nth-child(30):hover { background-image: url("img_30_on.png"); }
+
+/*
+@each 임의변수 in (각각의 값){
+  //내용
+}
+*/
+/* each 1 */
+li:nth-child(3) { background-image: url("img3.png"); }
+
+li:nth-child(10) { background-image: url("img10.png"); }
+
+li:nth-child(5) { background-image: url("img5.png"); }
+
+li:nth-child(15) { background-image: url("img15.png"); }
+
+/* each 2 */
+.coffee_americano { background-image: url(americano.png); }
+
+.coffee_americano:hover { background-image: url(americano_on.png); }
+
+.coffee_latte { background-image: url(latte.png); }
+
+.coffee_latte:hover { background-image: url(latte_on.png); }
+
+.coffee_viena { background-image: url(viena.png); }
+
+.coffee_viena:hover { background-image: url(viena_on.png); }
+
+.coffee_compana { background-image: url(compana.png); }
+
+.coffee_compana:hover { background-image: url(compana_on.png); }
+
+.coffee_mocha { background-image: url(mocha.png); }
+
+.coffee_mocha:hover { background-image: url(mocha_on.png); }
+
+/* each 3 */
+.green_americano { background-image: url(americano.png); }
+
+.green_americano:hover { background-image: url(americano_on.png); }
+
+.green_latte { background-image: url(latte.png); }
+
+.green_latte:hover { background-image: url(latte_on.png); }
+
+.green_viena { background-image: url(viena.png); }
+
+.green_viena:hover { background-image: url(viena_on.png); }
+
+.green_compana { background-image: url(compana.png); }
+
+.green_compana:hover { background-image: url(compana_on.png); }
+
+.green_mocha { background-image: url(mocha.png); }
+
+.green_mocha:hover { background-image: url(mocha_on.png); }
+
+/* for 2 */
+li:nth-child(1) { color: #333; }
+
+li:nth-child(2) { color: #555; }
+
+li:nth-child(3) { color: #666; }
+
+li:nth-child(4) { color: #777; }
+
+li:nth-child(5) { color: #9fe; }
+
+li:nth-child(6) { color: #dce; }
+
+li:nth-child(7) { color: #fa0; }
+
+/* for 3 */
+li:nth-child(1) { color: #333; }
+
+li:nth-child(2) { color: #555; }
+
+li:nth-child(3) { color: #666; }
+
+li:nth-child(4) { color: #777; }
+
+li:nth-child(5) { color: #9fe; }
+
+li:nth-child(6) { color: #dce; }
+
+li:nth-child(7) { color: #fa0; }
