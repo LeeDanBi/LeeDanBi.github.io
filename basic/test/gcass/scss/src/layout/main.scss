@@ -1,0 +1,49 @@
+// main.scss
+/* main.css */
+@import "../../base/variable";
+@import "../../base/mixin";
+
+//@import "./layout/header";
+//@import "./layout/main_etc";
+//@import "./layout/footer";
+
+
+%hidden{width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden;}
+
+#wrap{width: 980px; height: auto; margin: 0 auto; background-color: #ccc;}
+#wrap:after{content:" "; display: block; width: 0; height: 0; clear: both;}
+
+#sideBox{width: 100%; height: 30px; background-color: lighten(map-get($color,primary), 6.5%); float: left;
+  >h2{@extend %hidden;}
+  >ul{width: 435px; height: 100%; float: right;
+    >li{width: 95px; height: 100%; float: left;
+      &:last-child{width: 245px;}  
+      $sideBoxImg:("home", "study", "education");
+      @for $i from 1 through length($sideBoxImg){
+      &:nth-child(#{$i})>a{@include link($f:"aside/" + nth($sideBoxImg,$i) + ".png", $f2:"aside/" + nth($sideBoxImg,$i) + "_on.png"); transition:all 0.3s linear;}
+      }//@for
+    }//li 
+  }//ul
+}//#sideBox
+
+#headBox{width: 250px; height: auto; min-height: 710px; background-color: map-get($color,primary); float: left; padding: 55px 55px 100px 42px; box-sizing:border-box;
+  >h1{width: 100%; height: 105px; margin-bottom: 40px; background-color: transparent;}
+  a{@include link($f:"header/header.png", $f2:"header/header_on.png",$p:-2px 0);}
+  >#gnb{
+    >h2{@extend %hidden;}
+    ul{width: 100%; height: auto; 
+      >li{width: 100%; height: 38px; margin-bottom: 25px;}
+      >li:nth-last-child(2){margin-bottom: 8px; }
+      >li:last-child{width: 100%; height: 112px; margin-bottom: 0; }
+      // list 반복문으로 변경
+        $gnbLink:(0 -144px, 0 -206px, 0 -268px, 0 -331px, 0 -393px, 0 -438px);
+      @for $i from 1 through length($gnbLink){
+        >li:nth-child(#{$i})>a{background-position: nth($gnbLink,$i); transition:all 0.3s linear;}
+      }//@for
+    }//ul
+  }//#gnb
+}//#headBox
+
+#contentBox{width: (980 - 250) + px; height: auto; min-height: 710px; background-color: #ffa; float: left;} 
+
+#footBox{width: 100%; height: 110px; border-top: 1px solid map-get($color,line); float: left; background-color: map-get($color,primary);}
