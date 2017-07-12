@@ -29,7 +29,7 @@
 				&:first-child{margin-left: 0;}
 				}//#gnb li
 			>li:nth-child(){@include change();}
-			>li:nth-child(){@include change(font:#175);}
+			>li:nth-child(){@include change($font:#175);}
 			>li:nth-child(){@include change(#fff,#995);}
 			>li:nth-child(){@include change(#0af,#1dd);} 
 			>li:nth-child(){@include change(#460,#125);}

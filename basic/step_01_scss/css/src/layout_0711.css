@@ -1,0 +1,20 @@
+/* layout_0711.scss */
+#wrap { width: 980px; height: 850px; margin: 0 auto; }
+
+#localMenu { width: inherit; height: 30px; background-image: url("../../img/gcassImg/localMenu/headBox_bg.png"); background-repeat: no-repeat; }
+
+#localMenu > ul { width: 435px; height: inherit; float: right; }
+
+#localMenu > ul > li { width: 95px; height: inherit; background-image: url("../../img/gcassImg/localMenu/topMenubar.png"); background-repeat: no-repeat; float: left; }
+
+#localMenu > ul > li:nth-child(2) { background-position: -95px 0; }
+
+#localMenu > ul > li:nth-child(3) { width: 245px; background-position: -190px 0; }
+
+#headconWrap { width: 100%; height: 709px; }
+
+#headBox { width: 248px; height: inherit; background-image: url("../../img/gcassImg/headBox/headBox_bg.png"); background-repeat: no-repeat; float: left; }
+
+#contentBox { width: 732px; height: inherit; background-image: url("../../img/gcassImg/contentBox/conetentBox_bg.png"); background-repeat: no-repeat; float: left; }
+
+#patternBG { width: inherit; height: 49px; background-image: url("../../img/gcassImg/contentBox/pattern_img.png"); background-repeat: repeat-x; }

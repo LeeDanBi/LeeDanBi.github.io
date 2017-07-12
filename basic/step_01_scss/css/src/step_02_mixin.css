@@ -17,22 +17,22 @@
 
 #wrap #gnb > ul > li:first-child { margin-left: 0; }
 
-#wrap #gnb > ul > li:nth-child(1) > a { transition: all 0.3s ease-out; }
+#wrap #gnb > ul > li:nth-child() > a { transition: all 0.3s ease-out; }
 
-#wrap #gnb > ul > li:nth-child(1):hover > a { background-color: #90a; color: #f25; font-size: 2em; }
+#wrap #gnb > ul > li:nth-child():hover > a { background-color: #afc; color: #111; font-size: 2em; }
 
-#wrap #gnb > ul > li:nth-child(2) > a { transition: all 0.3s ease-out; }
+#wrap #gnb > ul > li:nth-child() > a { transition: all 0.3s ease-out; }
 
-#wrap #gnb > ul > li:nth-child(2):hover > a { background-color: #fa0; color: #175; font-size: 2em; }
+#wrap #gnb > ul > li:nth-child():hover > a { background-color: #afc; color: #175; font-size: 2em; }
 
-#wrap #gnb > ul > li:nth-child(3) > a { transition: all 0.3s ease-out; }
+#wrap #gnb > ul > li:nth-child() > a { transition: all 0.3s ease-out; }
 
-#wrap #gnb > ul > li:nth-child(3):hover > a { background-color: #fff; color: #995; font-size: 2em; }
+#wrap #gnb > ul > li:nth-child():hover > a { background-color: #fff; color: #995; font-size: 2em; }
 
-#wrap #gnb > ul > li:nth-child(4) > a { transition: all 0.3s ease-out; }
+#wrap #gnb > ul > li:nth-child() > a { transition: all 0.3s ease-out; }
 
-#wrap #gnb > ul > li:nth-child(4):hover > a { background-color: #0af; color: #1dd; font-size: 2em; }
+#wrap #gnb > ul > li:nth-child():hover > a { background-color: #0af; color: #1dd; font-size: 2em; }
 
-#wrap #gnb > ul > li:nth-child(5) > a { transition: all 0.3s ease-out; }
+#wrap #gnb > ul > li:nth-child() > a { transition: all 0.3s ease-out; }
 
-#wrap #gnb > ul > li:nth-child(5):hover > a { background-color: #460; color: #125; font-size: 2em; }
+#wrap #gnb > ul > li:nth-child():hover > a { background-color: #460; color: #125; font-size: 2em; }
