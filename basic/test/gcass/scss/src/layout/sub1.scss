@@ -1,0 +1,45 @@
+//sub1.scss
+/* sub1.css */
+@import "../../base/variable";
+@import "../../base/mixin";
+
+#contentBox{width: (980 - 250) + px; height: auto; min-height: 710px; float: left; padding-right: 28px; box-sizing:border-box;
+  >hgroup{width: 100%; height: 20px; margin-top: 132px;
+    >h2{width: 150px; height: 100%; float: right; color: map-get($color,white);}
+    >h3{width: 250px; height: 100%; float: right; color: map-get($color,white);}
+  }//hgroup
+}//#contentBox
+  #proLang_box{ width: 651px; height: 375px; margin-top: 20px; margin-left: 30px;
+    >h4{@extend %hidden;}
+    >ul{ width: 100%; height: 100%;
+      >li{width: 199px; height: 537px; float: left; margin-right: 26px;
+        &:last-child{margin-right: 0;}
+        >.p_img{width: 100%; height: 337px; background-image: url($url + "gcass_sub_image/proLang_img.png"); margin-bottom: 10px;background-repeat: no-repeat; box-shadow:10px 10px 8px rgba(0,0,0,0.6); border-radius: 18px; transition:all 700ms;
+          >span{width: 340px; display: block; font-size:4rem; @include prefix(transform, rotate(-90deg) translate(-110px, -20px));}
+          
+          //transform:rotate(); // 회전(deg)
+          //transform:scale();  // 크기(1 = 100%)
+          //transform:translate(); // 위치이동(본래의 위치를 기점으로 이동)
+          //transform:skew(); // 기울임
+        }//.p_img
+        >.p_img:hover{@include prefix(transform, translateY(-20px));}
+        $pPosition:(0 0, -226px -36px, -452px 0);
+        $pmt:(0,39px,0);
+        @for $i from 1 through length($pPosition){
+          &:nth-child(#{$i})>.p_img{background-position: nth($pPosition,$i); margin-top: nth($pmt,$i);}
+        }//@for
+        >.p_text{width: 100%; border-right:1px solid map-get($color,white); border-left:1px solid map-get($color,white); font-size:2rem; text-align: left; padding-top: 20px; padding-left: 10px; box-sizing:border-box;
+          >ul{width: auto; height: auto;}
+          >ul>li{width: auto; height: auto; color: map-get($color,white);}
+        }//.p_text
+        @for $i from 1 through 3{
+          &:nth-child(#{$i})>.p_text{height: 190px - nth($pmt,$i);}
+        }     
+        }//li
+    }//ul
+  }//#proLang_box
+
+
+#adBox{width: 100%; height: 446px; float: left; padding-top: 52px; box-sizing:border-box;}
+  .ad_img{width: 670px; height: 312px; margin-left: 20px; background-image: url($url + "gcass_sub_image/ad01.png");}
+  .promgramClass{width: 210px; height: 100%; float: right;}

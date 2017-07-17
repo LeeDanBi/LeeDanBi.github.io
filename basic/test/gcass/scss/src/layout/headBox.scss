@@ -1,0 +1,22 @@
+//headBox.scss
+/* headBox.css */
+@import "../../base/variable";
+@import "../../base/mixin";
+
+#headBox{width: 250px; height: 1160px; min-height: 710px; float: left; padding: 55px 55px 100px 42px; box-sizing:border-box; background-color: rgba(map-get($color,black), 0.1);
+  >h1{width: 100%; height: 105px; margin-bottom: 40px; background-color: transparent;}
+  a{@include link($f:"header/header.png", $f2:"header/header_on.png",$p:-2px 0);}
+  >#gnb{
+    >h2{@extend %hidden;}
+    ul{width: 100%; height: auto; 
+      >li{width: 100%; height: 38px; margin-bottom: 25px;}
+      >li:nth-last-child(2){margin-bottom: 8px; }
+      >li:last-child{width: 100%; height: 112px; margin-bottom: 0; }
+      // list 반복문으로 변경
+        $gnbLink:(0 -144px, 0 -206px, 0 -268px, 0 -331px, 0 -393px, 0 -438px);
+      @for $i from 1 through length($gnbLink){
+        >li:nth-child(#{$i})>a{background-position: nth($gnbLink,$i); transition:all 0.3s linear;}
+      }//@for
+    }//ul
+  }//#gnb
+}//#headBox

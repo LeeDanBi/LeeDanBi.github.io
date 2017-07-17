@@ -8,8 +8,6 @@
 //@import "./layout/footer";
 
 
-%hidden{width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden;}
-
 #wrap{width: 980px; height: auto; margin: 0 auto; background-color: #ccc;}
 #wrap:after{content:" "; display: block; width: 0; height: 0; clear: both;}
 

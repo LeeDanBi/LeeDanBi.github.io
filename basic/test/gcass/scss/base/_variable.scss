@@ -1,5 +1,7 @@
 // _variable.scss
 
+%hidden{width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden;}
+
 $color:(
   primary:#777,
   black:#171717,

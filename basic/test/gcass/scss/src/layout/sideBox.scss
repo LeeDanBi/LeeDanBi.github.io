@@ -1,0 +1,20 @@
+// sideBox.scss
+/* sideBox.css */
+@import "../../base/variable";
+@import "../../base/mixin";
+
+#wrap{width: 980px; height: auto; margin: 0 auto; background-image: url($url + "gcass_sub_image/sub/bg01.jpg"); background-repeat: repeat;}
+#wrap:after{content:" "; display: block; width: 0; height: 0; clear: both;}
+
+#sideBox{width: 100%; height: 30px; background-color: lighten(map-get($color,primary), 6.5%); float: left;
+  >h2{@extend %hidden;}
+  >ul{width: 435px; height: 100%; float: right;
+    >li{width: 95px; height: 100%; float: left;
+      &:last-child{width: 245px;}  
+      $sideBoxImg:("home", "study", "education");
+      @for $i from 1 through length($sideBoxImg){
+      &:nth-child(#{$i})>a{@include link($f:"aside/" + nth($sideBoxImg,$i) + ".png", $f2:"aside/" + nth($sideBoxImg,$i) + "_on.png"); transition:all 0.3s linear;}
+      }//@for
+    }//li 
+  }//ul
+}//#sideBox

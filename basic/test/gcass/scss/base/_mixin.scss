@@ -11,3 +11,11 @@ $url:"../../../img/";
   &:hover{background-image: url($u + $f2);}
   >span{width: 0; height: 0;display: block;position: absolute; overflow: hidden;}
 }
+
+@mixin prefix($attr, $value){
+            -webkit-#{$attr}:$value;
+            -moz-#{$attr}:$value;
+            -ms-#{$attr}:$value;
+            -o-#{$attr}:$value;
+            #{$attr}:$value;
+          }
