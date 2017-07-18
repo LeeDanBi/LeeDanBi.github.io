@@ -1,0 +1,48 @@
+/* sub1.css */
+#proLang_box > h4 { width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden; }
+
+#contentBox { width: 730px; height: auto; min-height: 710px; float: left; padding-right: 28px; box-sizing: border-box; }
+
+#contentBox > hgroup { width: 100%; height: 20px; margin-top: 132px; }
+
+#contentBox > hgroup > h2 { width: 150px; height: 100%; float: right; color: #fff; }
+
+#contentBox > hgroup > h3 { width: 250px; height: 100%; float: right; color: #fff; }
+
+#proLang_box { width: 651px; height: 375px; margin-top: 20px; margin-left: 30px; }
+
+#proLang_box > ul { width: 100%; height: 100%; }
+
+#proLang_box > ul > li { width: 199px; height: 537px; float: left; margin-right: 26px; }
+
+#proLang_box > ul > li:last-child { margin-right: 0; }
+
+#proLang_box > ul > li > .p_img { width: 100%; height: 337px; background-image: url("../../../img/gcass_sub_image/proLang_img.png"); margin-bottom: 10px; background-repeat: no-repeat; box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.6); border-radius: 18px; transition: all 700ms; }
+
+#proLang_box > ul > li > .p_img > span { width: 340px; display: block; font-size: 4rem; -webkit-transform: rotate(-90deg) translate(-110px, -20px); -moz-transform: rotate(-90deg) translate(-110px, -20px); -ms-transform: rotate(-90deg) translate(-110px, -20px); -o-transform: rotate(-90deg) translate(-110px, -20px); transform: rotate(-90deg) translate(-110px, -20px); }
+
+#proLang_box > ul > li > .p_img:hover { -webkit-transform: translateY(-20px); -moz-transform: translateY(-20px); -ms-transform: translateY(-20px); -o-transform: translateY(-20px); transform: translateY(-20px); }
+
+#proLang_box > ul > li:nth-child(1) > .p_img { background-position: 0 0; margin-top: 0; }
+
+#proLang_box > ul > li:nth-child(2) > .p_img { background-position: -226px -36px; margin-top: 39px; }
+
+#proLang_box > ul > li:nth-child(3) > .p_img { background-position: -452px 0; margin-top: 0; }
+
+#proLang_box > ul > li > .p_text { width: 100%; border-right: 1px solid #fff; border-left: 1px solid #fff; font-size: 2rem; text-align: left; padding-top: 20px; padding-left: 10px; box-sizing: border-box; }
+
+#proLang_box > ul > li > .p_text > ul { width: auto; height: auto; }
+
+#proLang_box > ul > li > .p_text > ul > li { width: auto; height: auto; color: #fff; }
+
+#proLang_box > ul > li:nth-child(1) > .p_text { height: 190px; }
+
+#proLang_box > ul > li:nth-child(2) > .p_text { height: 151px; }
+
+#proLang_box > ul > li:nth-child(3) > .p_text { height: 190px; }
+
+#adBox { width: 100%; height: 446px; float: left; padding-top: 52px; box-sizing: border-box; }
+
+.ad_img { width: 670px; height: 312px; margin-left: 20px; background-image: url("../../../img/gcass_sub_image/ad01.png"); }
+
+.promgramClass { width: 210px; height: 100%; float: right; }

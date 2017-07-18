@@ -1,0 +1,32 @@
+/* sideBox.css */
+#sideBox > h2 { width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden; }
+
+#wrap { width: 980px; height: auto; margin: 0 auto; background-image: url("../../../img/gcass_sub_image/sub/bg01.jpg"); background-repeat: repeat; }
+
+#wrap:after { content: " "; display: block; width: 0; height: 0; clear: both; }
+
+#sideBox { width: 100%; height: 30px; background-color: #888888; float: left; }
+
+#sideBox > ul { width: 435px; height: 100%; float: right; }
+
+#sideBox > ul > li { width: 95px; height: 100%; float: left; }
+
+#sideBox > ul > li:last-child { width: 245px; }
+
+#sideBox > ul > li:nth-child(1) > a { width: 100%; height: 100%; display: block; background-image: url("../../../img/aside/home.png"); background-repeat: no-repeat; background-position: 0 0; transition: all 0.3s linear; }
+
+#sideBox > ul > li:nth-child(1) > a:hover { background-image: url("../../../img/aside/home_on.png"); }
+
+#sideBox > ul > li:nth-child(1) > a > span { width: 0; height: 0; display: block; position: absolute; overflow: hidden; }
+
+#sideBox > ul > li:nth-child(2) > a { width: 100%; height: 100%; display: block; background-image: url("../../../img/aside/study.png"); background-repeat: no-repeat; background-position: 0 0; transition: all 0.3s linear; }
+
+#sideBox > ul > li:nth-child(2) > a:hover { background-image: url("../../../img/aside/study_on.png"); }
+
+#sideBox > ul > li:nth-child(2) > a > span { width: 0; height: 0; display: block; position: absolute; overflow: hidden; }
+
+#sideBox > ul > li:nth-child(3) > a { width: 100%; height: 100%; display: block; background-image: url("../../../img/aside/education.png"); background-repeat: no-repeat; background-position: 0 0; transition: all 0.3s linear; }
+
+#sideBox > ul > li:nth-child(3) > a:hover { background-image: url("../../../img/aside/education_on.png"); }
+
+#sideBox > ul > li:nth-child(3) > a > span { width: 0; height: 0; display: block; position: absolute; overflow: hidden; }
