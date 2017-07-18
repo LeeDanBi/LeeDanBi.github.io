@@ -1,10 +1,58 @@
 /* ! footBox.css */
 #footBox { width: 100%; height: auto; }
 
-#inbBoxWrap { width: 100vw; height: 60px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #464646; }
+#inbBoxWrap { width: 100vw; height: 60px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #404040; }
 
-#inbBox { width: 950px; height: 60px; position: absolute; top: 0; left: 50%; margin-left: -475px; }
+#inbBox { width: 950px; height: 60px; position: absolute; top: 0; left: 50%; margin-left: -475px; padding-top: 16px; box-sizing: border-box; }
 
-#logoAddressWrap { width: 100vw; height: 162px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #606060; }
+#inb { width: 600px; height: 100%; float: left; }
 
-#logoAddress { width: 950px; height: 162px; position: absolute; top: 0; left: 50%; margin-left: -475px; }
+#inb > ul { width: 100%; height: 100%; }
+
+#inb > ul > li { width: auto; height: 100%; float: left; margin-right: 40px; position: relative; }
+
+#inb > ul > li::after { content: " "; display: block; width: 20px; height: 12px; position: absolute; top: 6px; right: -20px; border-right: 1px solid #f0f0f0; }
+
+#inb > ul > li:last-child { margin-right: 0; }
+
+#inb > ul > li:last-child::after { display: none; }
+
+#inb > ul > li > a { display: block; height: 100%; color: #f0f0f0; }
+
+#snsNB { width: 280px; height: 100%; float: right; }
+
+#snsNB > dl { width: 100%; height: 100%; color: #f0f0f0; }
+
+#snsNB > dl > dt { width: 180px; height: 100%; float: left; }
+
+#snsNB > dl > dd { width: 100px; height: 100%; float: left; }
+
+#snsNB > dl > dd > ul { width: 100%; height: 100%; }
+
+#snsNB > dl > dd > ul > li { width: auto; height: 100%; float: left; margin-right: 14px; }
+
+#snsNB > dl > dd > ul > li:last-child { margin-right: 0; }
+
+#logoAddressWrap { width: 100vw; height: 162px; position: relative; top: 0; left: 50%; margin-left: -50vw; background-color: #464646; }
+
+#logoAddress { width: 950px; height: 162px; position: absolute; top: 0; left: 50%; margin-left: -475px; padding-top: 38px; box-sizing: border-box; }
+
+#bottomLogo { width: 170px; height: 52px; float: left; background-image: url("../img/footBox/footLogo.png"); background-repeat: no-repeat; margin-top: 20px; margin-right: 20px; }
+
+#boxInfo { width: 500px; height: 95px; float: left; border-right: 1px solid #888; padding-right: 24px; box-sizing: border-box; color: #888; margin-right: 20px; }
+
+#boxInfo p { margin-bottom: 10px; font-size: 0.8rem; }
+
+#boxInfo p:last-of-type { margin-bottom: 0; }
+
+#boxService { width: 228px; height: 100%; float: left; }
+
+#boxService > div { background-image: url("../img/footBox/footIcon.png"); background-repeat: no-repeat; }
+
+#boxService > div:nth-of-type(1) { width: auto; height: 40px; background-position: 0 top; margin-bottom: 8px; }
+
+#boxService > div:nth-of-type(2) { width: auto; height: 50px; background-position: 0 bottom; }
+
+#boxService > div > p { margin-left: 60px; font-size: 0.55rem; padding-top: 14px; box-sizing: border-box; color: #888; }
+
+#boxService > div > p:last-of-type { padding-top: 0; }
