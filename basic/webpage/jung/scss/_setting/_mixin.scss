@@ -11,5 +11,5 @@
 
 @mixin fullborder(){
 position:relative;
-      &::before{content: " "; width: 100vw; height: 0; position:absolute; display: block; border-bottom: 1px solid map-get($color,border1); bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100;}
+      &::before{content: " "; width: 100vw; height: 0; position:absolute; display: block; border-bottom: 1px solid map-get($color,border1); bottom: 0; left: 50%; margin-left: -50vw; z-index: 100;}
 }

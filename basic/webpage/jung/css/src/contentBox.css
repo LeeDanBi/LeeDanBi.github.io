@@ -194,7 +194,7 @@
 /* _________ //#magazineBox _____________*/
 #noticeBox { width: 100%; height: 70px; padding-top: 24px; box-sizing: border-box; position: relative; }
 
-#noticeBox::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100; }
+#noticeBox::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 0; left: 50%; margin-left: -50vw; z-index: 100; }
 
 #noticeBox h2 { width: 80px; height: 25px; float: left; line-height: 25px; font-size: 1rem; margin-right: 70px; }
 
@@ -205,9 +205,9 @@
 #noticeBox > ul > li:first-child { margin-right: 320px; }
 
 /* _________ //#noticeBox _____________*/
-#storyBox { width: 100%; height: 56px; position: relative; }
+#storyBox { width: 100%; height: 56px; position: relative; padding-top: 22px; box-sizing: border-box; }
 
-#storyBox::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100; }
+#storyBox::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 0; left: 50%; margin-left: -50vw; z-index: 100; }
 
 #storyBox > ul { width: 100%; height: 16px; }
 
@@ -215,16 +215,16 @@
 
 #storyBox dl { width: 100%; height: 100%; }
 
-#storyBox dl:last-child { margin-right: 0; font-size: 0.7rem; }
+#storyBox dl:last-child { margin-right: 0; font-size: 0.75rem; }
 
 #storyBox dl dt { width: auto; height: 100%; margin-right: 20px; float: left; color: #d61920; font-weight: bold; }
 
 #storyBox dl dd { width: auto; height: 100%; float: left; }
 
 /* _________ //#storyBox _____________*/
-#otherSite { width: 100%; height: 116px; position: relative; }
+#otherSite { width: 100%; height: 116px; position: relative; padding-top: 40px; box-sizing: border-box; }
 
-#otherSite::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100; }
+#otherSite::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 0; left: 50%; margin-left: -50vw; z-index: 100; }
 
 #otherSite > ul { width: 100%; height: 45px; }
 

@@ -1,12 +1,76 @@
 /* footBox.css */
 #footBox { width: 100%; height: auto; }
 
-#inb { width: 100%; height: 48px; position: relative; }
+#inb { width: 100%; height: 48px; position: relative; padding-top: 15px; box-sizing: border-box; }
 
-#inb::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100; }
+#inb::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 0; left: 50%; margin-left: -50vw; z-index: 100; }
 
-#callBox { width: 100%; height: 72px; }
+#inb > ul { width: 700px; height: 20px; float: left; }
 
-#serviseBox { width: 100%; height: 60px; }
+#inb > ul > li { width: auto; height: 100%; float: left; margin-right: 20px; font-size: 0.9rem; }
+
+#inb #familySite { width: 218px; height: 30px; float: right; margin-top: -6px; border: 1px solid #e0e0e0; box-sizing: border-box; }
+
+#inb #familySite form { width: 100%; height: 100%; }
+
+#inb #familySite form select { width: 150px; height: 100%; border: none; float: left; margin-top: 6px; margin-left: 10px; }
+
+#inb #familySite form button { width: 50px; height: 28px; background-color: #e0e0e0; float: right; }
+
+#callBox { width: 100%; height: 72px; padding-top: 30px; box-sizing: border-box; }
+
+.pointC { color: #d61920; }
+
+#counsel { width: 800px; height: 30px; float: left; font-size: 0.8rem; }
+
+#counsel h2 { width: auto; height: 100%; float: left; font-size: 1rem; margin-right: 30px; }
+
+#counsel > ul { width: 635px; height: 100%; float: left; }
+
+#counsel > ul > li { width: auto; height: 100%; margin-right: 30px; float: left; line-height: 26px; }
+
+#counsel > ul > li:last-child { margin-right: 0; }
+
+#sns { width: 70px; height: 30px; float: right; }
+
+#sns > ul { width: 100%; height: 100%; }
+
+#sns > ul > li { width: 30px; height: 30px; border-radius: 15px; background-image: url("../../img/split.png"); background-repeat: no-repeat; float: left; }
+
+#sns > ul > li:nth-child(1) { background-position: -303px -460px; margin-right: 10px; }
+
+#sns > ul > li:nth-child(2) { background-position: -337px -460px; }
+
+#serviseBox { width: 100%; height: 60px; padding-top: 20px; box-sizing: border-box; }
+
+#serviseBox > ul { width: 100%; height: 22px; }
+
+#serviseBox > ul > li { width: auto; height: 22px; float: left; font-size: 0.75rem; }
+
+#serviseBox > ul > li:nth-child(1) { width: 28px; height: 28px; margin-right: 14px; background-image: url("../../img/split.png"); background-repeat: no-repeat; background-position: -312px -28px; margin-top: -4px; }
+
+#serviseBox > ul > li:nth-child(2) { width: 144px; margin-right: 15px; }
+
+#serviseBox > ul > li:nth-child(3) { width: 630px; margin-right: 30px; }
+
+#serviseBox > ul > li:nth-child(4) { width: 135px; }
+
+#serviseBox > ul > li:nth-child(4) > p { width: auto; height: 100%; float: left; }
+
+#serviseBox > ul > li:nth-child(4) > a { width: 10px; height: 10px; display: block; border: 1px solid #e0e0e0; float: left; line-height: 10px; text-align: center; }
 
 #addressBox { width: 100%; height: 118px; }
+
+#addressBox > address { width: 850px; height: 70px; float: left; }
+
+#addressBox > address > ul { width: 850px; height: 70px; }
+
+#addressBox > address > ul > li { width: auto; height: 18px; font-size: 0.7rem; float: left; position: relative; font-style: normal; }
+
+#addressBox > address > ul > li::after { content: " "; width: 11px; height: 8px; display: block; position: absolute; top: 3px; right: -11px; border-right: 1px solid #e0e0e0; }
+
+#addressBox > div { width: 150px; height: 70px; float: left; font-size: 0.7rem; margin-top: 10px; }
+
+#addressBox > div > p { width: auto; height: 100%; float: left; }
+
+#addressBox > div > a { width: 10px; height: 10px; display: block; border: 1px solid #e0e0e0; float: left; line-height: 10px; text-align: center; }
