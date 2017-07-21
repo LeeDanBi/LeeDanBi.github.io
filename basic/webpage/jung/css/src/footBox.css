@@ -1,20 +1,12 @@
 /* footBox.css */
-#footBox {
-  width: 100%;
-  height: auto; }
+#footBox { width: 100%; height: auto; }
 
-#inb {
-  width: 100%;
-  height: 48px; }
+#inb { width: 100%; height: 48px; position: relative; }
 
-#callBox {
-  width: 100%;
-  height: 72px; }
+#inb::before { content: " "; width: 100vw; height: 0; position: absolute; display: block; border-bottom: 1px solid #e0e0e0; bottom: 1px; left: 50%; margin-left: -50vw; z-index: 100; }
 
-#serviseBox {
-  width: 100%;
-  height: 60px; }
+#callBox { width: 100%; height: 72px; }
 
-#addressBox {
-  width: 100%;
-  height: 118px; }
+#serviseBox { width: 100%; height: 60px; }
+
+#addressBox { width: 100%; height: 118px; }

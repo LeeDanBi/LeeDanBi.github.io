@@ -20,7 +20,7 @@
       }//ul
     }//#unb
 
-  #searchBox{width: 100%; height: auto; padding-top: 20px;box-sizing:border-box;}
+  #searchBox{width: 100%; height: auto; padding-top: 20px;box-sizing:border-box; @include fullborder();}
     h1{width: 186px; height: 30px; @include bgImage($f:"logo.png"); float: left; margin-top: 18px; margin-right: 100px;}
     #searchB{width: 420px; height: 44px; border: 2px solid map-get($color,point); float: left; margin-top: 10px;
       >form{width: 100%; height: 100%;
@@ -32,7 +32,7 @@
     }//#searchB
     #event{width: 255px; height: 80px; @include bgImage($f:"ad_btn_11.jpg"); float: right;}
 
-  #gnbBox{width: 100%; height: 60px;
+  #gnbBox{width: 100%; height: 60px; @include fullborder();
     >ul{width: 100%; height: 100%;
       >li{width: auto; height: 100%; float: left;
         &:first-child{width: 170px; height: 100%; border-right: 1px solid map-get($color,border1); border-left: 1px solid map-get($color,border1); box-sizing: border-box;

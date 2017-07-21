@@ -10,23 +10,120 @@
 
   /* _________ //#addBox _____________*/
 
-  #infoBanner{width: 100%; height: 180px;} 
+  #infoBanner{width: 100%; height: 180px; position:relative;
+    >ul{width: 1920px; height: 100%; position: absolute; top: 0; left: 50%; margin-left: -(1920/2)+px; background-position: center;
+      >li{width: 639px; height: 100%; float: left; margin-right: 1px;
+        &:last-child{margin-right: 0;}
+        $file:("ad_btn_14.jpg", "ad_btn_10.jpg", "ad_btn_9.jpg" );
+        @for $i from 1 through 3{
+          &:nth-child(#{$i}){
+            @include bgImage($f:nth($file,$i));
+          }
+        }//for
+      }//li
+    }//ul
+  } //#infoBanner
 
   /* _________ //#infoBanner _____________*/
 
-  #recommentBox{width: 100%; height: 1272px;} 
+  #recommentBox{width: 100%; height: 1272px;}
+    .title_h2{width: 100%; height: 150px; padding-top: 98px; box-sizing:border-box; border-bottom: 1px solid map-get($color,border1);
+      >h2{width: auto; height: auto; float: left; margin-right: 10px;}
+      >p{width: auto; height: auto; float: left; margin-top: 10px;}
+    }//.title_h2
+    #lnb{width: 100%; height: 160px;
+      >ul{width: 100%; height: 100%; margin-top: 40px;
+        >li{width: 106px; height: 100%; float: left; margin-right: 42px; 
+          &:last-child{margin-right: 0;}
+         >.iconIMG{width: 100%; height: 106px; @include bgImage($f:"split.png");}
+          $file:(0, 
+                -116px, 
+                -232px,
+                -348px,
+                -464px,
+                -580px,
+                -696px);
+          @for $i from 1 through 7{
+            &:nth-child(#{$i}) > .iconIMG{background-position:nth($file,$i) -80px;
+            }
+            &:nth-child(#{$i}) > .iconIMG:hover{
+              background-position:nth($file,$i) -196px;
+            }
+          }//@for
+          >.iconText{width: 100%; height: 54px; text-align: center; padding-top: 16px;}
+          a{width: 100%; height: 100%; display: block;}
+        }//li
+      }//ul
+    }//#lnb
+
+    #goodsArr{width: 100%; height: 658px; margin-top: 56px;
+      >ul{width: 981px; height: 100%;
+        >li{width: 216px; height: 300px; float: left; margin-right: 35px;
+          &:nth-child(4n){margin-right: 0;}
+        }//li
+          .goodsImg{width: 216px; height: 216px;
+            >a{width: 100%; height: 100%; display: block;}
+          }//.goodsImg
+          @for $i from 1 through 8{
+            li:nth-child(#{$i})>.goodsImg{@include bgImage($f:"product_"+ $i +".jpg");}
+          }//@for
+          button{width: 163px; height: 18px; background-color: map-get($color,white); border: 1px solid map-get($color,button1); font-size:0.7rem; color: map-get($color,button1); margin-left: 26px;}
+          .goodsText{width: 100%; height: auto;
+            >dl{width: 100%; height: 100%; text-align: center;
+              >dt{width: auto; height: auto; font-size: 1.1rem;}
+              >dd{width: auto; height: auto; font-size: 0.9rem;}
+            }//dl
+          }//.goodsText
+      }//ul
+    }//#goodsArr
+    #goCategory{width: 240px; height: 65px; border: 1px solid map-get($color,border1); line-height: 65px; text-align: center; font-size:1.2rem; background-color: #f8f8f8; margin-left: 380px;}
 
   /* _________ //#recommentBox _____________*/
 
-  #specialAdd{width: 100%; height: 488px;} 
+  #specialAdd{width: 100%; height: 488px; @include bgImage($f:"sub_banner_1.png");} 
 
   /* _________ //#specialAdd _____________*/
 
-  #brandBox{width: 100%; height: 800px;} 
+  #brandBox{width: 100%; height: 800px; margin-top: 90px;
+    .title_h2{border: none;}
+    }//#brandBox
+    #showBrand{width: 100%; height: 630px;
+      >ul{width: 100%; height: 100%;
+        >li{width: 320px; height: 180px; float: left; margin-right: 20px; margin-bottom: 20px;
+          &:nth-child(3n){margin-right: 0;}
+          &:last-child{width: 100%; margin-right: 0; margin-bottom: 0;}
+          @for $i from 1 through 7{
+            &:nth-child(#{$i}){@include bgImage($f:"brand_" + $i + ".jpg");}
+          }//@for
+          &:nth-child()
+          >a{width: 100%; height: 100%;}
+        }
+      }//ul
+    }//#showBrand
 
   /* _________ //#brandBox _____________*/
 
-  #forComsumer{width: 100%; height: 602px;} 
+  #forComsumer{width: 100%; height: 602px; margin-top: 90px;
+    h2{width: 284px; height: 28px; @include bgImage($f:"forconsumm.png"); margin-left: 358px; margin-bottom: 36px;}
+    >ul{width: 981px; height: 100%;
+        >li{width: 216px; height: 300px; float: left; margin-right: 35px;
+          &:nth-child(4n){margin-right: 0;}
+        }//li
+          .goodsImg{width: 216px; height: 216px;
+            >a{width: 100%; height: 100%; display: block;}
+          }//.goodsImg
+          @for $i from 1 through 8{
+            li:nth-child(#{$i})>.goodsImg{@include bgImage($f:"product_"+ $i +".jpg");}
+          }//@for
+          button{width: 163px; height: 18px; background-color: map-get($color,white); border: 1px solid map-get($color,button1); font-size:0.7rem; color: map-get($color,button1); margin-left: 26px;}
+          .goodsText{width: 100%; height: auto;
+            >dl{width: 100%; height: 100%; text-align: center;
+              >dt{width: auto; height: auto; font-size: 1.1rem;}
+              >dd{width: auto; height: auto; font-size: 0.9rem;}
+            }//dl
+          }//.goodsText
+      }//ul
+  } //#forComsumer
 
   /* _________ //#forComsumer _____________*/
 
@@ -36,14 +133,45 @@
 
   /* _________ //#magazineBox _____________*/
 
-  #noticeBox{width: 100%; height: 70px;} 
+  #noticeBox{width: 100%; height: 70px; padding-top: 24px; box-sizing:border-box; @include fullborder();
+    h2{width: 80px; height: 25px; float: left; line-height: 25px; font-size:1rem; margin-right: 70px;}
+    >ul{width: 800px; height: 25px; float: left;
+      >li{width: 200px; height: 25px; float: left; line-height: 25px; list-style: disc;font-size:0.8rem;
+        &:first-child{margin-right: 320px;}
+      }//li
+    }//ul
+  } //#noticeBox
 
   /* _________ //#noticeBox _____________*/
 
-  #storyBox{width: 100%; height: 56px;} 
+  #storyBox{width: 100%; height: 56px; @include fullborder();
+    >ul{width: 100%; height: 16px;
+      >li{width: auto; height: 16px; margin-right: 80px; float: left;}
+    }//ul
+     dl{width: 100%; height: 100%;
+      &:last-child{margin-right: 0; font-size:0.7rem;}
+      dt{width: auto; height: 100%; margin-right: 20px; float: left; color: map-get($color,point); font-weight: bold;}
+      dd{width: auto; height: 100%; float: left;}
+    }//dl
+  }// #storyBox
 
   /* _________ //#storyBox _____________*/
 
-  #otherSite{width: 100%; height: 116px;} 
+  #otherSite{width: 100%; height: 116px; @include fullborder();
+    >ul{width: 100%; height: 45px;
+      >li{width: auto; height: 100%; margin-right: 50px; float: left;
+        &:last-child{margin-right: 0;}
+      }//li
+    }//ul
+     dl{width: 100%; height: 100%; font-size: 0.9rem;
+      dt{width: auto; height: 100%; margin-right: 20px; float: left; line-height: 45px;}
+     }//dl
+      li:nth-child(2) dt{width: 52px; height: 45px; @include bgImage($f:"storyIcon_G.png");}
+      li:nth-child(3) dt{width: 62px; height: 14px; @include bgImage($f:"storyIcon_D.png"); margin-top: 16px;}
+      li:nth-child(4) dt{width: 62px; height: 48px; @include bgImage($f:"storyIxon_GG.png");}
+      
+      dd{width: auto; height: 100%; float: left;}
+    
+  } //#otherSite
 
   /* _________ //#otherSite _____________*/
