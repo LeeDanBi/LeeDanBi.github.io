@@ -1,0 +1,10 @@
+// _mixin.scss
+
+@mixin bgImage($u:$url, $f:none, $r:no-repeat){
+  background-image: url( $u + $f ); background-repeat: $r;
+};
+
+@mixin fullBgimg($f){
+              position:relative;
+    &::before{content:" "; display: block; width: 100vw; height: 100%; @include bgImage($f); position: absolute; top: 0; left: 50%; margin-left: -50vw; background-position: center;}
+  }

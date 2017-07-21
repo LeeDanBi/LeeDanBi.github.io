@@ -1,0 +1,132 @@
+/* headBox.css */
+#wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto; }
+
+#headBox {
+  width: 100%;
+  height: auto; }
+
+#unbBox {
+  width: 100%;
+  height: 34px;
+  font-size: 0.6rem;
+  padding-top: 9px;
+  box-sizing: border-box;
+  position: relative; }
+  #unbBox::after {
+    content: " ";
+    width: 100vw;
+    height: 0;
+    position: absolute;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+    bottom: 1px;
+    left: 50%;
+    margin-left: -50vw;
+    z-index: 100; }
+
+#companyN {
+  width: 100px;
+  height: 14px;
+  float: left; }
+
+#unb {
+  width: 335px;
+  height: 14px;
+  float: right; }
+  #unb > ul {
+    width: 100%;
+    height: 100%; }
+    #unb > ul > li {
+      width: auto;
+      height: 100%;
+      float: left;
+      padding: 0 2px;
+      margin-right: 22px;
+      position: relative; }
+      #unb > ul > li::after {
+        content: " ";
+        width: 11px;
+        height: 8px;
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: -11px;
+        border-right: 1px solid #e0e0e0; }
+      #unb > ul > li:last-child {
+        margin-right: 0; }
+      #unb > ul > li:last-child::after {
+        display: none; }
+      #unb > ul > li > a {
+        width: 100%;
+        height: 100%; }
+
+#searchBox {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  box-sizing: border-box; }
+
+h1 {
+  width: 186px;
+  height: 30px;
+  background-image: url("../../img/logo.png");
+  background-repeat: no-repeat;
+  float: left;
+  margin-top: 18px;
+  margin-right: 100px; }
+
+#searchB {
+  width: 420px;
+  height: 44px;
+  border: 2px solid #d61920;
+  float: left;
+  margin-top: 10px; }
+  #searchB > form {
+    width: 100%;
+    height: 100%; }
+    #searchB > form > fieldset {
+      width: 100%;
+      height: 100%;
+      padding: 8px 10px 8px 20px;
+      box-sizing: border-box; }
+      #searchB > form > fieldset > input {
+        width: 310px;
+        height: 100%;
+        border: none; }
+      #searchB > form > fieldset > button {
+        width: 70px;
+        height: 100%;
+        color: #d61920;
+        font-weight: bold;
+        font-size: 1.1rem; }
+
+#event {
+  width: 255px;
+  height: 80px;
+  background-image: url("../../img/ad_btn_11.jpg");
+  background-repeat: no-repeat;
+  float: right; }
+
+#gnbBox {
+  width: 100%;
+  height: 60px; }
+  #gnbBox > ul {
+    width: 100%;
+    height: 100%; }
+    #gnbBox > ul > li {
+      width: auto;
+      height: 100%;
+      float: left; }
+      #gnbBox > ul > li:first-child {
+        width: 170px;
+        height: 100%;
+        border-right: 1px solid #e0e0e0;
+        border-left: 1px solid #e0e0e0;
+        box-sizing: border-box; }
+        #gnbBox > ul > li:first-child > button {
+          width: 100%;
+          height: 100%;
+          font-size: 1.2rem; }

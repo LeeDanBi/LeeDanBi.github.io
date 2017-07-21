@@ -1,0 +1,10 @@
+//footBox.scss
+/* footBox.css */
+@import "../_setting/base";
+@import "../_setting/mixin";
+
+#footBox{width: 100%; height: auto;}
+  #inb{width: 100%; height: 48px;}
+  #callBox{width: 100%; height: 72px;}
+  #serviseBox{width: 100%; height: 60px;}
+  #addressBox{width: 100%; height: 118px;}
