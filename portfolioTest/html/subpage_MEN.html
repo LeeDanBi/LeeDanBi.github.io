@@ -8,6 +8,7 @@
            <script src="../ie/ie7/IE9.js"></script>
            <script src="../ie/css3PIE/PIE_IE9.js"></script>
           <![endif]-->
+          <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css" />
           <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
           <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
           <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
@@ -16,21 +17,23 @@
           <link rel="stylesheet" type="text/css" href="../css/src/footBox.css" />
           <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
           <script src="../js/jQuery/jquery-ui.min.js"></script>
-          <title>MISSHA MEN</title>
+          <title>MISSHA</title>
       </head>
       <body>
         <div id="wrap">
           <header id="headBox">
             <div id="subHbox" class="clearfix">
+              <div class="inner_full_box"></div>
               <h2>beautyNet</h2>
               <ul id="messageBox" class="clearfix">
-                <li><a href="#">쪽지</a></li>
-                <li><a href="#">알림</a></li>
-                <li><a href="#">쿠폰</a></li>
+                <li><a href="#">쪽지</a><div class="count_box"></div></li>
+                <li><a href="#">알림</a><div class="count_box"></div></li>
+                <li><a href="#">쿠폰</a><div class="count_box"></div></li>
               </ul>
             </div>
             <div id="mainHbox" class="clearfix">
-              <h1><a href="./main.html">MISSHA</a></h1>
+              <div class="inner_full_box"></div>
+              <h1><a href="./main.html"><span class="hidden">MISSHA</span></a></h1>
               <nav id="unb">
                 <ul>
                   <li><a href="#">로그인</a></li>
@@ -51,31 +54,24 @@
               </ul>
             </nav>
             <div id="searchBox" class="clearfix">
+              <div id="mrDeco"></div>
               <div id="misshaR"><a href="#">미샤 쇼핑 랭킹</a></div>
               <form action="#" method="get">
-                <fieldset>
+                <fieldset class="clearfix">
                   <legend></legend>
-                  <input type="serch">
+                  <input type="search">
+                  <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </fieldset>
               </form>
               <div id="recommendBox"><a href="#">맞춤찾기</a></div>
             </div>
             <div id="siteNBbox">
+              <div class="inner_full_box"></div>
               <ul id="misshaInfo">
                 <li><a href="#">브랜드 스토리</a></li>
                 <li><a href="#">사용후기</a></li>
                 <li><a href="#">단종/리뉴얼</a></li>
                 <li><a href="#">미샤 TV광고</a></li>
-                <li><a href="#">샘플창고</a></li>
-                <li><a href="#">MISSHA RANKKING</a></li>
-              </ul>
-              <ul id="memberInfo">
-                <li><a href="#">멤버십 안내</a></li>
-                <li><a href="#">매장안내</a></li>
-                <li><a href="#">매장 불만 제로</a></li>
-                <li><a href="#">전성분 검색</a></li>
-                <li><a href="#">1:1친절상담</a></li>
-                <li><a href="#">삼품주문 방법</a></li>
               </ul>
             </div>
           </header>
@@ -116,13 +112,18 @@
 
           <footer id="footBox">
             <div id="footInfo">
-              <h2>ABLE C&amp;C</h2>
-              <address>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit illum ut magni aspernatur minus saepe veritatis nemo dolorem necessitatibus corrupti.</address>
+              <h2 class="hidden_wrap"><a href="#"><span>ABLE C&amp;C</span></a></h2>
+              <address>
+                <p>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</p>
+                <p>문의전화 : 080-080-4936 | FAX : 02-6392-6894</p>
+                <p>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</p>
+                <p>COPYRIGHT&copy; ABLSC&amp;C, ALL RIGHT TESERVED.</p>
+              </address>
               <article id="snsBox">
-                <ul>
-                  <li><a href="#">facebook</a></li>
-                  <li><a href="#">twitter</a></li>
-                  <li><a href="#">instagram</a></li>
+                <ul class="hidden_wrap">
+                  <li><a href="#"><span>facebook</span></a></li>
+                  <li><a href="#"><span>kakao</span></a></li>
+                  <li><a href="#"><span>instagram</span></a></li>
                 </ul>
               </article>
             </div>

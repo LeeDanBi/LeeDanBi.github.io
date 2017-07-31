@@ -6,23 +6,33 @@
 
 #footBox{width: 100%; height: auto; color: #ddd;}
 
-  #footInfo{width: 100%; height: 120px; padding-top: 20px; padding-left: 6px; box-sizing:border-box; background-color: map-get($color,subDark) - #111 ;
-    >h2{width: 170px; height: 50px; float: left;}
-    >address{width: 500px; height: 76px; float: left;}
+  #footInfo{width: 100%; height: 266px; padding-top: 70px; box-sizing:border-box;
+    @include innerFullc($c:map-get($color,primary));
+    >h2{width: 170px; height: 58px; float: left; margin-right: 20px;
+        @include bgImg($f:"footBox/h2.png");
+    }
+    >address{width: 540px; height: 76px; float: left; font-style:normal;}
   }
-    #snsBox{float: right;
+    #snsBox{width: 182px; height: 54px; float: right; margin-top: -8px;
       ul{width: 100%; height: 100%;
-      >li{@include innerT($w:70px, $h:70px $ta:center); border-radius:35px; float: left; margin-right: 10px;background-color: map-get($color,subDark) + #444;}
+      >li{@include innerT($w:54px, $h:54px, $ta:center); border-radius:(54/2)+px; float: left; margin-right: 10px;background-color: map-get($color,subDark) + #444;
+        $snsIcon:("facebook.png","kakao.png","instagram.png");
+        @for $i from 1 through length($snsIcon){
+          &:nth-child(#{$i}){@include bgImg($f:"footBox/sns/" + nth($snsIcon,$i));}
+        }
+        &:last-child{margin-right: 0;}
+        }//li
       }//ul
     }//#snsBox
 
 /* //#footInfo _______________________ */
 
-  #inbBox{width: 100%; height: 30px; background-color: map-get($color,subDark); padding-left: 80px; padding-top: 4px; box-sizing:border-box;
+  #inbBox{width: 100%; height: 60px; padding-left: 10px; padding-top: 18px; box-sizing:border-box;
+    @include innerFullc($c:map-get($color,subDark)); 
     >ul{width: 100%; height: 100%; font-size: 0.8rem;}
-    dt{width: auto; height: auto; float: left; margin-right: 20px;}
-    dd{width: auto; height: auto; width: auto; height: auto; float: left;}
-    li{float: left; margin-right: 20px;}
+    dt{width: auto; height: auto; float: left; margin-right: 20px; font-size: 1rem; font-weight: bold;}
+    dd{width: auto; height: auto; width: auto; height: auto; float: left; font-size: 1rem;}
+    li{float: left; margin-right: 16px; font-size: 1rem;}
   }//#inbBox
 
 /* //#inbBox _______________________ */

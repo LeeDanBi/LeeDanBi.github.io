@@ -11,11 +11,46 @@
 }
 
 // 좌우 overflow
-@mixin overflowBox($w:inherit, $h:420px, $inw:1200px, $inh:400px, $imgh:280px, $texth:120px){width: $w; height: $h; overflow-x: auto;
+@mixin overflowBox($w:inherit, $h:400px, $inw:1200px, $inh:400px, $imgh:280px, $texth:120px){width: $w; height: $h; overflow-x: auto;
       >ul{width: $inw; height: $inh;
-      >li{width: 280px; height: 100%; float: left;}
+      >li{width: 300px; height: 100%; float: left;}
       >li:last-child{margin-right: 0;}
-        >li>.innerImg{width: 100%; height: $imgh;}
-        >li>.contentText{width: 100%; height: $texth;}
         }//ul
       }
+
+// fullLine
+@mixin overline($h,$c){
+  position:relative;
+  &::after{content:" "; width: 100vw; height: $h; display: block; background-color: $c; position:absolute; bottom: -$h; left: 50%; margin-left: -50vw; z-index: 1000}
+}
+
+//bgImg
+
+@mixin bgImg($u:$url, $f:none, $r:no-repeat){
+  background-image: url($u+$f); background-repeat: $r; background-position: center;
+}
+
+//inner_full_box
+@mixin innerFull($h:0,$p:relative,$z:0,$f:none){
+  width: 100%; height: $h; position:$p; top:0; z-index: $z;
+
+  >.inner_full_box{
+    width: 100vw; height: 100%; 
+    @include bgImg($f:$f); position:absolute; top:0; left:50%; margin-left: -50vw; background-position: center;}
+}
+
+//
+
+//@mixin innerFullc($h:0,$t:0,$z:-50,$c:transparent){
+//  width: 100%; height: $h; position:relative; top:$t;
+
+//  >.inner_full_box{
+ //   width: 100vw; height: 100%; 
+  //  background-color: $c; position:absolute; top:0; left:50%; margin-left: -50vw; background-position: center; z-index: $z;}
+//}
+
+@mixin innerFullc($c:transparent, $p:relative){
+  position:$p;
+  &::before{content:" "; width: 100vw; height: 100%; 
+    background-color: $c; position:absolute; top:0; left:50%; margin-left: -50vw; z-index: -100;}
+}

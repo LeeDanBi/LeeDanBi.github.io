@@ -4,16 +4,86 @@
 @import "../_base/base";
 @import "../_base/mixin";
 
-#contentBox{width: 100%; height: auto; color: #ddd; margin-bottom: 20px;}
-  #eventBox{width: 100%; height: 442px;}
-    #eventBox>h3{width: 100px; height: 40px; margin: 30px 0px 4px;}
+body{background-color: map-get($color,subLight);}
+#contentBox{width: 100%; height: auto; color: #ddd;}
+  #timedealBox{width: 100%; height: 556px; position:relative; top:0;
+  >.inner_full_box{width: 100vw; height: 100%; @include bgImg($f:"headBox/timeDeal.png"); position:absolute; top:0; left:50%; margin-left: -50vw; background-position: center;
+    >a{ @include innera();
+    }
+   }//.inner_full_box
+  }//#timedealBox
+  #lnb{width: 100%; height: 212px; padding: 50px 10px 56px; box-sizing:border-box; @include overline(1px,#fff); @include innerFullc(transparent);
+    &::before{@include bgImg($f:"contentBox/pattern.png", $r:repeat);}
+    >.inner_full_box{z-index: -100;}
+      >ul{width: 100%; height: 100%;
+        >li{width: 110px; height: 100px; @include bgImg($f:"contentBox/lnbIcon.png"); float: left; margin-left: 40px;
+          &:nth-child(1){background-position: -485px 0; margin-left: 0;}
+          &:nth-child(2){width: 90px; background-position: -660px 0;}
+          &:nth-child(3){width: 140px; background-position: -800px 0;}
+          &:nth-child(4){width: 110px; background-position: -985px 0;}
+          &:nth-child(5){width: 120px; background-position: -1145px 0;}
+          &:nth-child(6){width: 130px; background-position: -1305px 0;}
+          >a{@include innera();}
+        }
+      }
+    }//#lnb
     
-    .ulWrap{@include overflowBox($w:inherit, $h:420px, $inw:1200px, $inh:400px, $imgh:280px, $texth:120px);
-      ul>li{margin-left: 4px; margin-right: 20px;
-        >.innerImg{background-color: #ddd;}
-        >.contentText{padding: 10px; box-sizing:border-box; background-color: #999;}
-        }//ul>li
+  #eventBox{width: 100%; height: auto;
+    position:relative; padding-top: map-get($margin,top); box-sizing:border-box;
+  &::before{content:" "; width: 100vw; height: 670px; 
+    @include bgImg($f:"contentBox/pattern.png", $r:repeat); position:absolute; top:0; left:50%; margin-left: -50vw; z-index: -100;}
+  }
+    #eventBox>h3{width: 500px; height: 110px; text-align: center; color: map-get($color,white); position: relative; top:0; left:50%; margin-left: -250px; font-size: (70/16)+rem; margin-bottom: map-get($margin,bottom);
+      &::after{
+        content:" "; width: 140px; height: 0; border-bottom: 1px solid map-get($color,primary2); display: block; position: absolute; top:(70+40)+px; left: 50%; margin-left: -70px; 
+      }
+    }//#eventBox>h3
+    .ulWrap{width: 100vw; height: 450px; position: relative; top: 0; left:50%; margin-left: -50vw; overflow:hidden; position: relative;
+      >ul{width: 3000px; height: auto;
+      >li{width: 300px; height: 400px; margin-left: 4px; margin-right: 20px; float: left; transition: all 500ms;
+        @for $i from 1 through 6{
+          &:nth-child(#{$i}){@include bgImg($f:"contentBox/event/pro_"+ $i +".png");}
+        }
+        &:hover{transform:translate(0, 30px);}
+          >a{@include innera();}//a
+          }//li        
+        }//ul
+        button{width: 60px; height: 90px; position: absolute;}
+        #goLeft{@include bgImg($f:"contentBox/event/goleft.png"); top:50%; left:50%; margin-top: -45px;margin-left: -(30+480)+px;}
+        #goRight{@include bgImg($f:"contentBox/event/goright.png"); top:50%; left:50%; margin-top: -45px;margin-left: (480-30)+px;}
       }//.ulWrap
 
-  #newHoxBox{width: 100%; height: 442px;}
-    #newHoxBox>h3{width: 100px; height: 40px; margin: 30px 0px 4px;}
+  #newHotBox{width: 100%; height: auto; padding-top: map-get($margin,top); box-sizing:border-box;
+    >h3{width: 500px; height: 110px; text-align: center; color: #000; position: relative; top:0; left:50%; margin-left: -250px; font-size: (70/16)+rem; margin-bottom: map-get($margin,bottom);
+      &::after{
+        content:" "; width: 140px; height: 0; border-bottom: 1px solid map-get($color,primary2); display: block; position: absolute; top:(70+40)+px; left: 50%; margin-left: -70px;
+      }
+    }//#ev
+  >div{width: 100%; height: 976px; padding: 0px 10px;
+    >ul{width: 100%; height: 100%;
+      >li{width: 444px; height: 444px; border-radius: 222px; background-color: #fff; float: left; margin-right: 54px; margin-bottom: 54px; transition: all 700ms;
+        @for $i from 1 through 4{
+          &:nth-child(#{$i}){@include bgImg($f:"contentBox/newNhot/pro_"+$i+".png");}
+        }
+
+        &:nth-child(2n){margin-right: 0;}
+        >a{@include innera();
+          >p{width: 100%; height: 100%; color: transparent; text-align: center; padding-top: (200-18)+px; box-sizing:border-box; transition: all 700ms; position: relative; border-radius: 222px; font-size:(36/16)+rem;
+            &::after{content:" "; width: 200px; height: 170px; border-top: 1px solid rgba(map-get($color,white),0); border-bottom: 1px solid rgba(map-get($color,white),0); display: block; position: absolute; top:50%; left : 50%; margin-top: -(170/2)+px; margin-left: -100px; transition:inherit; transition-delay:0;}
+          }//p
+        }//a
+      }//li
+      li:hover{background-size: 120%; transition: all 700ms;
+        >a>p{color: map-get($color,white); background-color: rgba(#000,0.7); 
+          &::after{border-color: map-get($color,white);}
+          }//li:hover>a>p
+        }//li
+    }//ul
+  }//div
+
+    >.more{width: 100%; height: 70px; background-color: map-get($color,subDark ); text-align: center; font-size: (36/16)+rem; color: #fff; margin-top: 90px; margin-bottom: 166px; box-shadow: 2px 2px 4px rgba(0,0,0,0.5);}
+  }//#newHotBox
+
+  #bmMallBox{@include innerFull($h:178px,$f:"headBox/bmMall.png"); 
+    a{ @include innera();}
+  }

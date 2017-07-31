@@ -1,4 +1,12 @@
 //_base.scss
 
 // color map
-$color(primary:#030303, primary2:#ab060c, subLight:#ddd, subDark:#333);
+$color : (primary:#030303, primary2:#ab060c, subLight:#ddd, subDark:#333, white:#fff, black:#000);
+
+//url
+
+$url : "../../img/";
+
+// 제목 아래 위 패딩, 마진
+
+$margin : (top:176px, bottom:98px);
