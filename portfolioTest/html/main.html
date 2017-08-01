@@ -17,6 +17,7 @@
           <link rel="stylesheet" type="text/css" href="../css/src/footBox.css" />
           <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
           <script src="../js/jQuery/jquery-ui.min.js"></script>
+        <!--   <script src="../js/main.js"></script> //바디의 마지막 자식에 써야한다. 여기에 쓰려면 따로 제일 밑으로 보내는 명령어가 필요하다.-->
           <title>MISSHA</title>
       </head>
       <body>
@@ -59,7 +60,8 @@
               <form action="#" method="get">
                 <fieldset class="clearfix">
                   <legend></legend>
-                  <input type="search">
+                  <input type="search" id="search">
+                  <label for="search" class="hidden">검색할 키워드를 입력하세요.</label>
                   <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </fieldset>
               </form>
@@ -155,7 +157,7 @@
               <article id="snsBox">
                 <ul class="hidden_wrap">
                   <li><a href="#"><span>facebook</span></a></li>
-                  <li><a href="#"><span>twitter</span></a></li>
+                  <li><a href="#"><span>kakao</span></a></li>
                   <li><a href="#"><span>instagram</span></a></li>
                 </ul>
               </article>
@@ -184,5 +186,23 @@
 <!-- // #footBox____________________ -->
 
         </div>
+
+        <script src="../js/main.js">
+//           var goRight = document.querySelector('#goRight');
+//           var goLeft = document.querySelector('#goLeft');
+//           var eContain = document.querySelector('#eventBox ul');
+
+// goRight.addEventListener('click',EContain);
+// function EContain(){
+//   eContain.style.transform += "translate(320px,0)";
+//   eContain.style.transition = "all 700ms";
+// }
+
+// goLeft.addEventListener('click',EContain2);
+// function EContain2(){
+//   eContain.style.transform += "translate(-320px,0)";
+//   eContain.style.transition = "all 700ms";
+// }
+        </script>
       </body>
     </html>

@@ -13,7 +13,7 @@ body{overflow-x:hidden; font-family: 'Nanum Gothic Coding', monospace;}
   }//#headBox
 
     #subHbox{width: 100%; height: 60px; padding-left: 6px; padding-top: 20px; box-sizing:border-box; @include overline(5px,map-get($color,primary2)); @include innerFullc(map-get($color,primary));
-      >h2{float: left; font-size: 0.9rem; color: #fff;}
+      >h2{float: left; font-size: 0.9rem; color: #fff; font-size:20/16+rem;}
     }//#subHbox
       #messageBox{float: right;
         >li{width: 100px; height: 30px; float: left; margin-right: 20px; font-size: 0.8rem; margin-top: 4px;
@@ -53,6 +53,7 @@ body{overflow-x:hidden; font-family: 'Nanum Gothic Coding', monospace;}
 /* //#gnb ___________________ */
 
     #searchBox{width: 100%; height: 120px; padding-top: 32px; box-sizing:border-box; font-size:(20/16)+rem;
+      @include innerFullc($c:map-get($color,subLight))
       @include overline(1px,map-get($color,primary2));
     }
       #mrDeco{width: 53px; height: 97px; float: left; margin-top: -32px;

@@ -83,7 +83,7 @@ body { background-color: #ddd; }
 
 #newHotBox > div > ul { width: 100%; height: 100%; }
 
-#newHotBox > div > ul > li { width: 444px; height: 444px; border-radius: 222px; background-color: #fff; float: left; margin-right: 54px; margin-bottom: 54px; transition: all 700ms; }
+#newHotBox > div > ul > li { width: 444px; height: 444px; border-radius: 222px; float: left; margin-right: 54px; margin-bottom: 54px; background-size: 100%; transition: all 700ms; }
 
 #newHotBox > div > ul > li:nth-child(1) { background-image: url("../../img/contentBox/newNhot/pro_1.png"); background-repeat: no-repeat; background-position: center; }
 

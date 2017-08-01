@@ -16,7 +16,7 @@
 
     hr{width:100%; border-bottom:1px solid #555;}
 
-  fieldset{border-color:transparent;}
+  fieldset{border: none}
 
   /* html5reset*/
   header,nav,aside,article,

@@ -61,7 +61,7 @@ body{background-color: map-get($color,subLight);}
     }//#ev
   >div{width: 100%; height: 976px; padding: 0px 10px;
     >ul{width: 100%; height: 100%;
-      >li{width: 444px; height: 444px; border-radius: 222px; background-color: #fff; float: left; margin-right: 54px; margin-bottom: 54px; transition: all 700ms;
+      >li{width: 444px; height: 444px; border-radius: 222px; float: left; margin-right: 54px; margin-bottom: 54px; background-size: 100%; transition: all 700ms;
         @for $i from 1 through 4{
           &:nth-child(#{$i}){@include bgImg($f:"contentBox/newNhot/pro_"+$i+".png");}
         }
