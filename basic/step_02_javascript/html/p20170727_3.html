@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#">
+    <fieldset>
+      <legend>지역선택</legend>
+      <select name="" id="area">
+        <script type="text/javascript">
+          var area = ['서울', '경기', '광주', '울산', '부산', '충남', '충북', '경남', '경북', '강원', '제주'];
+          for(var j=0; j < area.length; j++){
+            document.write("<option value=\""+ area[j] +"\">" + area[j] + "</option>");
+          } //for 
+          /*for(var j in area){
+            document.write("<option value=\""+ area[j] +"\">" + area[j] + "</option>");
+          } //for in 배열에선 이용하지 않는다.*/
+
+        </script>
+      </select>
+    </fieldset>
+  </form>
+  <form action="#">
+    <fieldset>
+      <legend>휴대폰 번호입력</legend>
+      <label for="first">앞자리 선택</label>
+      <select name="" id="first">
+        <script type="text/javascript">
+          for(var p=0;p<10;p++){
+            if(p===5){
+              continue;
+            }
+          document.write("<option value=\"01"+ p +"\">01" +p + "</option>");
+          }
+        </script>
+      </select>
+      <p>
+      <select name="" id="areaNum">
+        <script>
+          var areaNum = {'서울':'02',
+                        '경기':'031',
+                        '광주':'03'
+                         };
+          for(var n in areaNum){
+            document.write(
+                '<option>' + n + '<option>'
+              );
+          }
+        </script>
+      </select>
+      </p>
+    </fieldset>
+  </form>
+
+</body>
+</html>

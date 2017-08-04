@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <form action="#" method="post">
+    <fieldset>
+      <legend>생년월일 선택하기</legend>
+
+      <label for="year">태어난 해</label>
+      <select name="" id="year">
+        <script>
+          for(var y=2017; y>2017-200; y--){
+            document.write("<option value=\""+  y +  "\">" + y + "년 </option>");
+          }
+        </script>
+      </select>
+
+      <label for="month">월</label>
+      <select name="" id="month">
+        <script>
+          for(var m=1; m<=12; m++){
+            document.write("<option value=\""+  m +  "\">" + m + "월 </option>");
+          }
+        </script>
+      </select>
+
+      <label for="days">일</label>
+      <select name="" id="days">
+        <script>
+          for(var d=1; d<=31; d++){
+            document.write("<option value=\""+  d +  "\">" + d + "일 </option>");
+            }
+          
+        </script>
+      </select>
+      
+    </fieldset>
+  </form>
+
+
+
+
+
+
+  <script>
+    var member = ['에스프레소', '아메리카노', '아포가토'];
+    for (var i in member){
+      console.log('판매하는 커피는: ' + member[i]);
+    }
+
+    var triangle = {width:30, height:50};
+    for (var j in triangle){
+      console.log(j + '=' + triangle[j])
+    }
+
+    var menu = {
+      coffee : {
+        americano : 2500,
+        latte : 3000,
+        nitro : 4000
+      },
+      tea : 4000
+    };
+
+    var book={};
+    book.title = 'Javascript기초이해하기';
+    book.publish = '아무개출판';
+    book.price = '24,000';
+
+    for(var k in book){
+      console.log(k+ '는 ' +book[k]);
+    }
+
+    for(var i=1; i < 10; i++){
+      if(i==5){
+        break;
+      }
+      console.log(i);
+    }
+
+    for(var i=0; i<10; i++){
+      if(i===5){
+        continue;
+      }
+      console.log(100+i);
+    }
+
+    //빈 객체에 추가할 수도 있다.
+  </script>
+</body>
+</html>

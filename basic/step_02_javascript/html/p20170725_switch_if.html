@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var MyRank = function(myrank){
+      var rank = myrank.toUpperCase();//대문자로 만들어주기
+
+      if(myrank.length == 1){
+        switch(rank){
+        case'A':
+          console.log('A랭크입니다.');
+          break;
+        case'B':
+          console.log('B랭크입니다.');
+          break;
+        case'C':
+          console.log('C랭크입니다.');
+          break;
+          case'D':
+          console.log('D랭크입니다.');
+          break;
+        default:
+          console.log('랭크 외 입니다.');
+        }
+      }else{
+        console.log('작성하는 글자는 '+ myrank +'입니다.');
+        console.log('영문 알파벳 한자리 글자를 입력하세요.');
+      }          
+    };
+
+    var Score = function(num){
+      var myscore;
+      if(0<=num && num<=100){
+        if(0<=num && num<=50){
+          myrank = 'D';
+        } else if(51<=num && num<=70){
+          myrank = 'C';
+        } else if(71<=num && num<=85){
+          myrank = 'B'; 
+        } else if(86<=num && num<=100){
+          myrank = 'A';   
+        }
+        console.log("당신은 " + myrank + "등급 입니다.");
+      } else{
+        console.log('장못된 값을 입력하셨습니다. 0~100 사이의 숫자를 입력하세요.');
+      }       
+    };
+
+    var Score1 = function(num){
+      var num = parseInt(num);
+      var myrank;
+      if(0<=num && num<=50){
+        myrank = 'D';
+      } else if(51<=num && num<=70){
+        myrank = 'C';
+      } else if(71<=num && num<=85){
+        myrank = 'B';
+      } else if(86<=num && num<=100){
+        myrank = 'A';
+      } else{
+        console.log('장못된 값을 입력하셨습니다. 0~100 사이의 숫자를 입력하세요.');
+      }
+     // console.log("당신은 " + myrank + "등급 입니다.");  
+      return myrank;    
+    }; // string을 number로 변환, return을 쓰고 싶다..
+
+var testScore = function(num){
+  console.log("당신은 " + Score1(num) + "등급 입니다."); 
+}
+  
+      //case 값은 단편적이 것 밖에 쓸 수 없다.
+
+
+    
+    
+  </script>
+</body>
+</html>

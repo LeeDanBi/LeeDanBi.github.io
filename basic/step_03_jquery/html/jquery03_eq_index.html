@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html lang="ko-KR">
+      <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--[if lte IE 9]>
+          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+           <script src="../ie/ie7/IE9.js"></script>
+           <script src="../ie/css3PIE/PIE_IE9.js"></script>
+          <![endif]-->
+          <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+          <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
+          <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+          <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
+          <script src="../js/jQuery/jquery-ui.min.js"></script>
+          <title>my title</title>
+          <style>
+            .tab_box{width: 100%; height: auto;}
+            .tab_menu{width: 100%; height: auto;}
+            .tab_menu::after{content:" "; display: block; clear: both;}
+            .tab_menu>li{width: 300px; height: 50px; float: left; border-right: 2px solid #ccc; background-color: #aaa; cursor:pointer;}
+            .tab_menu>li:first-child{background-color: #fa0;}
+            .tab_content{width: 100%; height: auto;}
+            .tab_content>p{display: none;}
+            .tab_content>p:first-child{display: block;}
+
+            ul,ol{width: 100%; height: auto;}
+            ul:after, ol:after{content:" "; display: block; clear: both;}
+            li{padding: 0.5em; margin: 0.2em; float: left;}
+            li:hover{background-color: #faa;}
+          </style>
+      </head>
+      <body>
+        <div class="tab_box">
+          <ul class="tab_menu">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+          <div class="tab_content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, eum!</p>
+            <p>02333333333333333333333333</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque veritatis temporibus reprehenderit delectus accusantium voluptas aliquam pariatur consequuntur a cum.</p>
+            <p>04----------------------------</p>
+            <p>05========================</p>
+            <p>dfaefefsdfseafefeaf</p>
+            <p>000000000000000000</p>
+            <p>08+++++++++++++++++++++</p>
+          </div>
+        </div>
+
+        <ul class="btn_num">
+          <li><button type="button">버튼의 역할_1</button></li>
+          <li><button type="button">버튼의 역할_2</button></li>
+          <li><button type="button">버튼의 역할_3</button></li>
+          <li><button type="button">버튼의 역할_4</button></li>
+          <li><button type="button">버튼의 역할_5</button></li>
+          <li><button type="button">버튼의 역할_6</button></li>
+          <li><button type="button">버튼의 역할_7</button></li>
+          <li><button type="button">버튼의 역할_8</button></li>
+          <li><button type="button">버튼의 역할_9</button></li>
+          <li><button type="button">버튼의 역할_10</button></li>
+        </ul>
+
+        <ol class="select_go">
+          <li><button type="button">선택한 순서의 다른 요소 변경_1</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_2</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_3</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_4</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_5</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_6</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_7</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_8</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_9</button></li>
+          <li><button type="button">선택한 순서의 다른 요소 변경_10</button></li>
+        </ol>
+
+        <ul class="number">
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+          <li>0</li>
+        </ul>
+
+        <script>
+          (function($){
+          //----------------------------------------
+            var numberList = $('.tab_menu').children('li');
+            var tabContent = $('.tab_content');
+            numberList.on('click',function(evt){
+              evt.preventDefault();
+
+              var tabIndex = $(this).index();
+              tabContent.children('p').siblings().css({display:'none'});
+              tabContent.children('p').eq(tabIndex).css({display:'block'});
+
+              // var x = tabContent.children('p').eq(tabIndex).css('display');
+              // if(x == 'block'){
+              //   numberList.eq(tabIndex).css({backgroundColor:'#fa0'});
+              //   numberList.eq(tabIndex).siblings().css({backgroundColor:'#aaa'});
+              // }
+
+              $(this).css({backgroundColor:'#fa0'});
+              $(this).siblings().css({backgroundColor:'#aaa'});
+            });
+
+            // =============================================
+
+            var btnNum = $('.btn_num').children('li');
+            //btnNum을 클릭했을 때 ( .on('click', function(){}); )
+            btnNum.on('click', function(evt){
+              evt.preventDefault(); // button 의 이벤트 발생 효과 무효화 처리
+              console.log( $(this).index() );
+              // 선택한 개체의 배경색을 변경
+              btnNum.css({backgroundColor:'#ffc'});
+              $(this).css({backgroundColor:'#afc'});
+            });
+            // ===================================
+            var selGo = $('.select_go').children('li');
+            //selGo\ zmfflr dlqpsxm
+            selGo.on('click',function(e){
+              e.preventDefault();
+              console.log($(this).index());
+              var i = $(this).index();
+              // 자식: children, 자손: find
+              $('.number').find('li').eq(i).css({backgroundColor:'#ffd', color:'#0fa'});
+            });
+
+          //----------------------------------------
+          })(this.jQuery);
+        </script>
+      </body>
+    </html>

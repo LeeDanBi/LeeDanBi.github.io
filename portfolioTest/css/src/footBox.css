@@ -7,7 +7,7 @@
 
 #footInfo > h2 { width: 170px; height: 58px; float: left; margin-right: 20px; background-image: url("../../img/footBox/h2.png"); background-repeat: no-repeat; background-position: center; }
 
-#footInfo > address { width: 540px; height: 76px; float: left; font-style: normal; }
+#footInfo > address { width: 540px; height: 76px; float: left; font-style: normal; line-height: 1.2; }
 
 #snsBox { width: 182px; height: 54px; float: right; margin-top: -8px; }
 

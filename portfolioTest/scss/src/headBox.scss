@@ -17,7 +17,7 @@ body{overflow-x:hidden; font-family: 'Nanum Gothic Coding', monospace;}
     }//#subHbox
       #messageBox{float: right;
         >li{width: 100px; height: 30px; float: left; margin-right: 20px; font-size: 0.8rem; margin-top: 4px;
-          a{width: 30px; height: 100%; float: left; margin-right: 10px;}
+          a{width: 30px; height: 100%; float: left; margin-right: 10px; margin-top: 4px;}
           .count_box{width: 60px; height: 20px; float: left; border-radius: 10px; background-color: #fff;}
         }
         >li:last-child{margin-right: 10px; background-position: center;}
@@ -29,7 +29,7 @@ body{overflow-x:hidden; font-family: 'Nanum Gothic Coding', monospace;}
       h1{width: 242px; height: 35px; float: left; 
         @include bgImg($f:"headBox/logo.png");
         }
-      #unb{float: right; margin-top: 40px; font-size: (20/16)+rem;
+      #unb{float: right; margin-top: 20px; font-size: (20/16)+rem;
         >ul{width: 100%;
         >li{float: left; margin-right: 16px;
           &:last-child{margin-right: 10px;}
@@ -58,12 +58,12 @@ body{overflow-x:hidden; font-family: 'Nanum Gothic Coding', monospace;}
     }
       #mrDeco{width: 53px; height: 97px; float: left; margin-top: -32px;
               @include bgImg($f:"headBox/mrIcon.png");}
-      #misshaR{width: 200px; height: 26px; float: left; text-align: center; color: map-get($color,black); margin-top: 28px;}
+      #misshaR{width: 200px; height: 26px; float: left; text-align: center; color: map-get($color,black); margin-top: 25px; font-weight: bold;}
       #searchBox>form{float: left; margin-left: 54px;
-      input{width: 358px; height: 58px; background-color: #fff; text-indent: 30px; padding-right: 30px; border: none; box-sizing:border-box; display: block; float: left;}
+      input{width: 358px; height: 58px; background-color: #fff; text-indent: 30px; padding-right: 30px; border: none; box-sizing:border-box; display: block; float: left; font-size: 24/16+rem;}
       button{width: 80px; height: 70px; color: map-get($color,white); background-color: map-get($color,primary2); font-size: (30/16)+rem; display: block; float: right; margin-top: -6px;}
       }//#searchBox>form
-      #recommendBox{@include innerT($w:200px, $h:26px, $ta:center); float: right; color: map-get($color,black); margin-top: 28px;}
+      #recommendBox{@include innerT($w:200px, $h:26px, $ta:center); float: right; color: map-get($color,black); margin-top: 25px; font-weight: bold;}
 
 /* //#searchBox ___________________ */
 

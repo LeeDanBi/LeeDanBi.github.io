@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style>
+    div{border: 3px solid #afc;}
+  </style>
+</head>
+<body>
+  <h1>웹에서 video 사용하기</h1>
+  <div>
+  <!-- video코드 사용1 -->
+    <video preload controls autoplay muted src="./mediaquery1.mp4">
+      당신의 브라우저에서는 못써여. 바꾸세요! 크롬으로....
+    </video>
+  <!-- -->
+    <video controls muted poster="../img/background/city.jpg">
+      <source src="./mediaquery2.webM" type="video/webM" />
+      <source src="./mediaquery2.ogv" type="video/ogv" />
+      <source src="./mediaquery2.mp4" type="video/mp4" />
+      <p>브라우저가 참 좋네요 다른 최신 브라우저로 바꾸세요.</p>
+    </video>
+
+  </div>
+  <div>
+    <!-- <audio src="">사용가능하지만 실제로는 복수형을 사용</audio> -->
+    <audio preload autoplay controls>
+      <source src="[음약재생파일].ogg" type="audio/ogg">
+      <source src="[음약재생파일].aac" type="audio/aac">
+      <source src="[음악재새유파일].mp3" type="audio/mp3">
+      <p>현재 브라우저에서는 재생되지 않습니다. 최신 브라우저를 사용하세요.</p>
+    </audio>
+  </div>
+</body>
+</html>

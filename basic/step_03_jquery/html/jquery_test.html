@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <!-- <link rel="stylesheet" href="../css/reset.css" /> -->
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <title>Document</title>
+  <style>
+    h1{padding: 1em; background-color: #9fc; color:#171717; text-align: center;}
+    #jsBox{width: 100%; height: auto; min-height: 500px; background-color: #09f; position: relative;}
+    #queryBox{width: 100%; height: auto; min-height: 500px; background-color: #f90;}
+    h2{background-color: #f7a; color: #fff; padding: 0.5em;}
+    button{background-color:#555; color: #fff; border-radius: 0.5em;
+          transition: all 500ms; padding: 1.4em;}
+    button:hover{box-shadow:0.3em 0.3em 0.3em #90f;}
+    #jsBtn2{position: absolute; top:33px; left: 0; z-index: -100;}
+  </style>
+</head>
+<body>
+  <h1>web test</h1>
+  <div id="jsBox">
+    <h2>javascript</h2>
+    <button type="button" id="jsBtn">javascript button</button>
+    <button type="button" id="jsBtn2">javascript button2</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ad, ex modi! Dolore nisi et ipsa eligendi aperiam vel molestiae minima ex deleniti nostrum suscipit, officiis provident libero dignissimos soluta.</p>
+  </div>
+ <div id="queryBox"> 
+    <h2>jquery</h2>
+    <button type="button" id="jqBtn">jquery button</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam totam suscipit rerum! Earum itaque laborum repellat incidunt nemo culpa expedita soluta debitis? Praesentium, quos illo nostrum velit, expedita voluptatem soluta.</p>
+ </div>
+
+ <script>
+   //javascript
+   // 1. id="jsBtn" 가져오기 id="jsBox"
+   //document.getElementById() == id
+   var jsBtn = document.getElementById("jsBtn");
+   var jsBox = document.getElementById("jsBox");
+   var js2 = document.getElementById("jsBtn2");
+   // 2. 버튼을 클릭
+   // jsBtn 클릭(이벤트)
+   // adEventListener() == 이벤트(크롬, 사파리, 파이어폭스, 오페라..)
+   // attatchEvent() == 이벤트 (익스플로러 8버전)
+   // call Back
+   //jsBtn.adEventListener('click', function(){});
+   jsBtn.addEventListener('click', JsBox);
+   function JsBox(){
+    
+      if(js2.style.zIndex == 100){
+  jsBox.style.backgroundColor = "#460";
+      jsBox.style.color = "#fc0";
+      jsBox.style.transition = "all 1000ms";
+      js2.style.zIndex = '100';
+      }else{
+        
+      }
+   }
+  
+  js2.addEventListener('click', JsBox2);
+  function JsBox2(){
+      jsBox.style.backgroundColor = "#469";
+      jsBox.style.color = "#fa9";
+      jsBox.style.transition = "all 1000ms";
+      js2.style.zIndex = '-100';
+  } 
+
+ </script>
+
+ <script>
+   //jquery
+   // 즉시실행함수(IIFE) : 함수작성과 동시에 동작(호출)
+   (function($){
+      $('#jqBtn').on('click', QueryBox);
+      function QueryBox(){
+        //$('#queryBox').css(backgroundColor, '#cca');
+        //$('#queryBox').css(color,'#fff');
+        $('#queryBox').animate({
+          backgroundColor: '#cca',
+          color: '#fff'
+        });
+      }
+   })(this.jQuery);
+   //window.jQuery(document.ready().function(){});
+   //jQuery(document.ready().function(){});
+   //$(document.ready().function(){});
+   //$(function(){});
+
+ </script>
+</body>
+</html>

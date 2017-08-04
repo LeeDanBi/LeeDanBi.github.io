@@ -19,7 +19,7 @@ body { overflow-x: hidden; font-family: 'Nanum Gothic Coding', monospace; }
 
 #messageBox > li { width: 100px; height: 30px; float: left; margin-right: 20px; font-size: 0.8rem; margin-top: 4px; }
 
-#messageBox > li a { width: 30px; height: 100%; float: left; margin-right: 10px; }
+#messageBox > li a { width: 30px; height: 100%; float: left; margin-right: 10px; margin-top: 4px; }
 
 #messageBox > li .count_box { width: 60px; height: 20px; float: left; border-radius: 10px; background-color: #fff; }
 
@@ -32,7 +32,7 @@ body { overflow-x: hidden; font-family: 'Nanum Gothic Coding', monospace; }
 
 h1 { width: 242px; height: 35px; float: left; background-image: url("../../img/headBox/logo.png"); background-repeat: no-repeat; background-position: center; }
 
-#unb { float: right; margin-top: 40px; font-size: 1.25rem; }
+#unb { float: right; margin-top: 20px; font-size: 1.25rem; }
 
 #unb > ul { width: 100%; }
 
@@ -62,15 +62,15 @@ h1 { width: 242px; height: 35px; float: left; background-image: url("../../img/h
 
 #mrDeco { width: 53px; height: 97px; float: left; margin-top: -32px; background-image: url("../../img/headBox/mrIcon.png"); background-repeat: no-repeat; background-position: center; }
 
-#misshaR { width: 200px; height: 26px; float: left; text-align: center; color: #000; margin-top: 28px; }
+#misshaR { width: 200px; height: 26px; float: left; text-align: center; color: #000; margin-top: 25px; font-weight: bold; }
 
 #searchBox > form { float: left; margin-left: 54px; }
 
-#searchBox > form input { width: 358px; height: 58px; background-color: #fff; text-indent: 30px; padding-right: 30px; border: none; box-sizing: border-box; display: block; float: left; }
+#searchBox > form input { width: 358px; height: 58px; background-color: #fff; text-indent: 30px; padding-right: 30px; border: none; box-sizing: border-box; display: block; float: left; font-size: 1.5rem; }
 
 #searchBox > form button { width: 80px; height: 70px; color: #fff; background-color: #ab060c; font-size: 1.875rem; display: block; float: right; margin-top: -6px; }
 
-#recommendBox { width: 200px; height: 26px; text-align: center; line-height: 26px; float: right; color: #000; margin-top: 28px; }
+#recommendBox { width: 200px; height: 26px; text-align: center; line-height: 26px; float: right; color: #000; margin-top: 25px; font-weight: bold; }
 
 /* //#searchBox ___________________ */
 #siteNBbox { width: 960px; height: 56px; font-size: 0.75rem; padding-top: 18px; box-sizing: border-box; color: #000; position: absolute; }

@@ -54,3 +54,12 @@
   &::before{content:" "; width: 100vw; height: 100%; 
     background-color: $c; position:absolute; top:0; left:50%; margin-left: -50vw; z-index: -100;}
 }
+
+
+
+@mixin prefix2($k, $v){
+  #{$k}: -webkit-$v;
+  #{$k}:-moz-$v;
+  #{$k}:-o-$v;
+  #{$k}:$v;
+}

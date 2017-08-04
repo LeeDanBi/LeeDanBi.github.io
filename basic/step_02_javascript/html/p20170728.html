@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function func(){
+      return this;
+    }
+    console.log(func());
+
+    var x = {to :function(){return this;},
+            yo:1 };
+
+    function func(){
+      if(window === this){
+        console.log("window === this");
+      }
+    }
+    func();
+
+    var obj = {
+      func : function(){
+        return this;
+      }
+    };
+    console.log( obj.func() );
+
+    var o = {
+      func : function(){
+          if(o === this){
+            console.log("o === this");
+          }
+      }
+    };
+
+    var funcThis = null;
+
+    function Func(){
+      return funcThis = this;
+    }
+    var o1 = Func();
+    var o2 = new Func();
+
+    console.log( Func() );
+    console.log(o1);
+    console.log(o2); 
+
+    var funcThis = null;
+
+    function Func(){
+      return funcThis = this;
+    }
+    var o1 = Func();
+    if(funcThis === window){
+        console.log('window');
+    };
+
+    var o2 = new Func();
+    if(funcThis === o2){
+      console.log('o2');
+    };
+
+    function Circle(xPoint, yPoint, radius){
+      this.x = xPoint;
+      this.y = yPoint;
+      this.r = radius;
+    }
+
+    var aCircle = new Circle(5,11,99);
+    var bCircle = new Circle(15, 10, 70);
+    var CCircle = new Circle(20, 5, 69);
+
+    var person = {};
+      person.name = 'Xido';
+      person.introduce = function(){
+        return 'My name is '+this.name;
+      };
+      document.write(person.introduce());
+
+    function Person(){}
+    var p = new Person();
+    p.name = 'xido';
+    p.introduce = function(){
+      return '<br /> My name is ' + this.name;
+    };
+    document.write(p.introduce());
+
+    function Person(){}
+    var p2 = new Person();
+    p2.name = 'bin';
+    p2.introduce = function(){
+      return '<br /> My name is ' + this.name;
+    };
+    document.write(p2.introduce());
+
+    function Person(name){
+      this.name = name;
+      this.introduce = function(){
+        return '<br /> My name is ' + this.name;
+      };
+    }
+    var p1 = new Person('xido');
+    document.write(p1.introduce());
+    document.write(p2.introduce());
+
+  </script>
+</body>
+</html>
