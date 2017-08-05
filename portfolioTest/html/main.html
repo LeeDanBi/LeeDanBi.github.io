@@ -22,7 +22,9 @@
       </head>
       <body>
         <div id="wrap">
+
           <header id="headBox">
+
             <div id="subHbox" class="clearfix">
               <div class="inner_full_box"></div>
               <h2>beautyNet</h2>
@@ -32,10 +34,15 @@
                 <li><a href="#">쿠폰</a><div class="count_box"></div></li>
               </ul>
             </div>
+
             <div id="mainHbox" class="clearfix">
-              <div class="inner_full_box"></div>
-              <h1><a href="./main.html"><span class="hidden">MISSHA</span></a></h1>
+
+              <div class="inner_full_box"><!-- full페이지 box --></div>
+
+              <h1><a href="./main.html"><span class="hidden">missha</span></a></h1>
+
               <nav id="unb">
+                <h2 class="hidden"> 유저 정보 네비게이션 </h2>
                 <ul>
                   <li><a href="#">로그인</a></li>
                   <li><a href="#">회원가입</a></li>
@@ -46,21 +53,22 @@
               </nav>
             </div>
             <nav id="gnb">
+              <h2 class="hidden"> 메인 메뉴 네비게이션 </h2>
               <ul class="clearfix">
-                <li><a href="./subpage_New.html">NEW</a></li>
-                <li><a href="#">SKIN CARE</a></li>
-                <li><a href="#">MAKE-UP</a></li>
-                <li><a href="./subpage_MEN.html">MEN</a></li>
-                <li><a href="#">SUN CARE</a></li>
+                <li><a href="./subpage_New.html">new</a></li>
+                <li><a href="#">skin care</a></li>
+                <li><a href="#">make-up</a></li>
+                <li><a href="./subpage_MEN.html">men</a></li>
+                <li><a href="#">sun care</a></li>
               </ul>
             </nav>
             <div id="searchBox" class="clearfix">
-              <div id="mrDeco"></div>
+              <div id="mrDeco"><!-- 미샤 링크 데코레이션 --></div>
               <div id="misshaR"><a href="#">미샤 쇼핑 랭킹</a></div>
               <form action="#" method="get">
                 <fieldset class="clearfix">
-                  <legend></legend>
-                  <input type="search" id="search">
+                  <legend class="hidden">검색창</legend>
+                  <input type="search" id="search" value="" name="search" />
                   <label for="search" class="hidden">검색할 키워드를 입력하세요.</label>
                   <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </fieldset>
@@ -80,14 +88,17 @@
 <!-- // #headBox____________________ -->
 
           <section id="contentBox">
+            <h2 class="hidden">메인 페이지 컨텐트</h2>
             <article id="timedealBox">
+             <h2 class="hidden"> 광고 </h2>
              <div class="inner_full_box">
-               <a href="#"></a>
-             </div>
+               <a href="#"><span class="hidden">온라인 고객님을 위한 타임 딜 이벤트</span></a>
+             </div> <!-- full페이지 box -->
             </article>
             <!-- //#timedealBox _______________________ -->
             <nav id="lnb">
-              <div class="inner_full_box"></div>
+              <h3 class="hidden">로컬 네비게이션</h3>
+              <div class="inner_full_box"><!-- full페이지 box --></div>
               <ul class="hidden_wrap clearfix">
                 <li><a href="#"><span>멤버십 안내</span></a></li>
                 <li><a href="#"><span>매점안내</span></a></li>
@@ -98,39 +109,39 @@
               </ul>
             </nav>
             <article id="eventBox">
-              <h3>EVENT</h3>
+              <h3>event</h3>
               <div class="ulWrap">
-                <ul class="clearfix">
-                  <li></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#"></a></li>
+                <ul class="clearfix hidden_wrap">
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>베어베어 콜라보</span></a></li>
+                  <li><a href="#"><span>쿠션 전품목 50% 할인</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
+                  <li><a href="#"><span>이벤트 상품</span></a></li>
                 </ul>
-                <button id="goLeft"></button>
-                <button id="goRight"></button>
+                <button id="goLeft"><span class="hidden">왼쪽으로 가는 버튼</span></button>
+                <button id="goRight"><span class="hidden">오른쪽으로 가는 버튼</span></button>
               </div>
             </article>
 
             <article id="newHotBox">
-              <h3>NEW&amp;HOT</h3>
+              <h3> new &amp; hot </h3>
               <div>
                 <ul class="clearfix">
                   <li>
-                    <a href="#"><p>스탠딩 마그네틱<br />브러쉬 10종세트</p></a>
+                    <a href="#"><span class="black_screen">스탠딩 마그네틱<br />브러쉬 10종세트</span></a>
                   </li>
                   <li>
-                    <a href="#"><p>수퍼아쿠아<br />모이스처 에센스 패드</p></a>
+                    <a href="#"><span class="black_screen">수퍼아쿠아<br />모이스처 에센스 패드</span></a>
                   </li>
                   <li>
-                    <a href="#"><p>니어스킨<br />pH 밸런싱 클렌징</p></a>
+                    <a href="#"><span class="black_screen">니어스킨<br />pH 밸런싱 클렌징</span></a>
                   </li>
                   <li>
-                    <a href="#"><p>미샤 시그너처<br />아우라 텐션</p></a>
+                    <a href="#"><span class="black_screen">미샤 시그너처<br />아우라 텐션</span></a>
                   </li>
                 </ul>
               </div>
@@ -139,7 +150,8 @@
               </button>
             </article>
             <article id="bmMallBox">
-              <div class="inner_full_box"><a href="#"></a></div>
+              <h2 class="hidden">광고</h2>
+              <div class="inner_full_box"><a href="#"><span class="hidden">마일리지 몰</span></a></div>
             </article>
             <!-- #bmMallBox____________ -->
           </section>
@@ -149,12 +161,13 @@
             <div id="footInfo">
               <h2 class="hidden_wrap"><a href="#"><span>ABLE C&amp;C</span></a></h2>
               <address>
-                <p>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</p>
-                <p>문의전화 : 080-080-4936 | FAX : 02-6392-6894</p>
-                <p>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</p>
-                <p>COPYRIGHT&copy; ABLSC&amp;C, ALL RIGHT TESERVED.</p>
+                <p><strong>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</strong></p>
+                <p><strong>문의전화 : 080-080-4936 | FAX : 02-6392-6894</strong></p>
+                <p><strong>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</strong></p>
+                <p>copyright &copy; able C &amp; C, ALL RIGHT TESERVED.</p>
               </address>
               <article id="snsBox">
+                <h3 class="hidden">sns 박스</h3>
                 <ul class="hidden_wrap">
                   <li><a href="#"><span>facebook</span></a></li>
                   <li><a href="#"><span>kakao</span></a></li>
@@ -173,7 +186,7 @@
                 <li><a href="#">사이트맵</a></li>
                 <li>
                   <dl class="clearfix">
-                    <dt>가맹점 문의 :</dt>
+                    <dt>가맹점 문의 :</dt> <!-- 나중에 after로 :바꾸기 -->
                     <dd><ul class="clearfix">
                       <li><a href="#">미샤</a></li>
                       <li><a href="#">어퓨</a></li>
@@ -187,22 +200,6 @@
 
         </div>
 
-        <script src="../js/main.js">
-//           var goRight = document.querySelector('#goRight');
-//           var goLeft = document.querySelector('#goLeft');
-//           var eContain = document.querySelector('#eventBox ul');
-
-// goRight.addEventListener('click',EContain);
-// function EContain(){
-//   eContain.style.transform += "translate(320px,0)";
-//   eContain.style.transition = "all 700ms";
-// }
-
-// goLeft.addEventListener('click',EContain2);
-// function EContain2(){
-//   eContain.style.transform += "translate(-320px,0)";
-//   eContain.style.transition = "all 700ms";
-// }
-        </script>
+        <script src="../js/main.js"></script>
       </body>
     </html>

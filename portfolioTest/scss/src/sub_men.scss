@@ -46,19 +46,55 @@ body{background-color: map-get($color,subDark);}
     >ul{width: 960px; height: auto; box-sizing:border-box; margin-bottom: 126px;
       >li{width: 100%; height: auto; margin-bottom: 30px; 
       &:last-child{margin-bottom: 0;}
+
+      @for $i from 1 through 2{
+            &:nth-child(1) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con1_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 4{
+            &:nth-child(2) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con2_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 3{
+            &:nth-child(3) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con3_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 4{
+            &:nth-child(4) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con4_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 4{
+            &:nth-child(5) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con5_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 2{
+            &:nth-child(6) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con6_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 3{
+            &:nth-child(7) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con7_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
+      @for $i from 1 through 5{
+            &:nth-child(8) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con8_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+        
+      @for $i from 1 through 8{
+            &:nth-child(9) li:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con9_" + $i +".png" ); background-position: center; background-size: 75%;}
+          }
+
         >button{width: 100%; height: 70px; background-color: map-get($color,primary2); text-align: left; line-height: 30px; font-size: 34/16+rem; color: map-get($color,white); margin-left: -10px; padding-left: 300px; box-sizing:border-box;
           >i{float: right; margin-right: 300px;}
         }//button
-        >.menu_content{width: 940px; height: 460px; box-shadow: 0 0 10px 3px rgba(map-get($color,black), 0.6) inset; display: none; overflow: hidden; position: relative; background-color: map-get($color,white);
-          >ul{width: 100%; height: 100%; padding-top: 60px; box-sizing:border-box; position: absolute; top:0; left: 0;
-            >li{width: 220px; height: 400px; margin-right: 20px; float: left; margin-bottom: 26px; 
-              @for $i from 2 through 3{
-                &:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_men/content/con1_" + $i + ".png"); background-size: 75%; background-position: center;}
-              }
-              &:hover>.pro_img{background-size: 80%;}
+        >.menu_content{width: 940px; height: 460px; box-shadow: 0 0 10px 3px rgba(map-get($color,black), 0.6) inset; display: none; overflow: hidden; background-color: map-get($color,white);
+          >ul{width: 100%; height: 100%; padding-top: 60px; box-sizing:border-box; margin: 0 auto;
+            
+            >li{width: 220px; height: 400px; margin-right: 20px; float: left; margin-bottom: 26px;
+              // &:first-child{ml22}
               >.pro_img{width: 100%; height: 295px; transition: all 500ms;}
               >.pro_name{width: 100%; height: 100px; color: map-get($color,black); text-align: center; padding-top: 16px; box-sizing:border-box; font-size: 24/16+rem;}
               a{@include innera();}
+              &:hover>.pro_img{background-size: 80%;}
             }//li
             >li:nth-child(4n){margin-right: 0;}
           }//ul

@@ -47,6 +47,12 @@ body { background-color: #333; }
 
 #goodsMEnu > ul > li:nth-child(9) > .pro_img { background-image: url("../../img/sub_new/product/pro_9.jpg"); background-repeat: no-repeat; background-position: center; background-size: 80%; background-position: center; }
 
+#goodsMEnu > ul > li:nth-child(10) > .pro_img { background-image: url("../../img/sub_new/product/pro_10.jpg"); background-repeat: no-repeat; background-position: center; background-size: 80%; background-position: center; }
+
+#goodsMEnu > ul > li:nth-child(11) > .pro_img { background-image: url("../../img/sub_new/product/pro_11.jpg"); background-repeat: no-repeat; background-position: center; background-size: 80%; background-position: center; }
+
+#goodsMEnu > ul > li:nth-child(12) > .pro_img { background-image: url("../../img/sub_new/product/pro_12.jpg"); background-repeat: no-repeat; background-position: center; background-size: 80%; background-position: center; }
+
 #goodsMEnu > ul > li:nth-child(1), #goodsMEnu > ul > li:nth-child(2), #goodsMEnu > ul > li:nth-child(3) { margin-top: 0; }
 
 #goodsMEnu > ul > li:nth-child(3n+1) { margin-left: 0; }
@@ -55,7 +61,7 @@ body { background-color: #333; }
 
 #goodsMEnu > ul > li .pro_img { width: 100%; height: 298px; background-color: #fff; position: relative; }
 
-#goodsMEnu > ul > li .pro_img .event_label { width: 140px; height: 20px; position: absolute; top: 14px; right: 0; background-color: #ab060c; }
+#goodsMEnu > ul > li .pro_img .event_label { width: 180px; height: 24px; position: absolute; top: 14px; right: 0; background-color: #ab060c; color: #fff; font-size: 0.875rem; text-align: center; line-height: 24px; }
 
 #goodsMEnu > ul > li .pro_img > form { width: 100%; height: 298px; position: absolute; top: 0; left: 0; background-color: rgba(0, 0, 0, 0.6); display: none; }
 
@@ -71,13 +77,13 @@ body { background-color: #333; }
 
 #goodsMEnu > ul > li dl { width: 100%; height: 100%; padding: 16px 20px; box-sizing: border-box; }
 
-#goodsMEnu > ul > li dl dt { width: auto; height: auto; font-size: 1.375rem; font-weight: bold; margin-bottom: 10px; }
+#goodsMEnu > ul > li dl dt { width: auto; height: auto; font-size: 1.125rem; font-weight: bold; margin-bottom: 10px; }
 
 #goodsMEnu > ul > li dl dd { width: auto; height: auto; }
 
-#goodsMEnu > ul > li dl dd > ul > li { float: left; margin-right: 14px; font-size: 1.125rem; }
+#goodsMEnu > ul > li dl dd > ul > li { float: left; margin-right: 14px; font-size: 1rem; }
 
-#goodsMEnu > ul > li dl dd > ul > li:last-child { font-size: 0.875rem; color: #ab060c; margin-top: 4px; }
+#goodsMEnu > ul > li dl dd > ul > li:last-child { font-size: 0.875rem; color: #ab060c; margin-top: 2px; }
 
 .order_num { width: 380px; height: 30px; margin-left: 330px; margin-bottom: 120px; }
 

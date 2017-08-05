@@ -21,7 +21,9 @@
       </head>
       <body>
         <div id="wrap">
+
           <header id="headBox">
+
             <div id="subHbox" class="clearfix">
               <div class="inner_full_box"></div>
               <h2>beautyNet</h2>
@@ -31,10 +33,15 @@
                 <li><a href="#">쿠폰</a><div class="count_box"></div></li>
               </ul>
             </div>
+
             <div id="mainHbox" class="clearfix">
-              <div class="inner_full_box"></div>
-              <h1><a href="./main.html"><span class="hidden">MISSHA</span></a></h1>
+
+              <div class="inner_full_box"><!-- full페이지 box --></div>
+
+              <h1><a href="./main.html"><span class="hidden">missha</span></a></h1>
+
               <nav id="unb">
+                <h2 class="hidden"> 유저 정보 네비게이션 </h2>
                 <ul>
                   <li><a href="#">로그인</a></li>
                   <li><a href="#">회원가입</a></li>
@@ -45,21 +52,23 @@
               </nav>
             </div>
             <nav id="gnb">
+              <h2 class="hidden"> 메인 메뉴 네비게이션 </h2>
               <ul class="clearfix">
-                <li><a href="./subpage_New.html">NEW</a></li>
-                <li><a href="#">SKIN CARE</a></li>
-                <li><a href="#">MAKE-UP</a></li>
-                <li><a href="./subpage_MEN.html">MEN</a></li>
-                <li><a href="#">SUN CARE</a></li>
+                <li><a href="./subpage_New.html">new</a></li>
+                <li><a href="#">skin care</a></li>
+                <li><a href="#">make-up</a></li>
+                <li><a href="./subpage_MEN.html">men</a></li>
+                <li><a href="#">sun care</a></li>
               </ul>
             </nav>
             <div id="searchBox" class="clearfix">
-              <div id="mrDeco"></div>
+              <div id="mrDeco"><!-- 미샤 링크 데코레이션 --></div>
               <div id="misshaR"><a href="#">미샤 쇼핑 랭킹</a></div>
               <form action="#" method="get">
                 <fieldset class="clearfix">
-                  <legend></legend>
-                  <input type="search">
+                  <legend class="hidden">검색창</legend>
+                  <input type="search" id="search" value="" name="search" />
+                  <label for="search" class="hidden">검색할 키워드를 입력하세요.</label>
                   <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </fieldset>
               </form>
@@ -78,17 +87,18 @@
 <!-- // #headBox____________________ -->
 
           <section id="contentBox">
+            <h2 class="hidden">new 상품 페이지</h2>
             <article id="adBannerBox">
               <div class="inner_full_box"></div>
               <span class="hidden">미샤 신제품을 소개합니다.</span>
             </article>
             <article id="goodsBox">
-              <h2>NEW PRODUCT</h2>
+              <h2>new product</h2>
               <div id="selectOrder" class="clearfix">
                 <p>총 n개의 상품이 진열되어 있습니다.</p>
                 <form action="#">
                   <fieldset>
-                    <legend></legend>
+                    <legend class="hidden">목록 보기 순서</legend>
                     <select name="proOrder" id="proOrder">
                       <option value="베스트">베스트 순</option>
                       <option value="높은가격">높은가격 순</option>
@@ -103,10 +113,10 @@
                 <ul class="clearfix">
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -114,11 +124,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>셀프 네일 살롱 데코 스티커</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>2,500원</del>(50%) 1,250원</li>
+                          <li>bm 0</li>
                         </ul>
                       </dd>
                     </dl>
@@ -126,10 +136,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -137,11 +147,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>메가 볼륨 마스카라 [롱 볼륨]</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>15,800원</del>(30%) 11,060원</li>
+                          <li>bm 222</li>
                         </ul>
                       </dd>
                     </dl>
@@ -149,10 +159,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -160,11 +170,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>메가 볼륨 마스카라 [컬 볼륨]</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>15,800원</del> (30%)11,060원</li>
+                          <li>bm 222</li>
                         </ul>
                       </dd>
                     </dl>
@@ -172,10 +182,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -183,11 +193,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>플라워 슬리핑 마스크 [동백]</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>11,800원</del>(50%) 5,900원</li>
+                          <li>bm 0</li>
                         </ul>
                       </dd>
                     </dl>
@@ -195,10 +205,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -206,11 +216,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>플라워 슬리핑 마스크 [장미]</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>11,800원</del>(50%) 5,900원</li>
+                          <li>bm 0</li>
                         </ul>
                       </dd>
                     </dl>
@@ -218,10 +228,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -229,11 +239,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 수액</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>22,000원</del>(30%) 15,400</li>
+                          <li>bm 308</li>
                         </ul>
                       </dd>
                     </dl>
@@ -241,10 +251,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -252,11 +262,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 유액</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>22,000원</del>(30%) 15,400</li>
+                          <li>bm 308</li>
                         </ul>
                       </dd>
                     </dl>
@@ -264,10 +274,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -275,11 +285,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 에센스</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>25,000원</del>(30%) 17,500원</li>
+                          <li>bm 350</li>
                         </ul>
                       </dd>
                     </dl>
@@ -287,10 +297,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -298,11 +308,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 크림</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>25,000원</del>(30%) 17,500원</li>
+                          <li>bm 350</li>
                         </ul>
                       </dd>
                     </dl>
@@ -310,10 +320,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">선케어 전품목 [1+1]</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -321,11 +331,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 선크림</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li>18,000원</li>
+                          <li>bm 0</li>
                         </ul>
                       </dd>
                     </dl>
@@ -333,10 +343,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -344,11 +354,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 2종 세트</dt>
                       <dd class="clearfix">
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>44,000원</del>(30%) 30,800원</li>
+                          <li>bm 616</li>
                         </ul>
                       </dd>
                     </dl>
@@ -356,10 +366,10 @@
                   </li>
                   <li>
                     <div class="pro_img">
-                      <div class="event_label"></div>
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
                       <form action="#">
                           <fieldset>
-                            <legend></legend>
+                            <legend class="hidden">관심상품 등록</legend>
                             <button type="button">관심상품</button>
                             <button type="button">장바구니</button>
                           </fieldset>
@@ -367,11 +377,11 @@
                     </div>
                     <div class="pro_info"><a href="#">
                     <dl>
-                      <dt>상품이름</dt>
+                      <dt>유려 미백 3종 세트</dt>
                       <dd>
                         <ul>
-                          <li>상품가격</li>
-                          <li>bm</li>
+                          <li><del>69,000원</del>(30%) 48,300원</li>
+                          <li>bm 966</li>
                         </ul>
                       </dd>
                     </dl>
@@ -414,12 +424,13 @@
             <div id="footInfo">
               <h2 class="hidden_wrap"><a href="#"><span>ABLE C&amp;C</span></a></h2>
               <address>
-                <p>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</p>
-                <p>문의전화 : 080-080-4936 | FAX : 02-6392-6894</p>
-                <p>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</p>
-                <p>COPYRIGHT&copy; ABLSC&amp;C, ALL RIGHT TESERVED.</p>
+                <p><strong>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</strong></p>
+                <p><strong>문의전화 : 080-080-4936 | FAX : 02-6392-6894</strong></p>
+                <p><strong>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</strong></p>
+                <p>copyright &copy; able C &amp; C, ALL RIGHT TESERVED.</p>
               </address>
               <article id="snsBox">
+                <h3 class="hidden">sns 박스</h3>
                 <ul class="hidden_wrap">
                   <li><a href="#"><span>facebook</span></a></li>
                   <li><a href="#"><span>kakao</span></a></li>
@@ -438,7 +449,7 @@
                 <li><a href="#">사이트맵</a></li>
                 <li>
                   <dl class="clearfix">
-                    <dt>가맹점 문의 :</dt>
+                    <dt>가맹점 문의 :</dt> <!-- 나중에 after로 :바꾸기 -->
                     <dd><ul class="clearfix">
                       <li><a href="#">미샤</a></li>
                       <li><a href="#">어퓨</a></li>
