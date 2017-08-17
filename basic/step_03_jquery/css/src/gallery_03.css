@@ -1,0 +1,9 @@
+.gallery_list li{width: 150px; height: 80px; float: left;  margin: 0.2em; margin-right: 1em; box-sizing: border-box; border: 1px solid #577; border-radius: 0.3em; overflow: hidden;}
+.gallery_list li>button{width: 100%; height: auto; padding: 0;}
+.gallery_list li>button:hover img,
+.gallery_list li>button:focus img{transform:scale(1.2);}
+.gallery_list li img{width: 100%; height: auto; transition: all 300ms ease-in;}
+
+.gallery_photo{width: 100%; height: auto; border-radius: 0.5em; 
+               overflow: hidden; margin-bottom: 1.5em;}
+.gallery_photo>img{width: 100%; height: auto;}
