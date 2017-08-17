@@ -5,6 +5,7 @@
 @import "../_base/mixin";
 
 body{background-color: map-get($color,subDark);}
+h2{text-transform: uppercase;}
 #contentBox{width: 100%; height: auto; color: #fff;}
 
   #adBannerBox{@include innerFull($h:395px, $f:"sub_new/mainBanner.png");}

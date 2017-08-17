@@ -9,6 +9,8 @@
 
 #footInfo > address { width: 540px; height: 76px; float: left; font-style: normal; line-height: 1.2; }
 
+#footInfo > address > p:last-of-type > span { text-transform: uppercase; }
+
 #snsBox { width: 182px; height: 54px; float: right; margin-top: -8px; }
 
 #snsBox ul { width: 100%; height: 100%; }
@@ -30,7 +32,9 @@
 
 #inbBox > ul { width: 100%; height: 100%; font-size: 0.8rem; }
 
-#inbBox dt { width: auto; height: auto; float: left; margin-right: 20px; font-size: 1rem; font-weight: bold; }
+#inbBox dt { width: auto; height: auto; float: left; margin-right: 20px; font-size: 1rem; font-weight: bold; position: relative; }
+
+#inbBox dt::after { content: ":"; display: block; position: absolute; top: 0; right: -10px; }
 
 #inbBox dd { width: auto; height: auto; width: auto; height: auto; float: left; font-size: 1rem; }
 

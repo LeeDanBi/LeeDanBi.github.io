@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="ko-KR" />
+    <html lang="ko-KR">
       <head>
           <meta charset="UTF-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,9 +13,7 @@
           <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
           <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
           <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
-          <link rel="stylesheet" type="text/css" href="../css/src/headBox.css" />
-          <link rel="stylesheet" type="text/css" href="../css/src/sub_men.css" />
-          <link rel="stylesheet" type="text/css" href="../css/src/footBox.css" />
+          <link rel="stylesheet" type="text/css" href="../css/src/page_sub_men.css" />
           <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
           <script src="../js/jQuery/jquery-ui.min.js"></script>
           <title>MISSHA</title>
@@ -70,7 +68,7 @@
                   <legend class="hidden">검색창</legend>
                   <input type="search" id="search" value="" name="search" />
                   <label for="search" class="hidden">검색할 키워드를 입력하세요.</label>
-                  <button type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                  <button type="button"><i class="fa fa-search" aria-hidden="true"></i><span class="hidden">검색</span></button>
                 </fieldset>
               </form>
               <div id="recommendBox"><a href="#">맞춤찾기</a></div>
@@ -269,7 +267,7 @@
                 <p><strong>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</strong></p>
                 <p><strong>문의전화 : 080-080-4936 | FAX : 02-6392-6894</strong></p>
                 <p><strong>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</strong></p>
-                <p>copyright &copy; able C &amp; C, ALL RIGHT TESERVED.</p>
+                <p>copyright &copy; <span>able C &amp; C, all right teserved.</span></p>
               </address>
               <article id="snsBox">
                 <h3 class="hidden">sns 박스</h3>
@@ -291,7 +289,7 @@
                 <li><a href="#">사이트맵</a></li>
                 <li>
                   <dl class="clearfix">
-                    <dt>가맹점 문의 :</dt> <!-- 나중에 after로 :바꾸기 -->
+                    <dt>가맹점 문의 </dt>
                     <dd><ul class="clearfix">
                       <li><a href="#">미샤</a></li>
                       <li><a href="#">어퓨</a></li>
@@ -308,38 +306,5 @@
 <!-- jquery__________ -->
 
         <script src="../js/sub_men.js"></script>
-        <script>
-
-          var title3 = document.querySelector('h3').innerText;
-          title3.toUpperCase();
-
-
-          (function($){
-
-            var goodML = $('#goodsMenu>ul>li');
-            var goodMLL = $('#goodsMenu>ul>li').length;
-
-            for(var i=0;i<goodMLL;i++){
-            var goodU = $('#goodsMenu>ul>li').eq(i)
-                          .find('.menu_content');
-            var goodL = goodU.find('li');
-            var goodL0 = goodL.eq(0);
-            var goodLIn = goodL.length; //각 li마다그 안에 #goodsMenu안의 li갯수를 파악
-            var arr = [];
-             // console.log(goodLIn);
-
-             if(goodLIn <= 2){
-                goodL0.css({marginLeft:'240px'})
-             }else if(goodLIn == 3 ){
-                goodL.eq(1).css({marginLeft : '220px'})
-             }else if(goodLIn > 4){
-                goodU.css({height:'900px'})
-                if(goodLIn == 5){
-                  goodL.eq(3).css({marginLeft : '240px'});
-                }
-             }
-            }//for
-          })(this.jQuery);
-        </script>
       </body>
     </html>

@@ -5,6 +5,7 @@
 @import "../_base/mixin";
 
 body{background-color: map-get($color,subLight);}
+h3{text-transform: uppercase;}
 #contentBox{width: 100%; height: auto; color: #ddd;}
   #timedealBox{width: 100%; height: 556px; position:relative; top:0;
   >.inner_full_box{width: 100vw; height: 100%; @include bgImg($f:"headBox/timeDeal.png"); position:absolute; top:0; left:50%; margin-left: -50vw; background-position: center;
@@ -39,9 +40,9 @@ body{background-color: map-get($color,subLight);}
       }
     }//#eventBox>h3
     .ulWrap{width: 100vw; height: 450px; position: relative; top: 0; left:50%; margin-left: -50vw; overflow:hidden; position: relative;
-      >ul{width: 3000px; height: auto;
+      >ul{width: 2600px; height: auto; margin-left: -320px;
       >li{width: 300px; height: 400px; margin-left: 4px; margin-right: 20px; float: left; transition: all 500ms;
-        @for $i from 1 through 6{
+        @for $i from 1 through 8{
           &:nth-child(#{$i}){@include bgImg($f:"contentBox/event/pro_"+ $i +".png");}
         }
         &:hover{transform:translate(0, 30px);}
