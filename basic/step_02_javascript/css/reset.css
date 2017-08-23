@@ -54,7 +54,7 @@ header, article, section, footer, nav, aside, hgroup, figure, main{display: bloc
 .cf::after, .clearfix::after{content:""; display: block; clear: both;}
 .me_full{width: 100%; height: 100%;}
 .me_link a{width:100%; height:100%; background-repeat:no-repeat; display:block;}
-a>span, .me_hidden, legend{
+.me_link a>span, .me_hidden, legend{
 	width: 0; height: 0; display: block; position: absolute; z-index: -100; overflow: hidden;}
 
 .me_first:first-of-type{margin-left: 0; padding-left: 0; border-left: 0;}

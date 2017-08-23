@@ -54,13 +54,32 @@ var image = [
 
   //3. gallery 큰 이미지 창 생성
 
-  $('.gallery_list').before('<div class="gallery_photo"><img></img></div>');
+  // $('.gallery_list').before('<div class="gallery_photo"><img></img></div>');
   //최초의 이미지 생성
+
+  // 3-1. gallery페이지를 모달 윈도우로 변경해보자
+    //이미지를 담을 상자 .gallery_photo
+    $('.gallery_list').before('<div class="gallery_photo"><img></div>');
+    // 배경이 흐리게 처리되는 상자
+    $('.gallery_photo').after('<div class="gray_box"></div>')
+
+    var photoBox  = $('.gallery_photo');
+    var photoBack = $('.gray_box');
+
   var bigSource, bigAlt;
 
   bigSource = url + image[0].big.img;
   bigAlt = image[0].big.alt;
   $('.gallery_photo').find('img').attr({'src':bigSource, 'alt':bigAlt});
+
+    var imgWidth  = parseInt(photoBox.find('img').width());
+    var imgHeight = parseInt(photoBox.find('img').height());
+
+     photoBox.css({'width': 'inherit',
+      'position':'fixed', 'left': '50%', 'top': '50%', 'zIndex': '1500', 
+                  'marginLeft':-imgWidth/2 +'px', 'marginTop': -imgHeight/2 +'px'});
+     photoBack.css({'position': 'fixed', 'zIndex':'1400', 'left':0, 'top':0, 'width' :'100%', 'height' : '100%', 'backgroundColor': 'rgba(0,0,0,0.4)'});
+
 
   //4. '.gallery_list'의 'li'를 클릭하면, 큰이미지에 내용변경 처리
 
