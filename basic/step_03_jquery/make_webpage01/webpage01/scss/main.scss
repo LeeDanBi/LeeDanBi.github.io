@@ -1,0 +1,144 @@
+@import './_base/base.scss';
+@import './_base/mixin.scss';
+
+.inner_wrap{width: 940px; height: 100%; margin: 0 auto;}
+
+#wrap{width: 100%; height: auto; background-color: transparent;}
+
+  #headBox{width: 100%; height: 120px; padding-top: 45px; box-sizing: border-box; position: absolute; z-index: 100;
+    h1{width: 160px; height: 50px; float: left; background-image: url( $url + 'img/logo_white.png'); 
+      background-repeat: no-repeat; margin-right: 128px;}
+    ul{width: auto; height: auto; float: left; margin-top: 18px; color: map-get($color,white); //background-color: rgba(map-get($color,white),0.7);
+       font-size:2.25rem;
+      >li{width: 120px; height: auto; float: left; margin-right: 40px;
+        >dl{width: 100%; height: 100%;
+          >dt{width: 100%;height: auto; color: #fff; margin-bottom: 15px;
+            >a{width: 100%; height: auto; display: block; color: #fff;}
+          }//dt
+          >dd{width: 100%; height: 100%; overflow: hidden;
+            >ul{ width: 100%; height: 100%; 
+              >li{font-size: 1rem; color: #000; margin-bottom: 10px;}
+            }//ul
+          }//dd
+        }//dl
+      }//li
+    }//ul
+    &::after{content: " "; width: 100%; height: 20px; display: block; 
+             position: absolute; left: 0; top: 120-20 + px; background-color: rgba(#fff,0.7); }
+    .inner_wrap{position: relative;}
+    #gnbWrap{width: 100%; height: 200px; position: absolute; background-color: rgba(#fff,0.8); z-index: -100; top:78px; @include bgimg($f:'img/charactor.png'); background-position: 60px 30px;}
+  }// #headBox
+
+  #adBanner{width: 100%; height: 900px; position: relative;  margin: 0 auto; overflow: hidden;
+    .bannerwrap{width: 500%; height: 900px;
+      li{width: 20%; height: 100%; float: left; background-size: cover;}
+      @for $i from 1 through 5{
+        .banner_img_0#{$i}{@include bgimg($f:'adBanner/adBanner_' + $i +'.jpg');}
+      }//@for
+    }//.bannerwrap
+    button{width: 140px; height: 460px; @include bgimg($f:'img/slide_button.png'); position: absolute; top: 50%; margin-top: -230px; border-radius: 70px;}
+    .btn_left{left: 80px;}
+    .btn_right{background-position: right; right: 80px;}
+  }// #adBanner
+
+  #contentBox{width: 100%;}
+    #tabBox{width: 100%; height: 900px; margin: 0 auto; background-color: map-get($color,point); padding-top: 20px; box-sizing:border-box; @include bgimg($f:'blackBoard/blackBoard.jpg'); background-position: 0 82px; background-size: cover;
+      .tabmenu{
+        li{width: 200px; height: 60px; float: left; background-color: #fa0; margin-right: 2px; 
+          &:first-child{background-color: #fff;}
+        button{width: 100%; height: 100%; background-color: inherit;}
+        }//li
+      }// .tabmenu
+      .tab_content{width: 940px; height: 700px; position: relative; padding: 60px; box-sizing: border-box; display: none; box-shadow: 0.2rem 0.2rem 0.2rem rgba(#000,0.7); background-color: map-get($color,white); margin-top: 2px;
+        button{width: 200px; height: 60px; position: absolute; right: 60px; bottom: 64px; @include bgimg($f:'img/go_button.png');
+          &:hover{background-position: bottom;}
+        }//button
+        &:first-of-type{display: block;}
+      }//.tab_content
+    }
+    // #tabBox
+    #fullImg{width: 100%; height: 300px; @include bgimg($f:'img/ad_image_1_1.png'); background-size: cover; background-position: 0 -250px;}
+    // #fullImg
+    #accordionBox{width: 100%; height: auto; padding: 100px 0 80px; @include bgimg($f:'blackBoard/blackBoard.jpg'); background-position: center; background-size: cover;
+      .accordion_menu{width: 100%; height: 100%;
+        >dt{width: 940px; height: 80px; background-color: #b6b6b6; margin-bottom: 2px; 
+          &:first-of-type{background-color: map-get($color,point);}
+          button{width: inherit; height: inherit; padding-left: 40px; box-sizing:border-box; line-height: 80px; font-size: 2rem; text-align: left;
+            p{float: left;}
+            .aco_icon{width: 41px; height: 41px; float: right; height: 41px; @include bgimg($f:'img/close_button.png'); margin-right: 40px;}
+          }//button
+        }// dt
+        >dd{width: 940px; height: 350px; display: none; padding: 40px; box-sizing:border-box; background-color: #fff;
+          &:first-of-type{display: block;}
+        }// dd
+      }// .accordion_menu
+    }// #accordionBox
+    #hotelMonkey{width: 100%; height: 416px; @include bgimg($f:'img/ad_image_2_1.png'); background-position: center; background-size: cover;
+      h2{text-align: center; color: #fff; text-shadow: 0.2rem 0.2rem 0.4rem rgba(#000,0.7); font-size: 5rem; line-height: 416px;}
+    }
+    // #hotelMonkey
+    #menuBox{width: 100%; height: 500px;
+      ul{width: 1120px; height: 100%; padding-top: 108px; box-sizing:border-box; margin: 0 auto;
+        li{width: 280px; height: 280px; float: left; border-radius: 140px; background-color: #fff;
+           margin-right: 130px; background-position: center; background-size: 200%;
+          @for $i from 1 through 3{
+            &:nth-child(#{$i}){@include bgimg($f:'issueIcon/issue_'+ $i +'.jpg');}
+          }//for
+          &:last-child{margin-right: 0;}
+        }
+      }//ul
+    }// #menuBox
+    #pageIndicate{width: 100%; height: 800px; background-color: #aaa; position: relative;
+                  padding: 72px 132px; box-sizing:border-box;
+                  @include bgimg($f:'slideimage/slideImage_1.jpg'); background-size: cover;
+      .text_box{width: 830px; height: 525px; background-color: rgba(map-get($color,white),0.5); 
+                padding: 55px 30px; box-sizing:border-box;
+        dt{font-size:2rem; margin-bottom: 30px;}
+        dd{font-size:1.5rem;}
+      }//.text_box 
+    }
+    .indication_box{width: 400px; height: 40px; position: absolute; bottom: 70px; left: 50%;
+                    margin-left: -200px; 
+      li{width: 40px; height: 40px; border-radius: 20px; overflow: hidden; background-color: map-get($color,white); float: left; margin-left: 50px;
+        &:first-child{margin-left: 0; background-color: map-get($color,red);}
+        button{width: 100%; height: 100%;}
+      }
+    }//ul
+    // #pageIndicate
+    #coffeInfo{width: 100%; height: 400px; padding-top: 84px; box-sizing:border-box;
+      .inner_wrap{text-align: center;
+        h2{font-size: 4rem; margin-bottom: 50px;}
+        p{font-size: 1.25rem;}
+      }
+    }// #coffeInfo
+    #galleryBox{width: 100%; height: 800px; @include bgimg($f:'blackBoard/blackBoard.jpg'); background-position: center; background-size: cover; color:map-get($color,white);
+      padding-top: 40px; box-sizing:border-box; 
+      h2{font-size: 6rem; text-align: center; margin-bottom: 75px;}
+      .large_img{width: 600px; height: 500px; border-radius: 100px; background-color: #666; float: left; margin-right: 40px; box-shadow: 0.3rem 0.3rem 1rem 0.5rem rgba(#000,0.7);
+        @include bgimg($f:'gallery/big/gallery_1.jpg'); background-size: 100%;}
+      .img_btn{width: 300px; height: auto; float: left; margin-top: 30px;
+        li{width: 100%; height: 80px; margin-bottom: 40px; border-radius: 40px;
+           background-color: map-get($color,white); box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem rgba(#000,0.7);
+           &:first-child{background-color: #fa0;}
+           .small_img{width: 120px; height: 60px; border-radius: 30px; background-color: #444; margin-top: 10px; @include bgimg($f:'img/gallery_icon.png');}
+           &:nth-child(1) .small_img{background-position: 0 -2px;}
+           &:nth-child(2) .small_img{background-position: -130px -2px;}
+           &:nth-child(3) .small_img{background-position: -260px -2px;}
+           &:nth-child(4) .small_img{background-position: -390px -2px;}
+         }// li
+        button{width: 100%; height: 100%; display: block; text-align:left; line-height: 80px;
+          p{float: left;
+            &:last-of-type{width: auto; height: 100%; line-height: 80px;}
+          }
+        }
+      }
+    }// #galleryBox
+
+  // #contentBox
+
+  #footBox{width: 100%; height: 240px; background-color: #656565; padding-top: 100px; box-sizing:border-box; position: relative;
+    &::after{content:" "; width: 100%; height: 2px; position: absolute; top:50px; background-color: map-get($color,white);}
+    h2{width: 160px; height: 50px; @include bgimg($f:'img/logo_white.png'); float: left;
+       margin-right: 30px; margin-left: 60px;}
+    address{width: 610px; height: 56px; color: #fff; font-style: normal; float: left; text-align: left;}
+  }// #footBox

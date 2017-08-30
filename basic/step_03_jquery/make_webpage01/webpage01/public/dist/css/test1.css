@@ -1,0 +1,12 @@
+/* test1.css */
+body {
+  background-color: #acc; }
+
+#wrap {
+  width: 100%;
+  height: auto; }
+
+#headBox {
+  width: inherit; }
+  #headBox .test {
+    width: 100%; }

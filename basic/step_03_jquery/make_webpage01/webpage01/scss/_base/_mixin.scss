@@ -1,0 +1,4 @@
+
+@mixin bgimg($u:$url,$f:'none'){
+  background-image: url($u+$f); background-repeat: no-repeat;
+}
