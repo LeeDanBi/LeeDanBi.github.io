@@ -1,9 +1,14 @@
 (function($){
-  // var h2 = $('h2');
-  // var UpperCase = h2.text().toUpperCase();
-  // h2.text(UpperCase);
+  var textUpper = $('.upper_case');
+
+  textUpper.each(function(){
+    var _this=$(this);
+    var text = _this.text().toUpperCase();
+    _this.text(text);
+  });
 
   //_________________________________ 대문자
+  // 대문자로 바꾸는 것은 css, text-transform을 쓰기로 한다...
 
   var gnbWrap = $('#gnbWrap');
   var gnbMenuBar = $('#gnb');
@@ -18,9 +23,9 @@
     gnbWrap.stop().slideDown();
   });
 
-  gnbWrap.on('mouseleave',function(){
-    gnb_menu.stop().delay(500).slideUp();
-    gnbWrap.stop().delay(500).slideUp();
+  $('#headBox').on('mouseleave',function(){
+    gnb_menu.delay(500).stop().slideUp();
+    gnbWrap.delay(500).stop().slideUp();
   });
 
 
@@ -32,23 +37,27 @@
 
   bannerUl.css({marginLeft: -100 +'%'})
   
-  btnLeft.on('click',function(e){
+  btnLeft.on('click',Goleft);
+  btnRight.on('click',GoRight);
+
+  function Goleft(e){
     e.preventDefault();
     bannerUl.animate({marginLeft:0},500,function(){
       var li_last=bannerUl.children('li').last();
       bannerUl.prepend(li_last);
       bannerUl.css({marginLeft:-100+'%'});
     });
-  });
-  btnRight.on('click',function(e){
-    e.preventDefault();
+  };
+  function GoRight(e){
     bannerUl.animate({marginLeft:-200 +'%'},500,function(){
       var li_first=bannerUl.children('li').first();
       bannerUl.append(li_first);
       bannerUl.css({marginLeft:-100+'%'});
+      return false;
     });
-  });
-
+  };
+    //----------- setInterval -------------
+   setInterval(GoRight,5000)
   // _______________________________ adBanner
 
   var tabMenu = $('.tabmenu');
@@ -89,11 +98,31 @@
 
   var indicateBox = $('.indication_box');
   var indicate_btn = indicateBox.children('li');
+  var allWrap = $('#allWrap');
+  var page_wrap = allWrap.children('li');
 
-  indicate_btn.on('click',function(){
+  page_wrap.eq(0).siblings().hide();
+
+  indicate_btn.on('click',function(e){
+    e.preventDefault();
     var _this = $(this);
+    var _this_index = _this.index();
     _this.siblings('li').css({backgroundColor:'#fff'});
     _this.css({backgroundColor:'#a53300'});
+    //page_wrap.eq(_this_index).siblings().hide();
+    page_wrap.eq(_this_index).siblings().animate({width:0},function(){
+      var _this = $(this);
+      _this.css({display:'none'});
+    });
+    //page_wrap.eq(_this_index).show();
+    // page_wrap.eq(_this_index).css({display:'block'},
+    //   function(){
+    //     var _this = $(this);
+    //     _this.animate({width:'20%'});
+    //     }
+    //   );
+    page_wrap.eq(_this_index).css({display:'block'})
+                             .animate({width:'20%'});;
   });
 
   // ___________________________________ Indicate
@@ -111,4 +140,27 @@
   });
 
   // ________________________________ gallery
+
+  var windowS = $(window);
+  var topIcon = $('.top_icon')
+
+  windowS.on('scroll',function(){
+  var wst = $(this).scrollTop();
+  var mot = $('#hotelMonkey').offset().top;
+  if(wst>=mot){
+    topIcon.fadeIn(500);
+  }else{
+    topIcon.fadeOut(500);
+  }
+  });
+  // _______________________내려가면 top버튼 나오게 만들기
+
+  topIcon.on('click',function(e){
+    e.preventDefault();
+    var htmlScroll = $('html, body');
+    htmlScroll.animate({scrollTop:$(this.hash).offset().top},500);
+
+  });
+
+  // ____________ top버튼 누를때 자연스럽게 올라가기
 })(this.jQuery);

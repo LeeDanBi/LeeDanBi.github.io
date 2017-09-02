@@ -1,0 +1,9 @@
+@media screen and (max-width: 1300px) {
+    #menuBox>ul{width: 960px; transition:all 500ms;}
+    #menuBox>ul>li{margin-right: 60px; transition:all 500ms;}
+    #pageIndicate .text_box{width: 500px; transition:all 500ms;
+      dd{font-size: 18/16 + rem;}
+    }//#pageIndicate .text_box
+    #coffeInfo .inner_wrap p{font-size: 18/16 +rem;}
+    #galleryBox h2{font-size: 4.2rem; transition:all 500ms;}
+  }

@@ -2,19 +2,24 @@ var gulp = require('gulp'); //경로가 없다면 무조건 node_modules로 간�
 var sass = require('gulp-sass');
 var sync = require('browser-sync').create();
 
-var url = {before: './', after:'./'}
+var url = './public/';
 var path = {
   sass:{
-    src: url.before +'scss/**/*.scss',
-    dist: url.after+ 'css/src/'
+    src: url+'scss/**/*.scss',
+    dist: url+ 'css/src/'
   },
-  html: url.after + '**/*.html'
+  html: url + '**/*.html'
 };
 
 // html ---------------------------
 
 gulp.task('html',function(){
   return gulp.src(path.html)
+             .pipe(sync.stream());
+});
+
+gulp.task('js',function(){
+  return gulp.src('./public/js/src/*.js')
              .pipe(sync.stream());
 });
 
@@ -30,7 +35,7 @@ gulp.task('sass', function () { //'sass'==sass라고 보면 됨 (하지만 이�
 gulp.task('sync', ['html', 'sass'] ,function(){
   return sync.init({
     port : 8234, //8000대 이후가 좋음
-    server: { baseDir : url.after }
+    server: { baseDir : url }
   });
 });
 
@@ -40,6 +45,7 @@ gulp.task('sync', ['html', 'sass'] ,function(){
 gulp.task('watch', function () {
   gulp.watch(path.sass.src, ['sass']);
   gulp.watch(path.html, ['html']);
+  gulp.watch('./public/js/src/*.js',['js']);
 
   return;
 });

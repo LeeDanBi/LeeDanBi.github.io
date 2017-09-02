@@ -2,6 +2,12 @@
 @import './_base/mixin.scss';
 
 .inner_wrap{width: 940px; height: 100%; margin: 0 auto;}
+.top_icon{display: none; width: 80px; height: 136px; @include bgimg($f:'img/top_button.png');
+          background-position: left; position: fixed; bottom: 35px; right: 65px;
+  &:hover{background-position: right;}
+  }//.top_icon
+// .upper_case{text-transform: uppercase;} 
+//이번엔 js로 해보았다.
 
 #wrap{width: 100%; height: auto; background-color: transparent;}
 
@@ -36,7 +42,9 @@
         .banner_img_0#{$i}{@include bgimg($f:'adBanner/adBanner_' + $i +'.jpg');}
       }//@for
     }//.bannerwrap
-    button{width: 140px; height: 460px; @include bgimg($f:'img/slide_button.png'); position: absolute; top: 50%; margin-top: -230px; border-radius: 70px;}
+    button{width: 140px; height: 460px; @include bgimg($f:'img/slide_button.png'); position: absolute; top: 50%; margin-top: -230px; border-radius: 70px; opacity: 0.1; transition: all 300ms;
+      &:hover{opacity: 1;}
+    }//button
     .btn_left{left: 80px;}
     .btn_right{background-position: right; right: 80px;}
   }// #adBanner
@@ -68,7 +76,7 @@
             .aco_icon{width: 41px; height: 41px; float: right; height: 41px; @include bgimg($f:'img/close_button.png'); margin-right: 40px;}
           }//button
         }// dt
-        >dd{width: 940px; height: 350px; display: none; padding: 40px; box-sizing:border-box; background-color: #fff;
+        >dd{width: 940px; height: 350px; display: none; padding-left: 40px; box-sizing:border-box; background-color: #fff;
           &:first-of-type{display: block;}
         }// dd
       }// .accordion_menu
@@ -81,17 +89,36 @@
       ul{width: 1120px; height: 100%; padding-top: 108px; box-sizing:border-box; margin: 0 auto;
         li{width: 280px; height: 280px; float: left; border-radius: 140px; background-color: #fff;
            margin-right: 130px; background-position: center; background-size: 200%;
+           overflow: hidden; 
           @for $i from 1 through 3{
             &:nth-child(#{$i}){@include bgimg($f:'issueIcon/issue_'+ $i +'.jpg');}
           }//for
           &:last-child{margin-right: 0;}
+          a{display: block; width: 100%; height: 100%; transition: all 500ms; position: relative; opacity: 0; text-align: center; 
+            dl{width: 100%; height: 100%; padding: 60px 20px 0; box-sizing:border-box; color: map-get($color,white);
+              >dt{width: 100px; height: auto; padding-bottom: 1px; border-bottom: 1px solid map-get($color,white); margin: auto; font-size: 30/16+rem; font-weight: bold; margin-bottom: 14px;    
+              }//>dt
+              >dd{width: 100%; height: auto; padding: 5px; box-sizing:border-box;
+                .little_title{font-size: 24/16+rem; color: map-get($color,yellow); margin-bottom: 5px;}
+              }//>dd
+            }//dl
+            &::after{content: " "; width: 90%; height: 90%; border:2px solid map-get($color,white); box-sizing:border-box; display: block; border-radius: 50%; position: absolute; top:50%; left:50%; margin-top: -45%; margin-left: -45%; transition: all 500ms;}
+            &:hover{background-color: rgba(#000,0.5); opacity: 1; color: inherit;}
+            &:hover::after{opacity: 1;}
+          }//a
         }
       }//ul
     }// #menuBox
-    #pageIndicate{width: 100%; height: 800px; background-color: #aaa; position: relative;
-                  padding: 72px 132px; box-sizing:border-box;
-                  @include bgimg($f:'slideimage/slideImage_1.jpg'); background-size: cover;
-      .text_box{width: 830px; height: 525px; background-color: rgba(map-get($color,white),0.5); 
+    #pageIndicate{width: 100%; height: 800px; background-color: #aaa; position: relative; 
+      overflow: hidden;
+      #allWrap{width: 500%; height: 100%; 
+        .page_wrap{width: 20%; height: 100%; float: left; background-size: cover; padding: 72px 132px; box-sizing:border-box; transition:all 500ms;
+          @for $i from 1 through 5{
+            &:nth-child(#{$i}){@include bgimg($f:'slideimage/slideImage_'+ $i +'.jpg');}
+          }//@for
+        }//.page_wrap
+      }//#allWrap
+      .text_box{width: 830px; height: 525px; background-color: rgba(map-get($color,white),0.8); 
                 padding: 55px 30px; box-sizing:border-box;
         dt{font-size:2rem; margin-bottom: 30px;}
         dd{font-size:1.5rem;}
@@ -99,9 +126,9 @@
     }
     .indication_box{width: 400px; height: 40px; position: absolute; bottom: 70px; left: 50%;
                     margin-left: -200px; 
-      li{width: 40px; height: 40px; border-radius: 20px; overflow: hidden; background-color: map-get($color,white); float: left; margin-left: 50px;
+      li{width: 40px; height: 40px; border-radius: 20px; background-color: map-get($color,white); float: left; margin-left: 50px;
         &:first-child{margin-left: 0; background-color: map-get($color,red);}
-        button{width: 100%; height: 100%;}
+        button{width: 100%; height: 100%; border-radius: 20px;}
       }
     }//ul
     // #pageIndicate
@@ -142,3 +169,5 @@
        margin-right: 30px; margin-left: 60px;}
     address{width: 610px; height: 56px; color: #fff; font-style: normal; float: left; text-align: left;}
   }// #footBox
+
+@import './_base/_media_query.scss';
