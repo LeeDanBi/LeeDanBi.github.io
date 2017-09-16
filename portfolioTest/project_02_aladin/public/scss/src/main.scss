@@ -67,7 +67,7 @@
             &:nth-child(3n){margin-right: 0;}
           }//li
         }//.list_book
-        .deco{width: 1014px; height: 34px; position: absolute; top: 570px; left:50%; margin-left: -507px; background-color: #fa0; z-index: 100;}
+        .deco{width: 1014px; height: 34px; position: absolute; top: 570px; left:50%; margin-left: -507px; background-color: #fa0; z-index: 100; box-shadow: 0.15rem 0.15rem 0.3rem rgba(#555,0.7);}
         .btn_book{}
       }//.book_show
     // 추천, 신간
@@ -96,8 +96,11 @@
     .box_map_store{width: 100%; height: 600px; background-color: #987;}
     .box_introduce{width: 100%; height: 450px; background-color: #218; @include bgImg($f:'bg.png') background-position: center; background-size: cover;
       ul{width: 100%; padding: 100px 10px 0 10px; box-sizing : border-box;
-        li{width: 300px; height: 260px; margin-right: 20px; background-color: #0d9; float: left;
+        li{width: 300px; height: 260px; margin-right: 20px; float: left;
           &:last-child{margin-right: 0;}
+          @for $i from 1 through 3{
+            &:nth-child(#{$i}) > .img_icon{@include bgImg($f:"main/icon/ebook_icon_" + $i + ".png"); background-position: center;}
+          }//@for
           .img_icon{width: 100%; height: 120px;}
           dl{width: 100%; height: 260 - 120 + px; text-align: center;
             dt{width: 100%;  height: auto; font-size: 24 / 16 + rem; font-weight: bold; margin-bottom: 25px;}
@@ -108,9 +111,18 @@
     }//.box_introduce
   // #contentBox _____________________________________
   #footBox{width: 100%; height: auto; background-color: #0af;}
-    #inb{width: 100%; height: 50px; background-color: #821;}
-    .box_foot{width: 100%; height: 300px; background-color: #315;
-      #inb{}
-      .box_foot{}
+    #inb{width: 100%; height: 50px; background-color: map-get($color,primary);
+      .box_wrap{width: 1130px;}
+      ul{width: 100%; height: 100%;
+        li{width: auto; height: 100%; float: left; font-size: 1rem; color: map-get($color,white); line-height: 50px; margin-right: 22px; position: relative;
+          &::after{content:" "; width: 0; height: 14px; display: block; border-right: 1px solid map-get($color,white); position: absolute; top:19px; right: -11px}
+          &:last-child{margin-right: 0;}
+          &:last-child::after{display: none;}
+        }//li
+      }//ul
+    }//
+    .box_foot{width: 100%; height: 300px; background-color: lighten(map-get($color,primary),20%); padding-top: 60px; box-sizing: border-box;
+      h2{width: 140px; height: 110px; float: left; @include bgImg($f:'footer/logo.png'); margin-top: 48px;}
+      .foot_content{float: left;}
     }//.box_foot
   // #footBox _____________________________________
