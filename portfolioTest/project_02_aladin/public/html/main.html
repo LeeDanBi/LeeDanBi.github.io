@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+    <html lang="ko-KR">
+      <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--[if lte IE 9]>
+          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+           <script src="../ie/ie7/IE9.js"></script>
+           <script src="../ie/css3PIE/PIE_IE9.js"></script>
+          <![endif]-->
+          <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+          <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
+          <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+          <link rel="stylesheet" type="text/css" href="../css/src/main.css" />
+          <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
+          <script src="../js/jQuery/jquery-ui.min.js"></script>
+          <title>알라딘</title>
+      </head>
+      <body>
+        <div id="wrap">
+          <header id="headBox">
+            <nav id="unb">
+              <div class="box_wrap"> 
+              <!-- .box_wrap은 가로 사이즈용 태그입니다. -->
+                <ul>
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">마이페이지</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#">장바구니</a></li>
+                </ul>
+              </div>
+            </nav>
+            <article class="box_main_head">
+              <div class="box_wrap">
+                <h1 index="0"><a href="#"><span class="hidden">알라딘</span></a></h1>
+                <form action="#" method="get">
+                  <fieldset>
+                    <legend></legend>
+                    <!-- 여기에 셀렉태그 -->
+                    <label for="selectBook">
+                      <span class="hidden">
+                        검색할 도서의 종류를 고르세요.
+                      </span>
+                    </label>
+                    <select name="selectBook" id="selectBook">
+                      <option value="통합검색">통합검색</option>
+                      <option value="국내도서">국내도서</option>
+                      <option value="해외도서">해외도서</option>
+                      <option value="ebook">ebook</option>
+                      <option value="중고도서">중고도서</option>
+                    </select>
+                    <label for="searchBook"><span class="hidden">원하는 도서를 검색하세요.</span></label>
+                    <input type="search" name="searchBook" id="searchBook" />
+                    <label for="searchBookBtn"><span class="hidden">검색 버튼입니다.</span></label>
+                    <input type="button" id="searchBookBtn" value="검색"/>
+                  </fieldset>
+                </form>
+              </div>
+            </article>
+            <nav id="gnb">
+              <div class="box_wrap">
+                <ul>
+                  <li><a href="#">국내도서</a></li>
+                  <li><a href="#">해외도서</a></li>
+                  <li><a href="#">ebook</a></li>
+                  <li><a href="#">중고매장</a></li>
+                  <li><a href="#">커피</a></li>
+                  <li><a href="#">음반/DVD</a></li>
+                  <li><a href="#">알라딘굿즈</a></li>
+                  <li><a href="#">북플/서재</a></li>
+                </ul>
+              </div>
+            </nav>
+          </header>
+          <!-- // #headBox -->
+          <section id="addBanner">
+            <div class="box_btn">
+              <div class="btn_left"></div>
+              <ul class="btn_indicate">
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+                <li><button type="button"></button></li>
+              </ul>
+              <div class="btn_right"></div>
+            </div>
+          </section>
+          <!-- // #addBanner -->
+          <article id="contentBox">
+            <article class="box_search_rank">
+              <div class="box_wrap">
+                <article class="deatail_search"></article>
+                <article class="ranking_10"></article>
+              </div>
+            </article>
+            <!-- // .box_search_rank -->
+            <article class="box_recommend book_show">
+              <div class="box_wrap">
+                <h3>추천도서</h3>
+                <div class="list_wrap">
+                  <ul class="list_book">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </div>
+                <div class="deco"></div>
+                <ul class="btn_book">
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </article>
+            <!-- // .box_recommend -->
+            <article class="box_new book_show">
+              <div class="box_wrap">
+                <h3>신간도서</h3>
+                <div class="list_wrap">
+                  <ul class="list_book">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                  </ul>
+                </div>
+                <div class="deco"></div>
+                <ul class="btn_book">
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+            </article>
+            <!-- // .box_new -->
+            <article class="box_notice">
+              <div class="box_wrap">
+                <ul class="menu_notice">
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt><button></button></dt>
+                      <dd></dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <!-- // .box_notice -->
+            <article class="box_info_ebook">
+              <div class="box_wrap">
+                <h3>e-book이용 안내</h3>
+                <ul class="icon_equipment">
+                  <li><a href="#"><span class="hidden">apple cellphone</span></a></li>
+                  <li><a href="#"><span class="hidden">android cellphone</span></a></li>
+                  <li><a href="#"><span class="hidden">computer</span></a></li>
+                  <li><a href="#"><span class="hidden">crema</span></a></li>
+                </ul>
+                <button type="button" class="btn_more">more</button>
+              </div>
+            </article>
+            <!-- // .box_info_ebook -->
+            <article class="box_map_store"></article>
+            <!-- // .box_map_store -->
+            <article class="box_introduce">
+              <div class="box_wrap">
+                <ul>
+                  <li>
+                    <div class="img_icon"></div>
+                    <dl>
+                      <dt>알라딘 중고매장</dt>
+                      <dd>오프라인에서도 <br />
+                      깨끗한 중고 도서들을 만날 수 있습니다.
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <div class="img_icon"></div>
+                    <dl>
+                      <dt>55% 슈퍼 바이백 서비스</dt>
+                      <dd>신간 베스트셀러 구입시<br />
+                      금액의 55%에 해당하는금액으로 알라딘이 <br />
+                      되사는 서비스입니다.
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <div class="img_icon"></div>
+                    <dl>
+                      <dt>서울 3시 당일배송</dt>
+                      <dd>
+                        서울지역은 오후 3시까지 <br />
+                        주문시 당일배송이 가능합니다.
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <!-- // .box_introduce -->
+          </article>
+          <!-- // #contentBox -->
+          <footerBox id="footBox">
+            <nav id="inb">
+              <div class="box_wrap">
+                <ul>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              </div>
+            </nav>
+            <article class="box_foot">
+              <div class="box_wrap">
+                
+              </div>
+            </article>
+          </footerBox>
+          <!-- // #footBox -->
+        </div>
+      </body>
+    </html>

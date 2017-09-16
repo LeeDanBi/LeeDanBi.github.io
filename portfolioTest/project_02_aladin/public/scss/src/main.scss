@@ -1,0 +1,116 @@
+@import '../_base/base.scss';
+@import '../_base/mixin.scss';
+
+#wrap{width: 100%; height: auto; background-color: #aaa;}
+// #wrap _____________________________________
+
+  .box_wrap{width: 960px; height: 100%; margin: 0 auto;} //내용이 그리드 안에 들어가기 위한 용도
+  
+  #headBox{width: 100%; height: auto; background-color: map-get($color,white);}
+    #unb{width: 100%; height: 35px; padding: 0 10px; box-sizing: border-box; border-bottom: 1px solid map-get($color,primary);
+      ul{width: 400px; height: 100%; float: right;
+        > li {width: auto; height: 100%; float: left; margin-right: 25px; line-height: 35px; font-size: 20/16 + rem; font-weight: bold;
+          &:last-child{margin-right: 0;}
+          a{width: 100%; height: 100%; display: block;}
+        }//li
+      }//ul
+    }//#unb
+    .box_main_head{width: 100%; height: 118px; padding-top: 22px; box-sizing:border-box;
+      h1{width: 181px; height: 82px; @include bgImg($f:"header/logo.png"); float: left;}
+      form{width: 540px; height: 42px; float: left; margin-top: 35px; margin-left: 56px;
+        > fieldset{width: 100%; height: 100%; position: relative;
+          #selectBook{width: 100px; height: 20px; font-size: 1rem; position: absolute; top:10px; left: 18px; z-index: 2000; border: 0;
+          }//#selectBook
+          #searchBook{width: 445px; height: 100%; float: left; border-radius: 21px 0 0 21px; padding-left: 120px; box-sizing:border-box; border: 2px solid map-get($color,point1);}
+          #searchBookBtn{width: 540 - 445 + px; height: 100%; float: left; background-color: map-get($color,point1); font-size: 24/16 + rem; border: none;}
+        }//fieldset
+      }//form
+    }//.box_main_head
+    #gnb{width: 100%; height: 60px; background-color: map-get($color,primary);
+      .box_wrap{padding: 0 10px; box-sizing: border-box;}
+      ul{width: 100%; height: 100%;
+        li{width: auto; height: 100%; float: left; margin-right: 34px; color: map-get($color,white); font-size: 24/16 + rem; line-height: 60px; font-weight: bold;
+          &:last-child{margin-right: 0;}
+        }//li
+      }//ul
+    }//#gnb
+  // #headBox _____________________________________
+
+  #addBanner{width: 100%; height: 600px; background-color: #fa0; position: relative;
+    .box_btn{width: 460px; height: 0; position: absolute; left: 50%; margin-left: -230px; bottom: 40 + 68 + px;
+      .btn_indicate{width: 324px; float: left; margin: 14px 40px 0 40px;
+        li{width: 40px; height: 40px; background-color: map-get($color,sub1); float: left; margin-right: 30px; border-radius: 20px;
+          &:first-child{background-color: map-get($color,point1);}
+          &:last-child{margin-right: 0;}
+          > button{width: 100%; height: 100%; border-radius: 20px}
+        }//li
+      }//ul.btn_indicate
+      div{width: 28px; height: 68px; background-color: #f00;}
+      .btn_left{float: left;}
+      .btn_right{float: right;}
+    }//box_btn
+  }//#addBanner
+  // #addBanner _____________________________________
+  #contentBox{width: 100%; height: auto; background-color: #a0f;}
+    .box_search_rank{width: 100%; height: 500px; background-color: #984;}
+      .deatail_search{width: 530px; height: 100%; float: left; background-color: #fd9; transform:skew(-10deg);}
+      .ranking_10{width: 470px; height: 100%; float: left; background-color: #0af; margin-left: -50px;}
+    .box_recommend{background-color: #912;}
+    .box_new{background-color: #359;}
+      //책 리스트 --------------------------------------
+      .book_show{width: 100%; height: 750px;
+        .box_wrap{padding: 145px 10px 0; box-sizing:border-box; position: relative;}
+        h3{width: auto; height: 40px; margin-left: 390px; font-size: 40/16 +rem; margin-bottom: 60px;}
+        .list_wrap{width: 940px; height: 330px; overflow: hidden;}
+        .list_book{width: 940 * 2 + px; height: 100%;
+          li{width: 300px; height: 330px; background-color: #fd9; float: left; margin-right: 20px;
+            &:nth-child(3n){margin-right: 0;}
+          }//li
+        }//.list_book
+        .deco{width: 1014px; height: 34px; position: absolute; top: 570px; left:50%; margin-left: -507px; background-color: #fa0; z-index: 100;}
+        .btn_book{}
+      }//.book_show
+    // 추천, 신간
+    .box_notice{width: 100%; height: 700px; background-color: #965; padding-top: 130px; box-sizing: border-box;}
+      .menu_notice{width: 1000px; height: 432px; position: relative;
+        > li{width: 120px; height: 120px; border-radius: 60px; background-color: #fa0; float: left; margin-right: 54px;
+          &:last-child{margin-right: 0;}
+          > dl{width: 100%; height: 100%;
+            > dt{width: 100%; height: 100%;
+              > button{width: 100%; height: 100%;}
+            }//dt
+            > dd{width: 960px; height: 250px; position: absolute; top: 180px; left: 0; background-color: #fa0;}
+          }//dl
+        }//li
+      }//.menu_notice
+    // .box_notice
+    .box_info_ebook{width: 100%; height: 500px; background-color: #d98; padding-top: 60px; box-sizing:border-box;
+     //@include bgImg($f:'main/ebook_1.png'); background-position: center; background-size: cover; //뭐가 더 낫지..
+     @include bgImg($f:'main/ebook_2.png'); background-position: center; background-size: cover; background-attachment: fixed;
+      h3{text-align: center; font-size: 80/16 + rem; font-weight: bold; color: map-get($color,white);}
+      .icon_equipment{width: 510px; height: 132px; margin: 40px auto;
+        li{width: 106px; height: 100%; float: left; margin-right: 10px; background-color: #fa0;}
+      }//.icon_equipment
+      .btn_more{width: 340px; height: 90px; margin: 0 auto; border: 2px solid map-get($color,white); border-radius: 20px; font-size: 40/16 +rem; font-weight: bold; color: map-get($color,white); padding: 0;}
+    }//.box_info_ebook
+    .box_map_store{width: 100%; height: 600px; background-color: #987;}
+    .box_introduce{width: 100%; height: 450px; background-color: #218; @include bgImg($f:'bg.png') background-position: center; background-size: cover;
+      ul{width: 100%; padding: 100px 10px 0 10px; box-sizing : border-box;
+        li{width: 300px; height: 260px; margin-right: 20px; background-color: #0d9; float: left;
+          &:last-child{margin-right: 0;}
+          .img_icon{width: 100%; height: 120px;}
+          dl{width: 100%; height: 260 - 120 + px; text-align: center;
+            dt{width: 100%;  height: auto; font-size: 24 / 16 + rem; font-weight: bold; margin-bottom: 25px;}
+            dd{width: 100%; height: auto; font-size:  14 / 16 + rem;}
+          }
+        }//li
+      }//ul
+    }//.box_introduce
+  // #contentBox _____________________________________
+  #footBox{width: 100%; height: auto; background-color: #0af;}
+    #inb{width: 100%; height: 50px; background-color: #821;}
+    .box_foot{width: 100%; height: 300px; background-color: #315;
+      #inb{}
+      .box_foot{}
+    }//.box_foot
+  // #footBox _____________________________________
