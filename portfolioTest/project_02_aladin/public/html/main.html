@@ -60,7 +60,7 @@
             <nav id="gnb">
               <div class="box_wrap">
                 <ul>
-                  <li><button type="button"><span class="hidden">menu</span></button></li>
+                  <li id="menuButton"><button type="button" id="buttonDeco"><span class="hidden">menu</span></button></li>
                   <li><a href="#">국내도서</a></li>
                   <li><a href="#">해외도서</a></li>
                   <li><a href="#">ebook</a></li>
@@ -327,12 +327,12 @@
                 <h3>추천도서</h3>
                 <div class="list_wrap">
                   <ul class="list_book">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li class="book_1"><a href="#"></a></li>
+                    <li class="book_2"><a href="#"></a></li>
+                    <li class="book_3"><a href="#"></a></li>
+                    <li class="book_4"><a href="#"></a></li>
+                    <li class="book_5"><a href="#"></a></li>
+                    <li class="book_6"><a href="#"></a></li>
                   </ul>
                 </div>
                 <div class="deco"></div>
@@ -366,15 +366,15 @@
             <!-- // .box_new -->
             <article class="box_notice">
               <div class="box_btn">
-                <div class="btn btn_left"></div>
-                <div class="btn btn_right"></div>
+                <div class="btn btn_l"></div>
+                <div class="btn btn_r"></div>
               </div>
               <div class="box_wrap">
                 <div class="notice_wrap">
                   <ul class="menu_notice">
                     <li>
                       <dl>
-                        <dt title="공지사항"><button type="button"><span class="hidden">공지사항</span></button></dt>
+                        <dt class="icon_1" title="공지사항"><button type="button"><span class="hidden">공지사항</span></button></dt>
                         <dd>
                           <dl class="notice_contain">
                             <dt>공지사항</dt>
@@ -390,7 +390,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="빠른 서비스"><button type="button"><span class="hidden">빠른 서비스</span></button></dt>
+                        <dt class="icon_2" title="빠른 서비스"><button type="button"><span class="hidden">빠른 서비스</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>빠른 서비스</dt>
@@ -408,7 +408,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="출판사, 판매자를 위한 안내"><button type="button"><span class="hidden">출판사, 판매자를 위한 안내</span></button></dt>
+                        <dt class="icon_3" title="출판사, 판매자를 위한 안내"><button type="button"><span class="hidden">출판사, 판매자를 위한 안내</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>출판사, 판매자를 위한 안내</dt>
@@ -427,7 +427,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="스페셜 서비스"><button type="button"><span class="hidden">스페셜 서비스</span></button></dt>
+                        <dt class="icon_4" title="스페셜 서비스"><button type="button"><span class="hidden">스페셜 서비스</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>스페셜 서비스</dt>
@@ -448,7 +448,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="가격만족"><button type="button"><span class="hidden">가격만족</span></button></dt>
+                        <dt class="icon_5" title="가격만족"><button type="button"><span class="hidden">가격만족</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>가격만족</dt>
@@ -467,7 +467,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="배송 만족"><button type="button"><span class="hidden">배송 만족</span></button></dt>
+                        <dt class="icon_6" title="배송 만족"><button type="button"><span class="hidden">배송 만족</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>배송 만족</dt>
@@ -486,7 +486,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="블로그 & SNS"><button type="button"><span class="hidden">블로그와 소셜 네트워크 서비스</span></button></dt>
+                        <dt class="icon_7" title="블로그 & SNS"><button type="button"><span class="hidden">블로그와 소셜 네트워크 서비스</span></button></dt>
                         <dd>
                           <dl class="notice_contain">
                             <dt>블로그 &amp; SNS</dt>
@@ -504,7 +504,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="웹 & 모바일"><button><span class="hidden">웹과 모바일</span></button></dt>
+                        <dt class="icon_8" title="웹 & 모바일"><button><span class="hidden">웹과 모바일</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>웹 &amp; 모바일</dt>
@@ -523,7 +523,7 @@
                     </li>
                     <li>
                       <dl>
-                        <dt title="제휴서비스"><button type="button"><span class="hidden">제휴서비스</span></button></dt>
+                        <dt class="icon_9" title="제휴서비스"><button type="button"><span class="hidden">제휴서비스</span></button></dt>
                         <dd>
                            <dl class="notice_contain">
                             <dt>제휴서비스</dt>
@@ -563,13 +563,16 @@
               <div class="box_map"></div>
               <div class="box_contents">
                 <div class="store_info">
-                  <div class="store_img"></div>
+                  <div class="store_img">
+                    <!-- 매장 사진 -->
+                  </div>
                   <dl>
                     <dt>가로수길점</dt>
                     <dd>
                       <p>영업 시간 : 09:30~22:00</p>
                       <p>정기 휴일 : 설날(음력), 추석 당일</p>
                       <p>주소 : 서울시 강남구 강남대로 152길 45</p>
+                      <p><a href="#">자세히 보기</a></p>
                     </dd>
                   </dl>
                 </div>

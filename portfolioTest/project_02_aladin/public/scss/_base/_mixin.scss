@@ -3,6 +3,12 @@
   background-image: url($u + $f); background-repeat: no-repeat;
 }
 
+// 가상 선택자
+@mixin pseudo($w, $h){
+  content: " "; display: block; width: $w; height: $h; position: absolute;
+}
+
+
 // 추천 도서 등 책 리스트 만들기
 // @mixin bookmenu(){
   
