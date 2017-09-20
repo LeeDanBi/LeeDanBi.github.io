@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="../css/src/player_01.css" />
+  <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jQuery/jquery-ui.min.js"></script>
+  <title>multi playter</title>
+</head>
+<body>
+  <div id="warp">
+    <header id="headbox">
+      <h1>music and video test</h1>
+    </header>
+    <section id="videoBox">
+      <div id="video">
+        <video muted preload autoplay>
+          <source src="D:/work/movie/w_d.mp4" type="video/mp4" />
+          <!-- <source src="" type="video/ogg" />
+          <source src="" type="video/webM" /> -->
+          <p>현재 사용하고 계신 브라우저는 동영상을 볼 수 없는 브라우저 입니다.<br />
+             최신 브라우저 또는 <a href="http://google.com/chrome">크롬브라우저</a> 를 설치하시고 사용하세요.</p>
+        </video>
+      </div>
+      <div class="play_button">
+        <button type="button" class="play">재생</button>
+        <button type="button" class="pause">일시정지</button>
+      </div>
+    </section>
+    <section id="musicBox">
+      <div id="music">
+        <audio controls>
+          <source src="D:/work/music/just_a_little_bit.mp3" type="audio/mp3" />
+          <!-- <source src="D:/work/music/just_a_little_bit.mp3" type="audio/mp3" />
+          <source src="D:/work/music/just_a_little_bit.mp3" type="audio/mp3" /> -->
+          <p>지금 브라우저는 음악이 재생이 안되쥬? 크롬깔아야쥬</p>
+        </audio>
+      </div>
+      <div class="play_button">
+        <button type="button" class="play">재생</button>
+        <button type="button" class="pause">일시정지</button>
+        <button type="button" class="prev">이전 곡</button>
+        <button type="button" class="next">다음 곡</button>
+      </div>
+    </section>
+    <article id="contentBox"></article>
+    <footer id="footBox"></footer>
+  </div>
+  <!-- script -->
+  <script src="../js/src/player_01.js"></script>
+</body>
+</html>

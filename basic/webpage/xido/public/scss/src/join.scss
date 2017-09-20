@@ -1,0 +1,97 @@
+/* main.css */
+@import "../_base/base.scss";
+@import "../_base/mixin.scss";
+
+#wrap{width: 960px; height: auto; margin: 0 auto;}
+  #headBox{width: 100%; height: 60px; position: relative; background-color: map-get($color,primary); @include bgImg($f:'main/all/header/nar.png'); background-position: 170px 16px;
+    h1{width: 150px; height: 60px; background-color: map-get($color,gray); float: left; @include bgImg($f:'main/all/header/logo.png'); background-position: center;}
+    .wrap_head{float: right; margin-right: 40px; width: 150px;}
+    #unb{width: 128px; height: 15px; overflow: hidden; color: map-get($color,white); margin-top: 12px; padding-left: 20px; box-sizing:border-box; float: right;
+      li{width: 24px; height: 12px; float: left; margin-left: 18px; background-position: right;
+        &:first-child{@include bgImg($f:'main/all/header/login.png'); margin-left: 0;}
+        &:nth-child(2){@include bgImg($f:'main/all/header/join.png');}
+        &:last-child{@include bgImg($f:'main/all/header/qna.png');}
+        a{display: block; width: 100%; height: 100%;}
+      }//li
+    }//#unb
+    .box_search{width: 145px; height: 20px; border: none; float: right;
+      fieldset{width: 100%; height: 100%; border: none; padding: 0; margin: 0;
+        #search{width: 125px; height: 20px; float: left; border: none;}
+        button{width: 20px; height: 20px; float: left; background-color: map-get($color,gray); color: #fff; text-indent:-0.1em;
+         }
+      }// fieldset
+    }//.box_search
+    #gnb{width: 800px; height: 30px; position: absolute; right: 10px; bottom: -30px; z-index: 100; color: map-get($color,primary);
+      li{float: left; margin-right: 55px; line-height: 30px;
+        &:first-child{margin-left: 25px;}
+        &:last-child{margin-right: 25px;}
+      }//li
+      &::after{content:" "; display: block; width: 100%; height: 0; border-bottom: 1px solid map-get($color,gray); position: absolute; bottom: 0; left: 0;}
+    }//#gnb
+  }//#headBox
+    //_____________________________________________________ //#headBox
+
+  input:focus + label::before{outline: 1px solid #fa0;}
+  #contentBox{width: 100%; height: auto; padding-top: 100px;}
+    .join_form{width: 100%; height: 600px; padding: 0 70px 0 170px; box-sizing:border-box; border:none; margin-bottom: 40px;
+      fieldset{margin: 0; padding: 0; border: 0;}
+      #confirmAll{opacity:0; position: absolute; z-index: -100;}
+      #confirmAll + label{width: 500px; height: 40px; font-weight: bold; margin-left: 50px; position: relative; display: block;
+        &.moreIcon::before {background-position: 0 -40px;}
+      }
+      #confirmAll + label::before{content:" "; width: 30px; height: 30px; display: block; @include bgImg($f:'join/join_icon.png'); background-position: 0 0; position: absolute; top:0; left:-40px; transition: all 300ms ease-out;}
+      // #confirmAll:checked + label::before, {background-position: 0 -40px;}
+      dl{width: 720px; height: 200px; margin-bottom: 40px; margin-top: 40px;
+        dt{width: 350px; height: 40px; margin-left: 60px; font-weight: bold; line-height: 40px;
+          input[type="checkbox"]{opacity:0; position: absolute; z-index: -100;}
+       
+          input[type="checkbox"]+label{position: relative;
+
+            &::before{content:" "; width: 20px; height: 20px; display: block; @include bgImg($f:'join/join_icon.png'); background-position: 0 -80px; position: absolute; top:0; left:-30px; transition: all 300ms ease-out;}
+            &.moreIcon::before{background-position: 0 -100px !important;}
+          //input[type="checkbox"]:checked + label::before{background-position: 0 -100px;}
+        }
+        }//dt
+        dd{width: 100%; height: 160px; overflow-y: scroll; background-color: #f1f1f1; padding: 15px 20px; box-sizing:border-box;}
+      }//dl
+      .btn_confirm{width: 380px; height: 40px; margin: 0 auto;
+        >input{width: 140px; height: 100%; float: left; color: map-get($color,white); font-size: 1.2rem;
+          &:first-of-type{margin-right: 100px; background-color: map-get($color,primary);}
+          &:last-of-type{background-color: map-get($color,gray);}  
+        }
+      }//.btn_confirm
+    }
+
+
+    //_____________________________________________________ //#contentBox
+  #footBox{width: 100%; height: 120px; background-color: map-get($color,gray); padding: 20px 30px; box-sizing:border-box;
+    h2{width: 80px; height: 33px; float: left; @include bgImg($f:'main/all/footer/h2_logo.png'); margin-right: 85px;}
+    .box_info{width: 540px; height: 100%; float: left; font-size: 0.85rem;}
+      #inb{width: 100%; height: 22px;
+        li{float: left; margin-right: 13px; color: map-get($color,white); position: relative;
+          &::after{content:" "; display: block; width: 0; height: 12px; border-right: 1px solid map-get($color,white); position: absolute; top:3px; right: -6px;}
+          &:last-child::after{display: none;}
+        }//li
+      }//#inb
+      address{color: lighten(map-get($color,gray),15%);}
+    .wrap{float: right;}
+    .company_bro{width: 100px; height: auto; margin-top: -20px;
+      fieldset{width: 100%; border: none; padding: 0;
+        #companyBro{width: 100%; height: 18px;}
+        p{width: 100%; font-size: 0.625rem; text-align: right; color: lighten(map-get($color,gray),15%);}
+      }//fieldset
+    }//.company_bro
+      .icon_hoby{width: 134px; height: 40px; margin-top: 30px;
+        li{width: 40px; height: 40px; float: left; margin-right: 7px; @include bgImg($f:'main/all/footer/link_mark_00.png'); transition: all 500ms;
+          &:first-child:hover{background-position: left bottom;}
+          &:nth-child(2){background-position: center 0;
+            &:hover{background-position: center bottom;}
+          }
+          &:last-child{margin-right: 0; background-position:right 0;
+            &:hover{background-position: right bottom;}
+          }
+        }//li
+      }//.icon_hoby
+
+  }//#footBox
+    //_____________________________________________________ //#footBox

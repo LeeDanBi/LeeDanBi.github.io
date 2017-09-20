@@ -1,0 +1,317 @@
+/* main.css */
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+
+#headBox {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  background-color: #ff0066;
+  background-image: url("../../img/main/all/header/nar.png");
+  background-repeat: no-repeat;
+  background-position: 170px 16px; }
+  #headBox h1 {
+    width: 150px;
+    height: 60px;
+    background-color: #777;
+    float: left;
+    background-image: url("../../img/main/all/header/logo.png");
+    background-repeat: no-repeat;
+    background-position: center; }
+  #headBox .wrap_head {
+    float: right;
+    margin-right: 40px;
+    width: 150px; }
+  #headBox #unb {
+    width: 128px;
+    height: 15px;
+    overflow: hidden;
+    color: #fff;
+    margin-top: 12px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: right; }
+    #headBox #unb li {
+      width: 24px;
+      height: 12px;
+      float: left;
+      margin-left: 18px;
+      background-position: right; }
+      #headBox #unb li:first-child {
+        background-image: url("../../img/main/all/header/login.png");
+        background-repeat: no-repeat;
+        margin-left: 0; }
+      #headBox #unb li:nth-child(2) {
+        background-image: url("../../img/main/all/header/join.png");
+        background-repeat: no-repeat; }
+      #headBox #unb li:last-child {
+        background-image: url("../../img/main/all/header/qna.png");
+        background-repeat: no-repeat; }
+      #headBox #unb li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+  #headBox .box_search {
+    width: 145px;
+    height: 20px;
+    border: none;
+    float: right; }
+    #headBox .box_search fieldset {
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin: 0; }
+      #headBox .box_search fieldset #search {
+        width: 125px;
+        height: 20px;
+        float: left;
+        border: none; }
+      #headBox .box_search fieldset button {
+        width: 20px;
+        height: 20px;
+        float: left;
+        background-color: #777;
+        color: #fff;
+        text-indent: -0.1em; }
+  #headBox #gnb {
+    width: 800px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+    z-index: 100;
+    color: #ff0066; }
+    #headBox #gnb li {
+      float: left;
+      margin-right: 55px;
+      line-height: 30px; }
+      #headBox #gnb li:first-child {
+        margin-left: 25px; }
+      #headBox #gnb li:last-child {
+        margin-right: 25px; }
+    #headBox #gnb::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 0;
+      border-bottom: 1px solid #777;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+
+#contentBox {
+  width: 100%;
+  height: auto; }
+
+fieldset {
+  margin: 0;
+  border: 0;
+  margin-bottom: 40px;
+  position: relative; }
+  fieldset:first-of-type::after, fieldset:nth-of-type(2)::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #d9d9d9;
+    position: absolute;
+    bottom: -15px;
+    left: 0; }
+
+#joinBox {
+  width: 650px;
+  height: 660px;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px; }
+  #joinBox .box_ID_PW dl:nth-of-type(2) dt::before {
+    background-position: -50px -20px; }
+  #joinBox .box_ID_PW dl:nth-of-type(3) dt::before {
+    background-position: -50px -40px; }
+  #joinBox .user_info dl:nth-of-type(1) dt::before {
+    background-position: -50px -60px; }
+  #joinBox .user_info dl:nth-of-type(2) dt::before {
+    background-position: -50px -80px; }
+  #joinBox .user_info dl:nth-of-type(3) dt::before {
+    background-position: -50px -100px; }
+  #joinBox .user_info dl:nth-of-type(4) dt::before {
+    background-position: -50px -120px; }
+  #joinBox .user_birth_add dl:nth-of-type(1) dt::before {
+    background-position: -50px -140px; }
+  #joinBox .user_birth_add dl:nth-of-type(2) dt::before {
+    background-position: -50px -160px; }
+  #joinBox .user_birth_add dl:nth-of-type(3) dt::before {
+    background-position: -50px -160px; }
+  #joinBox dl {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px; }
+    #joinBox dl dt {
+      width: 70px;
+      height: 100%;
+      margin-right: 15px;
+      margin-left: 40px;
+      line-height: 30px;
+      float: left;
+      font-size: 1rem;
+      position: relative; }
+      #joinBox dl dt::before {
+        content: " ";
+        display: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        background-image: url("../../img/join/join_icon.png");
+        background-repeat: no-repeat;
+        background-position: -50px 0; }
+    #joinBox dl dd {
+      float: left; }
+      #joinBox dl dd input {
+        width: 240px;
+        height: 100%;
+        float: left;
+        border: 1px solid #d9d9d9;
+        box-sizing: border-box; }
+        #joinBox dl dd input[type="button"] {
+          width: 100px;
+          height: 100%;
+          margin-left: 24px;
+          background-color: #d9d9d9; }
+      #joinBox dl dd p {
+        width: auto;
+        height: 100%;
+        float: left;
+        font-size: 0.75rem;
+        line-height: 30px;
+        margin-left: 24px; }
+    #joinBox dl .phone_num input, #joinBox dl .user_birth input, #joinBox dl .user_add input {
+      width: 100px; }
+    #joinBox dl .user_birth input {
+      margin-right: 6px; }
+    #joinBox dl .user_birth p {
+      margin: 0;
+      margin-right: 10px; }
+    #joinBox dl .phone_num input, #joinBox dl .user_add input {
+      margin-right: 10px; }
+    #joinBox dl .phone_num span, #joinBox dl .user_add span {
+      display: block;
+      float: left;
+      margin: 0;
+      margin-right: 10px; }
+    #joinBox dl .phone_num .phone_last, #joinBox dl .phone_num .add_last, #joinBox dl .user_add .phone_last, #joinBox dl .user_add .add_last {
+      margin: 0; }
+    #joinBox dl .user_mail input:first-of-type {
+      width: 130px; }
+    #joinBox dl .user_mail input:last-of-type {
+      width: 200px; }
+    #joinBox dl .user_mail span {
+      display: block;
+      float: left;
+      margin-right: 10px;
+      margin-left: 10px; }
+    #joinBox dl #userAddPlus {
+      width: 362px; }
+  #joinBox .btn_conrim {
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0; }
+    #joinBox .btn_conrim input {
+      width: 140px;
+      height: 100%;
+      margin-right: 70px;
+      padding: 0;
+      background-color: #f06;
+      color: #fff; }
+      #joinBox .btn_conrim input:last-of-type {
+        margin-right: 0;
+        background-color: #d9d9d9;
+        color: #333; }
+  #joinBox #addressSearch {
+    float: right; }
+
+#footBox {
+  width: 100%;
+  height: 120px;
+  background-color: #777;
+  padding: 20px 30px;
+  box-sizing: border-box; }
+  #footBox h2 {
+    width: 80px;
+    height: 33px;
+    float: left;
+    background-image: url("../../img/main/all/footer/h2_logo.png");
+    background-repeat: no-repeat;
+    margin-right: 85px; }
+  #footBox .box_info {
+    width: 540px;
+    height: 100%;
+    float: left;
+    font-size: 0.85rem; }
+  #footBox #inb {
+    width: 100%;
+    height: 22px; }
+    #footBox #inb li {
+      float: left;
+      margin-right: 13px;
+      color: #fff;
+      position: relative; }
+      #footBox #inb li::after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 12px;
+        border-right: 1px solid #fff;
+        position: absolute;
+        top: 3px;
+        right: -6px; }
+      #footBox #inb li:last-child::after {
+        display: none; }
+  #footBox address {
+    color: #9d9d9d; }
+  #footBox .wrap {
+    float: right; }
+  #footBox .company_bro {
+    width: 100px;
+    height: auto;
+    margin-top: -20px; }
+    #footBox .company_bro fieldset {
+      width: 100%;
+      border: none;
+      padding: 0; }
+      #footBox .company_bro fieldset #companyBro {
+        width: 100%;
+        height: 18px; }
+      #footBox .company_bro fieldset p {
+        width: 100%;
+        font-size: 0.625rem;
+        text-align: right;
+        color: #9d9d9d; }
+  #footBox .icon_hoby {
+    width: 134px;
+    height: 40px;
+    margin-top: 30px; }
+    #footBox .icon_hoby li {
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin-right: 7px;
+      background-image: url("../../img/main/all/footer/link_mark_00.png");
+      background-repeat: no-repeat;
+      transition: all 500ms; }
+      #footBox .icon_hoby li:first-child:hover {
+        background-position: left bottom; }
+      #footBox .icon_hoby li:nth-child(2) {
+        background-position: center 0; }
+        #footBox .icon_hoby li:nth-child(2):hover {
+          background-position: center bottom; }
+      #footBox .icon_hoby li:last-child {
+        margin-right: 0;
+        background-position: right 0; }
+        #footBox .icon_hoby li:last-child:hover {
+          background-position: right bottom; }

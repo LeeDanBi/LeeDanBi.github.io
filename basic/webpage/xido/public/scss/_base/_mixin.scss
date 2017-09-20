@@ -1,0 +1,19 @@
+@mixin bgImg($u:$url,$f:none){
+  background-image: url($u+$f); background-repeat: no-repeat;
+}
+
+@mixin prefix($p,$v){
+  -webkit-#{$p}:$v;
+  -moz-#{$p}:$v;
+  -ms-#{$p}:$v;
+  -o-#{$p}:$v;
+  #{$p}:$v;
+}
+
+@mixin prefix2($p,$v){
+  #{$p}:-webkit-#{$v};
+  #{$p}:-moz-#{$v};
+  #{$p}:-ms-#{$v};
+  #{$p}:-o-#{$v};
+  #{$p}:#{$v};
+}

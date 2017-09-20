@@ -1,0 +1,259 @@
+/* main.css */
+#wrap {
+  width: 960px;
+  height: auto;
+  margin: 0 auto; }
+
+#headBox {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  background-color: #ff0066;
+  background-image: url("../../img/main/all/header/nar.png");
+  background-repeat: no-repeat;
+  background-position: 170px 16px; }
+  #headBox h1 {
+    width: 150px;
+    height: 60px;
+    background-color: #777;
+    float: left;
+    background-image: url("../../img/main/all/header/logo.png");
+    background-repeat: no-repeat;
+    background-position: center; }
+  #headBox .wrap_head {
+    float: right;
+    margin-right: 40px;
+    width: 150px; }
+  #headBox #unb {
+    width: 128px;
+    height: 15px;
+    overflow: hidden;
+    color: #fff;
+    margin-top: 12px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    float: right; }
+    #headBox #unb li {
+      width: 24px;
+      height: 12px;
+      float: left;
+      margin-left: 18px;
+      background-position: right; }
+      #headBox #unb li:first-child {
+        background-image: url("../../img/main/all/header/login.png");
+        background-repeat: no-repeat;
+        margin-left: 0; }
+      #headBox #unb li:nth-child(2) {
+        background-image: url("../../img/main/all/header/join.png");
+        background-repeat: no-repeat; }
+      #headBox #unb li:last-child {
+        background-image: url("../../img/main/all/header/qna.png");
+        background-repeat: no-repeat; }
+      #headBox #unb li a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+  #headBox .box_search {
+    width: 145px;
+    height: 20px;
+    border: none;
+    float: right; }
+    #headBox .box_search fieldset {
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin: 0; }
+      #headBox .box_search fieldset #search {
+        width: 125px;
+        height: 20px;
+        float: left;
+        border: none; }
+      #headBox .box_search fieldset button {
+        width: 20px;
+        height: 20px;
+        float: left;
+        background-color: #777;
+        color: #fff;
+        text-indent: -0.1em; }
+  #headBox #gnb {
+    width: 800px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: -30px;
+    z-index: 100;
+    color: #ff0066; }
+    #headBox #gnb li {
+      float: left;
+      margin-right: 55px;
+      line-height: 30px; }
+      #headBox #gnb li:first-child {
+        margin-left: 25px; }
+      #headBox #gnb li:last-child {
+        margin-right: 25px; }
+    #headBox #gnb::after {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 0;
+      border-bottom: 1px solid #777;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+
+#contentBox {
+  width: 100%;
+  height: 100%; }
+
+.box_authen {
+  width: 450px;
+  height: 365px;
+  margin: 100px auto;
+  box-shadow: 0.1rem 0.1rem 0.3rem #555; }
+  .box_authen h2 {
+    width: 100%;
+    height: 73px;
+    text-align: left;
+    background-image: url("../../img/quotatioin/bg.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    line-height: 73px;
+    font-size: 1.6rem;
+    padding-left: 38px;
+    box-sizing: border-box; }
+  .box_authen dt {
+    font-weight: bold;
+    font-size: 1.2rem; }
+  .box_authen form {
+    padding: 0;
+    border: 0; }
+    .box_authen form fieldset {
+      padding: 20px 38px;
+      margin: 0;
+      border: 0; }
+  .box_authen .contain {
+    padding: 20px 10px;
+    background-color: #eee;
+    margin-top: 16px; }
+    .box_authen .contain label {
+      font-weight: bold;
+      margin-right: 10px; }
+    .box_authen .contain .box_phone {
+      margin-bottom: 16px; }
+    .box_authen .contain .box_phone input, .box_authen .contain select {
+      width: 75px;
+      height: 16px; }
+  .box_authen .box_serv input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    z-index: -100; }
+  .box_authen .box_serv input[type="radio"]:focus + label {
+    border-bottom: 3px solid #ffa; }
+  .box_authen .box_serv input[type="radio"]:checked + label {
+    color: #f0a;
+    font-size: 1.5rem; }
+  .box_authen .box_serv label {
+    color: #aaa;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 300ms ease-in; }
+  .box_authen .button_box {
+    width: 194px;
+    height: 40px;
+    margin: 0 auto; }
+    .box_authen .button_box button {
+      width: 70px;
+      height: 40px;
+      float: left; }
+    .box_authen .button_box .btn_yes {
+      background-image: url("../../img/quotatioin/submit_btn.png");
+      background-repeat: no-repeat;
+      margin-right: 54px; }
+    .box_authen .button_box .btn_no {
+      background-image: url("../../img/quotatioin/reset_btn.png");
+      background-repeat: no-repeat; }
+  .box_authen .check {
+    margin-top: 10px;
+    margin-bottom: 16px; }
+
+#footBox {
+  width: 100%;
+  height: 120px;
+  background-color: #777;
+  padding: 20px 30px;
+  box-sizing: border-box; }
+  #footBox h2 {
+    width: 80px;
+    height: 33px;
+    float: left;
+    background-image: url("../../img/main/all/footer/h2_logo.png");
+    background-repeat: no-repeat;
+    margin-right: 85px; }
+  #footBox .box_info {
+    width: 540px;
+    height: 100%;
+    float: left;
+    font-size: 0.85rem; }
+  #footBox #inb {
+    width: 100%;
+    height: 22px; }
+    #footBox #inb li {
+      float: left;
+      margin-right: 13px;
+      color: #fff;
+      position: relative; }
+      #footBox #inb li::after {
+        content: " ";
+        display: block;
+        width: 0;
+        height: 12px;
+        border-right: 1px solid #fff;
+        position: absolute;
+        top: 3px;
+        right: -6px; }
+      #footBox #inb li:last-child::after {
+        display: none; }
+  #footBox address {
+    color: #9d9d9d; }
+  #footBox .wrap {
+    float: right; }
+  #footBox .company_bro {
+    width: 100px;
+    height: auto;
+    margin-top: -20px; }
+    #footBox .company_bro fieldset {
+      width: 100%;
+      border: none;
+      padding: 0; }
+      #footBox .company_bro fieldset #companyBro {
+        width: 100%;
+        height: 18px; }
+      #footBox .company_bro fieldset p {
+        width: 100%;
+        font-size: 0.625rem;
+        text-align: right;
+        color: #9d9d9d; }
+  #footBox .icon_hoby {
+    width: 134px;
+    height: 40px;
+    margin-top: 30px; }
+    #footBox .icon_hoby li {
+      width: 40px;
+      height: 40px;
+      float: left;
+      margin-right: 7px;
+      background-image: url("../../img/main/all/footer/link_mark_00.png");
+      background-repeat: no-repeat;
+      transition: all 500ms; }
+      #footBox .icon_hoby li:first-child:hover {
+        background-position: left bottom; }
+      #footBox .icon_hoby li:nth-child(2) {
+        background-position: center 0; }
+        #footBox .icon_hoby li:nth-child(2):hover {
+          background-position: center bottom; }
+      #footBox .icon_hoby li:last-child {
+        margin-right: 0;
+        background-position: right 0; }
+        #footBox .icon_hoby li:last-child:hover {
+          background-position: right bottom; }

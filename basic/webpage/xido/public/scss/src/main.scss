@@ -1,0 +1,136 @@
+/* main.css */
+@import "../_base/base.scss";
+@import "../_base/mixin.scss";
+
+#wrap{width: 960px; height: auto; margin: 0 auto;}
+  #headBox{width: 100%; height: 60px; position: relative; background-color: map-get($color,primary); @include bgImg($f:'main/all/header/nar.png'); background-position: 170px 16px;
+    h1{width: 150px; height: 60px; background-color: map-get($color,gray); float: left; @include bgImg($f:'main/all/header/logo.png'); background-position: center;}
+    .wrap_head{float: right; margin-right: 40px; width: 150px;}
+    #unb{width: 128px; height: 15px; overflow: hidden; color: map-get($color,white); margin-top: 12px; padding-left: 20px; box-sizing:border-box; float: right;
+      li{width: 24px; height: 12px; float: left; margin-left: 18px; background-position: right;
+        &:first-child{@include bgImg($f:'main/all/header/login.png'); margin-left: 0;}
+        &:nth-child(2){@include bgImg($f:'main/all/header/join.png');}
+        &:last-child{@include bgImg($f:'main/all/header/qna.png');}
+        a{display: block; width: 100%; height: 100%;}
+      }//li
+    }//#unb
+    .box_search{width: 145px; height: 20px; border: none; float: right;
+      fieldset{width: 100%; height: 100%; border: none; padding: 0; margin: 0;
+        #search{width: 125px; height: 20px; float: left; border: none;}
+        button{width: 20px; height: 20px; float: left; background-color: map-get($color,gray); color: #fff; text-indent:-0.1em;
+         }
+      }// fieldset
+    }//.box_search
+    #gnb{width: 800px; height: 30px; position: absolute; right: 10px; bottom: -30px; z-index: 100; color: map-get($color,primary);
+      li{float: left; margin-right: 55px; line-height: 30px;
+        &:first-child{margin-left: 25px;}
+        &:last-child{margin-right: 25px;}
+      }//li
+      &::after{content:" "; display: block; width: 100%; height: 0; border-bottom: 1px solid map-get($color,gray); position: absolute; bottom: 0; left: 0;}
+    }//#gnb
+  }//#headBox
+    //_____________________________________________________ //#headBox
+  #adBanner{width: 100%; height: 490px; overflow: hidden; position: relative;
+    #bannerWrap{width: 500%; height: 100%;
+      li{width: 20%; height: 100%; float: left;}
+      @for $i from 1 through 5{
+        .banner_#{$i}{@include bgImg($f:'banner/banner_0'+ $i +'.png');}
+      }//@for
+    }//#bannerWrap
+    .box_btn{width: 100%; height: 0; position: absolute; top: 50%; margin-top: -41px; cursor: pointer; opacity:0.7;
+      &:hover{opacity:1;}
+      .btn_l{width: 60px; height: 82px; @include bgImg($f:'main/main/banner/left_btn_on.png'); float: left;}
+      .btn_r{width: 60px; height: 82px; @include bgImg($f:'main/main/banner/right_btn_on.png'); float: right;}
+    }//.box_btn
+    .indicator{width: auto; height: 10px; position: absolute; right: 100px; bottom: 30px;
+      li{width: 10px; height: 10px; float: left; margin-right: 5px; background-color: lighten(map-get($color,primary),35%); border-radius: 5px; overflow: hidden;
+        &:first-child{background-color: map-get($color,primary);}
+        &:last-child{margin-right: 0;}
+        &:focus{background-color: #666;}
+        >button{width: 100%; height: 100%;
+        }//button
+      }//li
+    }//.indicatoer
+  }//#adBanner
+    //_____________________________________________________ //#adBanner
+  #contentBox{width: 100%; height: 360px; padding: 20px 30px; box-sizing:border-box; background-color: map-get($color,primary);
+    .heading{width: 100%; height: 20px; color: map-get($color,white); font-size: 1.25rem;
+      h2{width: 70px; height: 20px; float: left; position: relative;}
+      h2::after{content:" "; display: block; width: 785px; height: 0; border-bottom: 1px solid map-get($color,white); position: absolute; top:12px; left: 80px;}
+      .icon{width: 20px; height: 20px; float: right; transition: all 500ms;
+        text-align: center;  line-height: 20px;
+        &:hover{transform: rotate(180deg);}
+      }//.icon
+    }//.heading
+    .content_wrap{width: 100%; height: 280px; margin-top: 16px; background-color: #fff; color: map-get($color,white);
+      .box_button{width: 380px; height: 100%; float: left; @include bgImg($f:'main/main/article/article_box_01.png');
+        .menu_bar{margin-left: 220px; margin-top: 30px;
+          li{margin-bottom: 25px; font-size: 0.875rem; text-decoration: underline;}
+        }//.menu_bar
+      }//.box_button
+      .box_img{width: 240px; height: 100%; float: left; @include bgImg($f:'main/main/article/article_box_02.png');}
+      .box_content{width: 280px; height: 100%; float: left; background-image: linear-gradient(135deg,map-get($color,primary) 40%,map-get($color,black)); overflow: hidden;
+        .box_scroll{width: 300px; height: 100%; overflow: hidden; overflow-y:scroll; padding: 18px; box-sizing:border-box;}
+      }//.box_content
+    }//.content_wrap
+  }//#contentBox
+
+  #sideBar{width: 132px; height: auto; min-height: 110px; position: fixed; top: 10%; left: 50%; margin-left: (960/2) + 10 + px;
+    .side_wrap{width: 100%; height: auto;
+      .side_top{width: 122px; height: 15px; @include bgImg($f:'main/side_bar/top_bg_01.png'); margin: 0 auto;}
+      .side_middle{width: 122px; height: auto; min-height: 10px; background-image: url( $url + 'main/side_bar/top_bg_02.png'); background-repeat: repeat-y; margin: 0 auto; padding: 10px 0 10px 16px; box-sizing:border-box;
+        h2{width: 52px; height: 22px; margin-left: 20px; @include bgImg($f:'main/side_bar/logo.png');}
+        h3{width: 132px; height: 46px; background-color: map-get($color,gray); margin-top: 5px; margin-left: -21px; text-align: center; color: map-get($color,white); font-size: 10/16 + rem; line-height: 12px; padding-top: 6px; box-sizing:border-box; text-transform: uppercase; position: relative;
+          &::after{content: " "; display: block; width: 100%; height: 41px; position: absolute; top: 2px; left: 0; border: 1px solid #fff; border-right: 0; border-left: 0;}
+        }//h3
+        .program_list{width: 100%; height: auto; margin-top: 10px;
+          li{width: 100%; height: 12px; margin-bottom: 6px; font-size: 12/16 + rem; position: relative; margin-left: 12px;
+            &:last-child{margin-bottom: 0;}
+            &::before{content: " "; display: block; width: 10px; height: 10px; position: absolute; top:2px; left: -14px; @include bgImg($f:'main/side_bar/fixed_program_icon.png');}
+          }//li
+          @for $i from 1 through 9{
+            .pro_0#{$i}::before{background-position: 0 ( ( $i - 1 ) * ( - 18 ) + px );}
+          }//@for
+          .pro_10::before{background-position: 0 ( 9 * ( - 18 ) + px );}
+        }//.program_list
+      }//.side_middle
+      .side_bottom{width: 122px; height: 15px; @include bgImg($f:'main/side_bar/top_bg_03.png'); margin: 0 auto;}
+    }//.side_wrap
+    .side_go_top{width: 122px; height: 75px; margin: 0 auto; @include bgImg($f:'main/side_bar/btm_bg.png'); margin-top: 5px; padding-top: 15px; box-sizing:border-box; text-transform: uppercase;
+      h3{color: map-get($color,white); text-align: center;}
+      p{text-align: center; margin-top: 10px;}
+    }//.side_go_top
+  }//#sideBar
+
+    //_____________________________________________________ //#contentBox
+  #footBox{width: 100%; height: 120px; background-color: map-get($color,gray); padding: 20px 30px; box-sizing:border-box;
+    h2{width: 80px; height: 33px; float: left; @include bgImg($f:'main/all/footer/h2_logo.png'); margin-right: 85px;}
+    .box_info{width: 540px; height: 100%; float: left; font-size: 0.85rem;}
+      #inb{width: 100%; height: 22px;
+        li{float: left; margin-right: 13px; color: map-get($color,white); position: relative;
+          &::after{content:" "; display: block; width: 0; height: 12px; border-right: 1px solid map-get($color,white); position: absolute; top:3px; right: -6px;}
+          &:last-child::after{display: none;}
+        }//li
+      }//#inb
+      address{color: lighten(map-get($color,gray),15%);}
+    .wrap{float: right;}
+    .company_bro{width: 100px; height: auto; margin-top: -20px;
+      fieldset{width: 100%; border: none; padding: 0;
+        #companyBro{width: 100%; height: 18px;}
+        p{width: 100%; font-size: 0.625rem; text-align: right; color: lighten(map-get($color,gray),15%);}
+      }//fieldset
+    }//.company_bro
+      .icon_hoby{width: 134px; height: 40px; margin-top: 30px;
+        li{width: 40px; height: 40px; float: left; margin-right: 7px; @include bgImg($f:'main/all/footer/link_mark_00.png'); transition: all 500ms;
+          &:first-child:hover{background-position: left bottom;}
+          &:nth-child(2){background-position: center 0;
+            &:hover{background-position: center bottom;}
+          }
+          &:last-child{margin-right: 0; background-position:right 0;
+            &:hover{background-position: right bottom;}
+          }
+        }//li
+      }//.icon_hoby
+
+  }//#footBox
+    //_____________________________________________________ //#footBox

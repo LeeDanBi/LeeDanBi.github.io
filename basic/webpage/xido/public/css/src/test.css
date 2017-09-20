@@ -1,0 +1,14 @@
+#side_box {
+  width: 7.635rem;
+  height: auto;
+  min-height: 9.375rem;
+  background-color: #ccc;
+  position: fixed; }
+
+.top_box {
+  width: 122px;
+  height: auto;
+  position: relative; }
+  .top_box > h3 {
+    width: 3.25rem;
+    height: 1rem; }

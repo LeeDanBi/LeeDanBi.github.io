@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8" />
+  <title>xido</title>
+  <link rel="stylesheet" href="../fontAwesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/normalize.css">
+  <link rel="stylesheet" href="../css/src/authen_01.css">
+  <script src="../js/jquery/jquery-3.2.1.min.js"></script>
+  <script src="../js/jquery/jqluery-ui.min.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header id="headBox" class="clearfix">
+      <h1><a href="#"><span class="hidden">logo</span></a></h1>
+      <div class="wrap_head">
+        <ul id="unb" calss="clearfix">
+          <li><a href="#"><span class="hidden">log in</span></a></li>
+          <li><a href="./authen_01.html"><span class="hidden">join</span></a></li>
+          <li><a href="#"><span class="hidden">question and answer</span></a></li>
+        </ul>
+        <form action="#" method="get" class="box_search">
+          <fieldset>
+            <legend class="hidden"></legend>
+            <input type="text" id="search" name="search" value="" />
+            <button type="button">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <ul id="gnb">
+        <li><a href="#"><span>about.xido</span></a></li>
+        <li><a href="#"><span>graphic.basic</span></a></li>
+        <li><a href="#"><span>design.guide</span></a></li>
+        <li><a href="#"><span>design.portfolio</span></a></li>
+        <li><a href="#"><span>gallery</span></a></li>
+        <li><a href="#"><span>guest</span></a></li>
+      </ul>
+    </header> 
+    <!-- ______________//#headBox_____________ -->
+    <section id="contentBox">
+      <article class="step_join">
+        
+      </article>
+      <article class="box_authen">
+          <h2>본인 인증 서비스</h2>
+          <form action="#" method="post" id="authen">
+            <fieldset>
+              <legend>본인 인증 서비스</legend>
+              <dl>
+                <dt>휴대폰 인증</dt>
+                <dd>입력하시는 정보는 암호화되어처리되며, <br/> 어떠한 이용도 발생하지 않습니다.</dd>
+              </dl>
+              <div class="contain">
+                <div class="box_phone">
+                  <label for="phone">휴대폰번호</label>
+                  <select name="phone" id="phone">
+  
+                  </select>
+                  <span>-</span>
+                  <label for="middleNum" class="hidden">휴대폰번호 가운데 셋 또는 네자리를 입력하세요.</label>
+                  <input type="text" id="middleNum" maxlength="4" value="" />
+                  <span>-</span>
+                  <label for="lastNum" class="hidden">휴대폰번호 마지막 네자리를 입력하세요.</label>
+                  <input type="text" id="lastNum" maxlength="4" value="" />
+                </div>
+                <div class="box_serv">
+                  <p>이동통신사</p>
+                  <input type="radio" name="serv" value="SKT" id="skt"/>
+                  <label for="skt">SKT</label>
+                  <input type="radio" name="serv" value="KT" id="kt" />
+                  <label for="kt">KT</label>
+                  <input type="radio" name="serv" value="LG" id="lg"/>
+                  <label for="lg">LG U+</label>
+                </div>
+              </div>
+                <p class="check">
+                  <input type="checkbox" name="confirm" id="confirm"/>
+                  <label for="confirm">개인 정보 제공 및 활용에 동의합니다.</label>
+                </p>
+                <div class="button_box">
+                  <button type="submit" class="btn_yes"><span class="hidden">확인</span></button>
+                  <button type="reset" class="btn_no"><span class="hidden">취소</span></button>
+                </div>
+            </fieldset>
+          </form>
+      </article>
+    </section>
+  
+    <!-- ______________//#contentBox_____________ -->
+    <footer id="footBox">
+      <h2><span class="hidden">logo</span></h2>
+      <article class="box_info">
+        <ul id="inb">
+          <li><a href="#">개인정보</a></li>
+          <li><a href="#">취급방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+        <address>
+          <p>대표이사:이도형 | 경기도 안산시 상록수 선암로 1길 10 청보아너스빌 XIDO COMPANY <br /> Tel:031-501-0001 | E-mail:xido@xido.kr</p>
+          <p>Copyright &copy; xido.design All right reserved</p>
+        </address>
+      </article>
+      <div class="wrap">
+        <form action="get" class="company_bro">
+          <fieldset>
+            <legend class="hidden"></legend>
+            <select name="company_bro" id="companyBro">
+              <option value="num1">design.group</option>
+            </select>
+            <p>designed by Ido</p>
+          </fieldset>
+        </form>
+        <ul class="icon_hoby">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- ______________//#footBox_____________ -->
+  </div>
+  <script>
+    (function($){
+      var phone = $('#phone');
+      for(var i=0; i<10; i++){
+      phone.append('<option value=\"01'+ i + '\">01' +i + '</option>');
+      }
+    })(this.jQuery);
+  </script>
+</body>
+</html>

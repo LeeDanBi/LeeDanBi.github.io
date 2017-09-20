@@ -278,7 +278,6 @@
 #addBanner {
   width: 100%;
   height: 600px;
-  background-color: #fa0;
   position: relative; }
   #addBanner .wrap_banner {
     width: 100%;
@@ -469,7 +468,12 @@
           float: left; }
         .deatail_search form fieldset dl dd input {
           display: block;
-          float: left; }
+          float: left;
+          opacity: 0;
+          position: absolute;
+          z-index: -5000; }
+        .deatail_search form fieldset dl dd label {
+          margin-right: 10px; }
     .deatail_search form .box_search {
       width: 402px;
       height: 40px; }
@@ -485,7 +489,9 @@
       float: right;
       border-radius: 15px;
       background-color: #CC1F41;
-      border: 0; }
+      border: 0;
+      color: #fff;
+      font-size: 1.5rem; }
 
 .ranking_10 {
   width: 470px;
@@ -606,14 +612,18 @@
     height: 330px;
     overflow: hidden; }
   .book_show .list_book {
-    width: 1880px;
+    width: 1900px;
     height: 100%; }
     .book_show .list_book li {
       width: 300px;
       height: 330px;
       float: left;
       margin-right: 20px;
-      box-shadow: 0.1rem 0.1rem 0.2rem rgba(85, 85, 85, 0.7); }
+      box-shadow: 0.1rem 0.1rem 0.2rem rgba(85, 85, 85, 0.7);
+      background-size: cover;
+      background-position: center; }
+      .book_show .list_book li:last-child {
+        margin-right: 0; }
       .book_show .list_book li a {
         width: 100%;
         height: 100%;
@@ -630,6 +640,30 @@
     background-image: url("../../img/book_deco.png");
     background-repeat: no-repeat;
     background-size: cover; }
+  .book_show .btn_book {
+    width: 162px;
+    height: 0;
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    margin-left: -81px; }
+    .book_show .btn_book .btn {
+      width: 52px;
+      height: 60px;
+      border-radius: 10px;
+      background-color: rgba(51, 51, 51, 0.7);
+      float: left;
+      margin-right: 20px;
+      cursor: pointer;
+      background-image: url("../../img/btn_book.png");
+      background-repeat: no-repeat; }
+      .book_show .btn_book .btn:hover {
+        background-color: #F18C00; }
+    .book_show .btn_book .bnt_left_ {
+      background-position: 10px center; }
+    .book_show .btn_book .bnt_right_ {
+      background-position: -62px center;
+      margin-right: 0; }
 
 .box_recommend {
   background-position: center; }
@@ -708,7 +742,7 @@
   width: 818px;
   height: 124px;
   overflow: hidden;
-  padding-left: 72px;
+  margin-left: 72px;
   padding-top: 2px; }
 
 .menu_notice {
@@ -886,10 +920,13 @@
     width: 50%;
     height: 100%;
     float: left;
-    background-image: url("../../img/main/store/map.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; }
+    background-color: #D6E8EA; }
+    .box_map_store .box_map .map {
+      width: 480px;
+      height: 100%;
+      float: right;
+      background-image: url("../../img/main/store/store_map.png");
+      background-repeat: no-repeat; }
   .box_map_store .box_contents {
     width: 50%;
     height: 100%;

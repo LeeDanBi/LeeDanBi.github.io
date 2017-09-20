@@ -4,7 +4,7 @@
 @import '../_copy/header.scss';
 @import '../_copy/footer.scss';
 
-  #addBanner{width: 100%; height: 600px; background-color: #fa0; position: relative;
+  #addBanner{width: 100%; height: 600px; position: relative;
     .wrap_banner{width: 100%; height: 100%; overflow: hidden;
       ul{width: 400%; height: 100%;
         li{width: 25%; height: 100%; float: left; position: relative; background-position: center; background-size: cover;
@@ -53,13 +53,14 @@
               dd{width: 500px; height: 40px;
                 .box_check{float: left;}
                 .box_radio{float: left;}
-                input{display: block; float: left;}
+                input{display: block; float: left; opacity: 0; position: absolute; z-index: -5000;}
+                label{margin-right: 10px;}
               }//
             }//dl
           }//fieldset
           .box_search{width: 402px; height: 40px;}
           #searchBookD{width: 338px; height: 100%; float: left; border-radius: 15px; border: 1px solid map-get($color,point2);}
-          #DsearchBookBtn{width: 54px; height: 100%; float: right; border-radius: 15px; background-color: map-get($color,point2); border: 0;}
+          #DsearchBookBtn{width: 54px; height: 100%; float: right; border-radius: 15px; background-color: map-get($color,point2); border: 0; color: map-get($color,white); font-size: 24/16 +rem;}
         }//form
       }//.deatail_search
       .ranking_10{width: 470px; height: 100%; float: left; padding-top: 40px; padding-left: 145px; box-sizing: border-box; background-color: map-get($color,primary); margin-left: -50px;
@@ -87,15 +88,22 @@
           &::before{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top:20px; left:-212px;}
           &::after{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top: 20px; left: 175px; background-position: right;}
         }//h3
-        .list_wrap{width: 950px; height: 330px; overflow: hidden;}
-        .list_book{width: 940 * 2 + px; height: 100%;
-          li{width: 300px; height: 330px; float: left; margin-right: 20px; box-shadow: 0.1rem 0.1rem 0.2rem rgba(map-get($color,shadow), 0.7);
-            //&:nth-child(3n){margin-right: 0;}
+        .list_wrap{width: 950px; height: 330px; overflow: hidden; 
+        }
+        .list_book{width: 940 * 2 + 20 + px; height: 100%;
+          li{width: 300px; height: 330px; float: left; margin-right: 20px; box-shadow: 0.1rem 0.1rem 0.2rem rgba(map-get($color,shadow), 0.7); background-size: cover; background-position: center;
+            &:last-child{margin-right: 0;}
             a{width: 100%; height: 100%; display: block;}
           }//li
         }//.list_book
         .deco{width: 1014px; height: 34px; position: absolute; top: 570px; left:50%; margin-left: -507px; z-index: 100; box-shadow: 0.15rem 0.15rem 0.3rem rgba(#555,0.7); @include bgImg($f:'book_deco.png'); background-size: cover;}
-        .btn_book{}
+        .btn_book{width: 162px; height: 0; position: absolute; bottom: 120px; left: 50%; margin-left: -81px;
+          .btn{width: 52px; height: 60px; border-radius: 10px; background-color: rgba(map-get($color,black),0.7); float: left; margin-right: 20px; cursor: pointer; @include bgImg($f:'btn_book.png');
+            &:hover{background-color: map-get($color,point1);}
+          }//.btn
+          .bnt_left_{background-position: 10px center;}
+          .bnt_right_{background-position: -62px center; margin-right: 0;}
+        }//.btn_book
       }//.book_show
     // 추천, 신간
     .box_recommend{background-position: center;
@@ -119,7 +127,7 @@
       }//.box_wrap
     }//.box_notice
       .box_wrap{position: relative;}
-      .notice_wrap{width: 818px; height: 124px; overflow: hidden; padding-left: 72px; padding-top: 2px;}
+      .notice_wrap{width: 818px; height: 124px; overflow: hidden; margin-left: 72px; padding-top: 2px;}
       .menu_notice{width: 1512px; height: 120px;
         > li{width: 120px; height: 120px; border-radius: 60px; float: left; margin-right: 54px;
           &:nth-child(1) > dl > dt {background-color: map-get($color,point1);}
@@ -164,10 +172,10 @@
       }//.btn_more
     }//.box_info_ebook
     .box_map_store{width: 100%; height: 600px; min-width: 960px;
-      .box_map{width: 50%; height: 100%; float: left;
+      .box_map{width: 50%; height: 100%; float: left; background-color: #D6E8EA;
         //bg어떻게 할지 고민...
-        @include bgImg($f:'main/store/map.png'); background-size: cover; background-position: center;
-      }
+        .map{width: 480px; height: 100%; float: right; @include bgImg($f:'main/store/store_map.png');}
+      }//.box_map
       .box_contents{width: 50%; height: 100%; float: left; background-color: map-get($color,primary); position: relative;
         &:before{content: " "; display: block; width: 67px; height: 96px; @include bgImg($f:'bg_arrow.png'); position: absolute; top: 390px; left: -65px; z-index: 100;}
         .store_info{width: 480px; height: 100%; float: left;

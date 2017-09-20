@@ -1,0 +1,123 @@
+/* main.css */
+@import "../_base/base.scss";
+@import "../_base/mixin.scss";
+
+#wrap{width: 960px; height: auto; margin: 0 auto;}
+  #headBox{width: 100%; height: 60px; position: relative; background-color: map-get($color,primary); @include bgImg($f:'main/all/header/nar.png'); background-position: 170px 16px;
+    h1{width: 150px; height: 60px; background-color: map-get($color,gray); float: left; @include bgImg($f:'main/all/header/logo.png'); background-position: center;}
+    .wrap_head{float: right; margin-right: 40px; width: 150px;}
+    #unb{width: 128px; height: 15px; overflow: hidden; color: map-get($color,white); margin-top: 12px; padding-left: 20px; box-sizing:border-box; float: right;
+      li{width: 24px; height: 12px; float: left; margin-left: 18px; background-position: right;
+        &:first-child{@include bgImg($f:'main/all/header/login.png'); margin-left: 0;}
+        &:nth-child(2){@include bgImg($f:'main/all/header/join.png');}
+        &:last-child{@include bgImg($f:'main/all/header/qna.png');}
+        a{display: block; width: 100%; height: 100%;}
+      }//li
+    }//#unb
+    .box_search{width: 145px; height: 20px; border: none; float: right;
+      fieldset{width: 100%; height: 100%; border: none; padding: 0; margin: 0;
+        #search{width: 125px; height: 20px; float: left; border: none;}
+        button{width: 20px; height: 20px; float: left; background-color: map-get($color,gray); color: #fff; text-indent:-0.1em;
+         }
+      }// fieldset
+    }//.box_search
+    #gnb{width: 800px; height: 30px; position: absolute; right: 10px; bottom: -30px; z-index: 100; color: map-get($color,primary);
+      li{float: left; margin-right: 55px; line-height: 30px;
+        &:first-child{margin-left: 25px;}
+        &:last-child{margin-right: 25px;}
+      }//li
+      &::after{content:" "; display: block; width: 100%; height: 0; border-bottom: 1px solid map-get($color,gray); position: absolute; bottom: 0; left: 0;}
+    }//#gnb
+  }//#headBox
+    //_____________________________________________________ //#headBox
+
+  #contentBox{width: 100%; height: auto;}
+    fieldset{margin: 0; border: 0; margin-bottom: 40px; position:relative;
+      &:first-of-type::after, &:nth-of-type(2)::after{content:" "; display: block; width: 100%; height: 0; border-bottom: 1px solid #d9d9d9; position: absolute; bottom: -15px; left:0;}
+    }//fieldset
+    #joinBox{width: 650px; height: 660px; margin: 0 auto; margin-top: 100px; margin-bottom: 100px;
+      .box_ID_PW{
+      dl:nth-of-type(2) dt::before{background-position: -50px -20px;}
+      dl:nth-of-type(3) dt::before{background-position: -50px -40px;}
+      }//.box_ID_PW
+      .user_info{
+        dl:nth-of-type(1) dt::before{background-position: -50px -60px;}
+        dl:nth-of-type(2) dt::before{background-position: -50px -80px;}
+        dl:nth-of-type(3) dt::before{background-position: -50px -100px;}
+        dl:nth-of-type(4) dt::before{background-position: -50px -120px;}
+      }//.user_info
+      .user_birth_add{
+        dl:nth-of-type(1) dt::before{background-position: -50px -140px;}
+        dl:nth-of-type(2) dt::before{background-position: -50px -160px;}
+        dl:nth-of-type(3) dt::before{background-position: -50px -160px;}
+      }//.user_birth_add
+      dl{width: 100%; height: 30px; margin-bottom: 10px;
+        dt{width: 70px; height: 100%; margin-right: 15px; margin-left: 40px; line-height: 30px; float: left; font-size: 1rem; position: relative;
+          &::before{content:" "; display: 0; width: 20px; height: 20px; position: absolute; top:5px; left:-20px; @include bgImg($f:"join/join_icon.png"); background-position: -50px 0;}
+        }//dt
+        dd{float: left;
+          input{width: 240px; height: 100%; float: left; border: 1px solid #d9d9d9; box-sizing:border-box;
+            &[type="button"]{width: 100px; height: 100%; margin-left: 24px; background-color: #d9d9d9;}
+          }//input
+          p{width: auto; height: 100%; float: left; font-size: 12/16 + rem; line-height: 30px; margin-left: 24px;}
+        }//dd
+        .phone_num, .user_birth, .user_add{
+          input{width: 100px;}
+        }//.phone_num, .user_mail, .user_add
+        .user_birth{
+          input{margin-right: 6px;}
+          p{margin: 0; margin-right: 10px;}
+        }
+        .phone_num, .user_add{
+          input{margin-right: 10px;}//input
+          span{display: block; float: left; margin: 0; margin-right: 10px;}
+          .phone_last, .add_last{margin: 0;}
+        }
+        .user_mail{
+          input:first-of-type{width: 130px;}
+          input:last-of-type{width: 200px;}
+          span{display: block; float: left; margin-right: 10px; margin-left: 10px;}
+        }
+        #userAddPlus{width: 362px;}
+      }//dl
+      .btn_conrim{width: 360px; height: 40px; margin: 0 auto; padding: 0;
+        input{width: 140px; height: 100%; margin-right: 70px; padding: 0; background-color: #f06; color:#fff;
+          &:last-of-type{margin-right: 0; background-color: #d9d9d9; color: #333; }
+        }//input
+      }//.btn_conrim
+      #addressSearch{float: right;}
+    }//#joinBox
+
+
+    //_____________________________________________________ //#contentBox
+  #footBox{width: 100%; height: 120px; background-color: map-get($color,gray); padding: 20px 30px; box-sizing:border-box;
+    h2{width: 80px; height: 33px; float: left; @include bgImg($f:'main/all/footer/h2_logo.png'); margin-right: 85px;}
+    .box_info{width: 540px; height: 100%; float: left; font-size: 0.85rem;}
+      #inb{width: 100%; height: 22px;
+        li{float: left; margin-right: 13px; color: map-get($color,white); position: relative;
+          &::after{content:" "; display: block; width: 0; height: 12px; border-right: 1px solid map-get($color,white); position: absolute; top:3px; right: -6px;}
+          &:last-child::after{display: none;}
+        }//li
+      }//#inb
+      address{color: lighten(map-get($color,gray),15%);}
+    .wrap{float: right;}
+    .company_bro{width: 100px; height: auto; margin-top: -20px;
+      fieldset{width: 100%; border: none; padding: 0;
+        #companyBro{width: 100%; height: 18px;}
+        p{width: 100%; font-size: 0.625rem; text-align: right; color: lighten(map-get($color,gray),15%);}
+      }//fieldset
+    }//.company_bro
+      .icon_hoby{width: 134px; height: 40px; margin-top: 30px;
+        li{width: 40px; height: 40px; float: left; margin-right: 7px; @include bgImg($f:'main/all/footer/link_mark_00.png'); transition: all 500ms;
+          &:first-child:hover{background-position: left bottom;}
+          &:nth-child(2){background-position: center 0;
+            &:hover{background-position: center bottom;}
+          }
+          &:last-child{margin-right: 0; background-position:right 0;
+            &:hover{background-position: right bottom;}
+          }
+        }//li
+      }//.icon_hoby
+
+  }//#footBox
+    //_____________________________________________________ //#footBox
