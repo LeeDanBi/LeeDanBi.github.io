@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+    <html lang="ko-KR">
+      <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!--[if lte IE 9]>
+          <script src="../ie/html5shiv/dist/html5shiv.min.js"></script>
+           <script src="../ie/ie7/IE9.js"></script>
+           <script src="../ie/css3PIE/PIE_IE9.js"></script>
+          <![endif]-->
+          <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css" />
+          <link rel="stylesheet" type="text/css" href="../css/base/reset.css" />
+          <link rel="stylesheet" type="text/css" href="../css/base/normalize.css" />
+          <link rel="stylesheet" type="text/css" href="../fontAwesome/css/font-awesome.min.css" />
+          <link rel="stylesheet" type="text/css" href="../css/src/page_sub_new.css" />
+          <script src="../js/jQuery/jquery-3.2.1.min.js"></script>
+          <script src="../js/jQuery/jquery-ui.min.js"></script>
+          <title>MISSHA</title>
+      </head>
+      <body>
+        <div id="wrap">
+
+          <header id="headBox">
+
+            <div id="subHbox" class="clearfix">
+              <div class="inner_full_box"></div>
+              <h2>beautyNet</h2>
+              <ul id="messageBox" class="clearfix">
+                <li><a href="#">쪽지</a><div class="count_box"></div></li>
+                <li><a href="#">알림</a><div class="count_box"></div></li>
+                <li><a href="#">쿠폰</a><div class="count_box"></div></li>
+              </ul>
+            </div>
+
+            <div id="mainHbox" class="clearfix">
+
+              <div class="inner_full_box"><!-- full페이지 box --></div>
+
+              <h1><a href="./main.html"><span class="hidden">missha</span></a></h1>
+
+              <nav id="unb">
+                <h2 class="hidden"> 유저 정보 네비게이션 </h2>
+                <ul>
+                  <li><a href="#">로그인</a></li>
+                  <li><a href="#">회원가입</a></li>
+                  <li><a href="#">장바구니</a></li>
+                  <li><a href="#">고객센터</a></li>
+                  <li><a href="#">비회원 주문조회</a></li>
+                </ul>
+              </nav>
+            </div>
+            <nav id="gnb">
+              <h2 class="hidden"> 메인 메뉴 네비게이션 </h2>
+              <ul class="clearfix">
+                <li><a href="./subpage_New.html">new</a></li>
+                <li><a href="#">skin care</a></li>
+                <li><a href="#">make-up</a></li>
+                <li><a href="./subpage_MEN.html">men</a></li>
+                <li><a href="#">sun care</a></li>
+              </ul>
+            </nav>
+            <div id="searchBox" class="clearfix">
+              <div id="mrDeco"><!-- 미샤 링크 데코레이션 --></div>
+              <div id="misshaR"><a href="#">미샤 쇼핑 랭킹</a></div>
+              <form action="#" method="get">
+                <fieldset class="clearfix">
+                  <legend class="hidden">검색창</legend>
+                  <input type="search" id="search" value="" name="search" />
+                  <label for="search" class="hidden">검색할 키워드를 입력하세요.</label>
+                  <button type="button"><i class="fa fa-search" aria-hidden="true"></i><span class="hidden">검색</span></button>
+                </fieldset>
+              </form>
+              <div id="recommendBox"><a href="#">맞춤찾기</a></div>
+            </div>
+            <div id="siteNBbox">
+              <div class="inner_full_box"></div>
+              <ul id="misshaInfo">
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">사용후기</a></li>
+                <li><a href="#">단종/리뉴얼</a></li>
+                <li><a href="#">미샤 TV광고</a></li>
+              </ul>
+            </div>
+          </header>
+<!-- // #headBox____________________ -->
+
+          <section id="contentBox">
+            <h2 class="hidden">new 상품 페이지</h2>
+            <article id="adBannerBox">
+              <div class="inner_full_box"></div>
+              <span class="hidden">미샤 신제품을 소개합니다.</span>
+            </article>
+            <article id="goodsBox">
+              <h2>new product</h2>
+              <div id="selectOrder" class="clearfix">
+                <p>총 n개의 상품이 진열되어 있습니다.</p>
+                <form action="#">
+                  <fieldset>
+                    <legend class="hidden">목록 보기 순서</legend>
+                    <select name="proOrder" id="proOrder">
+                      <option value="베스트">베스트 순</option>
+                      <option value="높은가격">높은가격 순</option>
+                      <option value="낮은가격">낮은가격 순</option>
+                      <option value="최신등록">최신등록 순</option>
+                      <option value="사용후기">사용후기 순</option>
+                    </select>
+                  </fieldset>
+                </form>
+              </div>
+              <div id="goodsMEnu">
+                <ul class="clearfix">
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>셀프 네일 살롱 데코 스티커</dt>
+                      <dd>
+                        <ul>
+                          <li><del>2,500원</del>(50%) 1,250원</li>
+                          <li>bm 0</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>메가 볼륨 마스카라 [롱 볼륨]</dt>
+                      <dd>
+                        <ul>
+                          <li><del>15,800원</del>(30%) 11,060원</li>
+                          <li>bm 222</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>메가 볼륨 마스카라 [컬 볼륨]</dt>
+                      <dd>
+                        <ul>
+                          <li><del>15,800원</del> (30%)11,060원</li>
+                          <li>bm 222</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>플라워 슬리핑 마스크 [동백]</dt>
+                      <dd>
+                        <ul>
+                          <li><del>11,800원</del>(50%) 5,900원</li>
+                          <li>bm 0</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>플라워 슬리핑 마스크 [장미]</dt>
+                      <dd>
+                        <ul>
+                          <li><del>11,800원</del>(50%) 5,900원</li>
+                          <li>bm 0</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 수액</dt>
+                      <dd>
+                        <ul>
+                          <li><del>22,000원</del>(30%) 15,400</li>
+                          <li>bm 308</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 유액</dt>
+                      <dd>
+                        <ul>
+                          <li><del>22,000원</del>(30%) 15,400</li>
+                          <li>bm 308</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 에센스</dt>
+                      <dd>
+                        <ul>
+                          <li><del>25,000원</del>(30%) 17,500원</li>
+                          <li>bm 350</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 크림</dt>
+                      <dd>
+                        <ul>
+                          <li><del>25,000원</del>(30%) 17,500원</li>
+                          <li>bm 350</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">선케어 전품목 [1+1]</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 선크림</dt>
+                      <dd>
+                        <ul>
+                          <li>18,000원</li>
+                          <li>bm 0</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 2종 세트</dt>
+                      <dd class="clearfix">
+                        <ul>
+                          <li><del>44,000원</del>(30%) 30,800원</li>
+                          <li>bm 616</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                  <li>
+                    <div class="pro_img">
+                      <div class="event_label">8월 바캉스세일 최대 50%</div>
+                      <form action="#">
+                          <fieldset>
+                            <legend class="hidden">관심상품 등록</legend>
+                            <button type="button">관심상품</button>
+                            <button type="button">장바구니</button>
+                          </fieldset>
+                      </form>
+                    </div>
+                    <div class="pro_info"><a href="#">
+                    <dl>
+                      <dt>유려 미백 3종 세트</dt>
+                      <dd>
+                        <ul>
+                          <li><del>69,000원</del>(30%) 48,300원</li>
+                          <li>bm 966</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    </a></div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="order_num">
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&gt;</a></li>
+              </ul>
+              <div id="sideBanner">
+                <div id="sbtop">나의 쇼핑</div>
+                <div id="sbBody">
+                  <a href="#">관심상품</a>
+                  <a href="#">장바구니</a>
+                  <div id="sawPro">
+                    <h2>오늘 본 상품</h2>
+                    <div class="pro_img"></div>
+                    <div class="more">
+                      <a href="#">
+                        <i class="fa fa-plus" aria-hidden="true"></i><span class="hidden">더보기</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div id="sbBottom">
+                  <a href="#wrap">TOP</a>
+                </div>
+              </div>
+            </article>
+          </section>
+<!-- // #content____________________ -->
+
+          <footer id="footBox">
+            <div id="footInfo">
+              <h2 class="hidden_wrap"><a href="#"><span>ABLE C&amp;C</span></a></h2>
+              <address>
+                <p><strong>주소 : 서울특별시 금천구 가산디지털1로 119 SK트윈테크타워 A동 3층 | 대표 : 이세훈 | 사업자 등록번호 : 119-81-34685 | 통신판매 신고번호 : 제 2002-00018호 사업자정보확인 |개인정보 보호책임자 : 정필회</strong></p>
+                <p><strong>문의전화 : 080-080-4936 | FAX : 02-6392-6894</strong></p>
+                <p><strong>메일 : cs@beautynet.co.kr | webmaster@beautynet.co.kr</strong></p>
+                <p>copyright &copy; <span>able C &amp; C, all right teserved.</span></p>
+              </address>
+              <article id="snsBox">
+                <h3 class="hidden">sns 박스</h3>
+                <ul class="hidden_wrap">
+                  <li><a href="#"><span>facebook</span></a></li>
+                  <li><a href="#"><span>kakao</span></a></li>
+                  <li><a href="#"><span>instagram</span></a></li>
+                </ul>
+              </article>
+            </div>
+            <div id="inbBox">
+              <ul id="inb" class="clearfix">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">회원약관</a></li>
+                <li><a href="#">멤버십 이용약관</a></li>
+                <li><a href="#">멤버십 안내</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li>
+                  <dl class="clearfix">
+                    <dt>가맹점 문의 </dt>
+                    <dd><ul class="clearfix">
+                      <li><a href="#">미샤</a></li>
+                      <li><a href="#">어퓨</a></li>
+                    </ul></dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+          </footer>
+<!-- // #footBox____________________ -->
+
+        </div>
+      </body>
+    </html>

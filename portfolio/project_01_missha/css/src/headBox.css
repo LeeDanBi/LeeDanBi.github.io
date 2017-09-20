@@ -1,0 +1,92 @@
+/* ! headBox.css */
+body { overflow-x: hidden; font-family: 'Nanum Gothic Coding', monospace; }
+
+#wrap { width: 960px; height: auto; margin: 0 auto; }
+
+#headBox { width: 100%; height: 414px; color: #fff; }
+
+#headBox a { width: 100%; height: 100%; display: block; }
+
+#subHbox { width: 100%; height: 60px; padding-left: 6px; padding-top: 20px; box-sizing: border-box; position: relative; position: relative; }
+
+#subHbox::after { content: " "; width: 100vw; height: 5px; display: block; background-color: #ab060c; position: absolute; bottom: -5px; left: 50%; margin-left: -50vw; z-index: 1000; }
+
+#subHbox::before { content: " "; width: 100vw; height: 100%; background-color: #030303; position: absolute; top: 0; left: 50%; margin-left: -50vw; z-index: -100; }
+
+#subHbox > h2 { float: left; font-size: 0.9rem; color: #fff; font-size: 1.25rem; text-transform: none; }
+
+#messageBox { float: right; }
+
+#messageBox > li { width: 100px; height: 30px; float: left; margin-right: 20px; font-size: 0.8rem; margin-top: 4px; }
+
+#messageBox > li a { width: 30px; height: 100%; float: left; margin-right: 10px; margin-top: 4px; }
+
+#messageBox > li .count_box { width: 60px; height: 20px; float: left; border-radius: 10px; background-color: #fff; display: block; }
+
+#messageBox > li:last-child { margin-right: 10px; background-position: center; }
+
+/* //#subHbox ___________________ */
+#mainHbox { width: 100%; height: 160px; padding-top: 68px; padding-left: 5px; box-sizing: border-box; position: relative; }
+
+#mainHbox::before { content: " "; width: 100vw; height: 100%; background-color: #030303; position: absolute; top: 0; left: 50%; margin-left: -50vw; z-index: -100; }
+
+h1 { width: 242px; height: 35px; float: left; background-image: url("../../img/headBox/logo.png"); background-repeat: no-repeat; background-position: center; }
+
+#unb { float: right; margin-top: 20px; font-size: 1.25rem; }
+
+#unb > ul { width: 100%; }
+
+#unb > ul > li { float: left; margin-right: 16px; }
+
+#unb > ul > li:last-child { margin-right: 10px; }
+
+/* //#mainHbox ___________________ */
+#gnb { width: 100%; height: 74px; padding: 26px 10px 0px; box-sizing: border-box; font-size: 1.5rem; text-transform: uppercase; position: relative; }
+
+#gnb::before { content: " "; width: 100vw; height: 100%; background-color: #333; position: absolute; top: 0; left: 50%; margin-left: -50vw; z-index: -100; }
+
+#gnb > ul { width: 100%; height: 100%; }
+
+#gnb > ul > li { width: auto; height: 20px; text-align: center; line-height: 20px; float: left; margin-right: 2px; margin-right: 20px; margin-right: 90px; }
+
+#gnb > ul > li:last-child { margin-right: 0; }
+
+#gnb > ul > li > a { width: 100%; height: 100%; display: block; padding: 0px 20px; }
+
+/* //#gnb ___________________ */
+#searchBox { width: 100%; height: 120px; padding-top: 32px; box-sizing: border-box; font-size: 1.25rem; position: relative; position: relative; }
+
+#searchBox::before { content: " "; width: 100vw; height: 100%; background-color: #ddd; position: absolute; top: 0; left: 50%; margin-left: -50vw; z-index: -100; }
+
+#searchBox::after { content: " "; width: 100vw; height: 1px; display: block; background-color: #ab060c; position: absolute; bottom: -1px; left: 50%; margin-left: -50vw; z-index: 1000; }
+
+#mrDeco { width: 53px; height: 97px; float: left; margin-top: -32px; background-image: url("../../img/headBox/mrIcon.png"); background-repeat: no-repeat; background-position: center; }
+
+#misshaR { width: 200px; height: 26px; float: left; text-align: center; color: #000; margin-top: 25px; font-weight: bold; }
+
+#searchBox > form { float: left; margin-left: 54px; }
+
+#searchBox > form input { width: 358px; height: 58px; background-color: #fff; text-indent: 30px; padding-right: 30px; border: none; box-sizing: border-box; display: block; float: left; font-size: 1.5rem; }
+
+#searchBox > form button { width: 80px; height: 70px; color: #fff; background-color: #ab060c; font-size: 1.875rem; display: block; float: right; margin-top: -6px; }
+
+#recommendBox { width: 200px; height: 26px; text-align: center; line-height: 26px; float: right; color: #000; margin-top: 25px; font-weight: bold; }
+
+/* //#searchBox ___________________ */
+#siteNBbox { width: 960px; height: 56px; font-size: 0.75rem; padding-top: 18px; box-sizing: border-box; color: #000; position: absolute; }
+
+#siteNBbox::before { content: " "; width: 100vw; height: 100%; background-color: #ddd; position: absolute; top: 0; left: 50%; margin-left: -50vw; z-index: -100; }
+
+#siteNBbox > .inner_full_box { width: 100vw; height: 100%; background-color: rgba(255, 255, 255, 0.5); position: absolute; top: 0; left: 50%; margin-left: -50vw; background-position: center; z-index: 100; }
+
+#misshaInfo { float: left; position: relative; z-index: 200; }
+
+#misshaInfo > li { float: left; font-size: 1.25rem; }
+
+#misshaInfo > li:hover { border-bottom: 2px solid #ab060c; }
+
+#siteNBbox li { margin-right: 90px; }
+
+#siteNBbox li:first-child { margin-left: 122px; }
+
+#siteNBbox li:last-child { margin-right: 0; }
