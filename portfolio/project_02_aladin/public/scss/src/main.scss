@@ -1,7 +1,7 @@
-@import '../_base/base.scss';
+@import '../_base/base.scss';  
 @import '../_base/mixin.scss';
-
-@import '../_copy/header.scss';
+ 
+@import '../_copy/header.scss';   
 @import '../_copy/footer.scss';
 
   #addBanner{width: 100%; height: 600px; position: relative;
@@ -33,7 +33,7 @@
       }//.btn_right
     }//box_btn
   }//#addBanner
-    .effect_maple{position: absolute;}
+    .effect_maple{position: absolute; transition: all 100ms;}
     .maple_1_l{width: 518px; height: 412px; z-index: 300; @include bgImg($f:'main/event/maple_1_l.png'); top: 100px; left: -105px;}
     .maple_2_l{width: 592px; height: 620px; z-index: 200; @include bgImg($f:'main/event/maple_2_l.png'); top: 50px; left: -108px;}
     .maple_3_l{width: 410px; height: 430px; z-index: 100; @include bgImg($f:'main/event/maple_3_l.png'); top: 20px; left: -105px;}
@@ -48,14 +48,44 @@
         form{transform:skew(10deg); padding-top: 56px; box-sizing: border-box;
           fieldset{width: 480px; height: 342px; padding-top: 40px; padding-left: 50px; box-sizing: border-box;
             dl{
-              &:first-of-type dt{width: 34px; height: 34px; display: block; margin-top: 18px; margin-bottom: 22px;}
+              &:first-of-type dt{width: 34px; height: 34px; display: block; margin-top: 18px;margin-bottom: 22px;}
+              &:first-of-type dd::before{display: none;}
+              &:first-of-type dd{
+                input:checked + label::after{display: none;}
+                label{
+                  &::before{display: none;}
+                  &::after{display: none;}
+                }//label
+              }//&:first-of-type dd
               dt{font-weight: bold;}
-              dd{width: 500px; height: 40px;
+              dd.box_con{width: 360px; height: 42px; margin-top: -55px; margin-bottom: 16px;
+                label{display: block; width: 48px; height: auto; margin-left: 30px;
+                  &:nth-child(4n+1){margin-left: 20px;}
+                }//label
+              }//dd.box_con
+              dd.box_publish label{margin-right: 14px;}
+              dd.box_stock .box_radio{
+                label{width: 100px; height: auto; display: block; margin-left: -32px; text-align: center; margin-right: 75px;}
+              }//dd.box_stock
+              dd.box_price label{margin-right: 58px;}
+              dd{width: 500px; height: 40px; position: relative; margin-left: 80px; margin-top: 2px;
+                &::before{@include pseudo($w:300px, $h:10px); position: absolute; top: -15px; left: 10px; background-color: map-get($color,white); border: 1px solid map-get($color,black);}
                 .box_check{float: left;}
-                .box_radio{float: left;}
-                input{display: block; float: left; opacity: 0; position: absolute; z-index: -5000;}
-                label{margin-right: 10px;}
-              }//
+                .box_radio{float: left;}//.box_radio
+                input{display: block; float: left; opacity: 0; position: absolute; z-index: -5000;
+                  // &:checked + label::before{width: 26px; height: 26px; top: -23px; left: 50%; margin-left: -13px; border-radius: 13px;}
+                  // &:checked + label::after{@include pseudo($w:20px,$h:20px); position: absolute; top: -19px; left:50%; margin-left: -10px; background-color: map-get($color,point2); border-radius: 10px;}
+                  // &:focus +label:after{background-color: #fa0;}
+                }
+                label{margin-right: 10px; position: relative;
+                  // &::before{@include pseudo($w:20px,$h:20px); position: absolute; top: -20px; left:50%; margin-left: -10px; background-color: map-get($color,white); border: 1px solid map-get($color,black); border-radius: 10px; transition: all 500ms;}
+                  // &::after{ @include pseudo($w:10px,$h:10px); position: absolute; top: -19px; left:50%; margin-left: -5px; background-color: map-get($color,white); border-radius: 5px; transition: all 500ms;}
+                  >i{@include pseudo($w:20px,$h:20px); position: absolute; top: -20px; left:50%; margin-left: -10px; background-color: map-get($color,white); border: 1px solid map-get($color,black); border-radius: 10px; transition: all 500ms; padding: 5px; box-sizing: border-box;
+                    &:before{@include pseudo($w:100%,$h:100%); background-color: map-get($color,white); border-radius: 5px;}
+                    }
+                  >span{}
+                }//label
+              }//dd
             }//dl
           }//fieldset
           .box_search{width: 402px; height: 40px;}

@@ -94,13 +94,22 @@
   width: 100%;
   height: 60px;
   background-color: #4C5C6C;
-  position: relative; }
+  position: relative;
+  z-index: 6500; }
+  #gnb.fixed {
+    position: fixed;
+    top: 0;
+    transform: translateY(-60px);
+    box-shadow: 0 0.1rem 0.1rem rgba(51, 51, 51, 0.7); }
+  #gnb.move {
+    transform: translateY(0); }
   #gnb .box_wrap {
     padding: 0 10px;
     box-sizing: border-box; }
   #gnb ul {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    position: relative; }
     #gnb ul li {
       width: auto;
       height: 100%;
@@ -114,13 +123,14 @@
         width: 152px;
         height: 62px;
         position: absolute;
-        bottom: -60px;
+        top: 60px;
         left: 50%;
         margin-left: -71px;
         z-index: 2000;
         background-image: url("../../img/gnb_menu.png");
         background-repeat: no-repeat;
-        cursor: pointer; }
+        cursor: pointer;
+        display: none; }
         #gnb ul li:first-child button {
           width: 36px;
           height: 23px;

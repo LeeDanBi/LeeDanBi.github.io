@@ -4,24 +4,71 @@
 
   var windowS = $(window);
   var addBanner= $('#addBanner');
+  var gnb = $('#gnb');
   var menuButton = $('#menuButton');
+  var buttonDeco = $('#buttonDeco')
+
+  // menuButton.slideUp();
 
   windowS.on('scroll',function(){
   var wst = $(this).scrollTop();
   var mot = addBanner.offset().top;
-  if(wst>=mot){
-    menuButton.css({position:'fixed', top: '0'});
-  }else{
-    menuButton.css({position:'absolute', top: '60px'});
+
+
+  // if(wst>=mot){
+  //   menuButton.slideDown().css({position:'fixed', top: '0'}).removeClass('button_deco');
+  //   if(gnb.css('position')=='fixed' && gnb.css('top')=='0'){
+  //   menuButton.css({position:'absolute', top: '60px'});
+  //   }
+  // }else{
+  //   
+  //   menuButton.slideUp();
+  //   menuButton.css({position:'absolute', top: '60px'});
+  //   if(gnb.css('position')=='fixed'){
+  //     gnb.css({position:'relative', top: 0});
+  //   }
+  // }
+
+ if(wst>=mot){
+  gnb.addClass('fixed');
+  menuButton.slideDown();
+  if(!buttonDeco.hasClass('button_deco')){
+  gnb.css({transform:'translateY(-60px)'});
   }
+ }else{
+  menuButton.slideUp();
+  gnb.removeClass('fixed');
+  buttonDeco.removeClass('button_deco');
+  gnb.css({transform:'translateY(0)'});
+ }
+
+
   });
 
-    //버튼 눌렀을 떄--
-  var buttonDeco = $('#buttonDeco')
-    menuButton.on('click',function(e){
-      e.preventDefault();
-      buttonDeco.stop().toggleClass('button_deco');
-    });
+  menuButton.on('click',function(e) {
+    e.preventDefault();
+     buttonDeco.stop().toggleClass('button_deco');
+     if(buttonDeco.hasClass('button_deco')){
+       gnb.css({transform:'translateY(0)',transition:'all 500ms'});
+      }else{
+       gnb.css({transform:'translateY(-60px)',transition:'all 500ms'});
+      }
+  });
+
+  //   //버튼 눌렀을 떄--
+  // var buttonDeco = $('#buttonDeco')
+  //   menuButton.on('click',function(e){
+  //     e.preventDefault();
+  //     buttonDeco.stop().toggleClass('button_deco');
+  //     if(buttonDeco.hasClass('button_deco')){
+  //       gnb.css({position:'fixed', top: '-60px', zIndex:'6000'}).animate({top:'0'});
+  //       menuButton.animate({position:'fixed', top: '60px'});
+  //     }else{
+  //       gnb.animate({position:'fixed', top: '-60px'});
+  //       menuButton.animate({position:'fixed', top: '0'});
+  //     }
+  //       //버그가 많이 일어나고 있습니다. 도와주세요.
+  //   });
 
 
   // 배너의 maple effect _________________

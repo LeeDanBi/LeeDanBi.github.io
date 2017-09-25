@@ -22,11 +22,14 @@
         }//fieldset
       }//form
     }//.box_main_head
-    #gnb{width: 100%; height: 60px; background-color: map-get($color,primary); position: relative;
+    #gnb{width: 100%; height: 60px; background-color: map-get($color,primary); 
+         position: relative; z-index:6500;
+      &.fixed{position: fixed; top: 0; transform:translateY(-60px); box-shadow: 0 0.1rem 0.1rem rgba(#333,0.7);}
+      &.move{transform:translateY(0)}
       .box_wrap{padding: 0 10px; box-sizing: border-box;}
-      ul{width: 100%; height: 100%;
+      ul{width: 100%; height: 100%; position: relative;
         li{width: auto; height: 100%; float: left; margin-right: 34px; color: map-get($color,white); font-size: 24/16 + rem; line-height: 60px; font-weight: bold;
-          &:first-child{width: 152px; height: 62px; position: absolute; bottom: -60px; left: 50%; margin-left: -71px; z-index: 2000; @include bgImg($f:'gnb_menu.png'); cursor: pointer;
+          &:first-child{width: 152px; height: 62px; position: absolute; top: 60px; left: 50%; margin-left: -71px; z-index: 2000; @include bgImg($f:'gnb_menu.png'); cursor: pointer;  display: none; 
             button{width: 36px; height: 23px; border-bottom: 4px solid map-get($color,white); margin-left: 56px; position: relative; transition: all 500ms;
               &::before{content:" "; display: block; width: 36px; height: 4px; position: absolute; top:8px; left: 0; background-color: map-get($color,white); transition: all 500ms; }
               &::after{content:" "; display: block; width: 36px; height: 4px; position: absolute; top:30px; left: 0; background-color: map-get($color,white); transition: all 500ms;}
