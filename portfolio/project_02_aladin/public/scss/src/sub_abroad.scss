@@ -4,12 +4,12 @@
 @import '../_copy/header.scss';
 @import '../_copy/footer.scss';
 
-  #addBanner{width: 100%; height: 600px; position: relative;
+  #addBanner{width: 100%; height: 600px; position: relative; border-bottom: 1px solid map-get($color,primary);
     .wrap_banner{width: 100%; height: 100%; overflow: hidden;
       ul{width: 400%; height: 100%;
         li{width: 25%; height: 100%; float: left; position: relative; background-position: center; background-size: cover;
           @for $i from 1 through 4{
-            &.bn_#{$i}{@include bgImg($f:'main/event/event_' + $i + '.png');}
+            &.bn_#{$i}{@include bgImg($f:'sub_abroad/event/event_' + $i + '.png');}
           }//@for
         }//li
         a{width: 100%; height: 100%; display: block; position: absolute; z-index: 500;}
@@ -38,9 +38,9 @@
   //책 리스트 --------------------------------------
       .book_show{width: 100%; height: 750px; @include bgImg($f:'bg.png'); background-position: center; background-size: cover;
         .box_wrap{padding: 145px 10px 0; box-sizing:border-box; position: relative;}
-        h3{width: auto; height: 40px; margin-left: 390px; font-size: 40/16 +rem; margin-bottom: 60px; position: relative;
+        h3{width: auto; height: 40px; display: inline-block; margin-left: 390px; font-size: 40/16 +rem; margin-bottom: 60px; position: relative;
           &::before{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top:20px; left:-212px;}
-          &::after{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top: 20px; left: 175px; background-position: right;}
+          &::after{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top: 20px; right: -212px; background-position: right;}
         }//h3
         .list_wrap{width: 950px; height: 330px; overflow: hidden; 
         }
@@ -60,7 +60,80 @@
         }//.btn_book
       }//.book_show
       //특가도서
+      .box_sale{width: 100%; height: 820px; background-color: map-get($color,white); background-image: none;
+        .list_wrap{width: 100%; height: 440px;}
+        ul.list_book{width: 100%;
+          li{height: 100%; border-radius: 0; box-shadow: none;
+            @for $i from 1 through 3{
+              &:nth-child(#{$i}) > .book_img{@include bgImg($f:'sub_abroad/sale_book/sale_' + $i +'.png');} 
+            }
+            .book_img{width: 100%; height: 385px; background-position:center;
+              >a{width: 100%; height: 100%; display: block;}
+            }//.book_img
+            dl{width: 100%; height: 55px; font-size: 20/16 +rem; text-align: center;
+              dt{width: auto; height: auto;}
+              dd{width: auto; height: auto;
+                .sale_percent{color:map-get($color,point2);}
+              }//dd
+            }//dl
+          }//li
+        }//ul.list_book
+        #btnMore{width: 160px; height: 60px; position: relative; margin-top: 150px; border:1px solid map-get($color,point2); text-align: center; font-size: 24/16 + rem; line-height: 60px; border-radius: 10px; font-weight: bold; color: map-get($color,point2);}
+      }//.box_sale
       //새로나온 도서
+      .box_new{width: 100%; height: 800px; background-color: map-get($color,white); background-image: none;
+        h3{left: 50%; margin-left: -120px;}
+        .list_wrap{width: 100%; height: 400px;}
+        ul.list_book{width: 100%; height: 100%;
+          li{width: 216px; height: 100%; margin-right: 22px;border-radius: 0; box-shadow: none;
+            @for $i from 1 through 4{
+              &:nth-child(#{$i}) > .book_img{@include bgImg($f:'sub_abroad/new_book/new_' + $i + '.jpg');}
+            }
+            .book_img{width: 216px; height: 216px; background-color: #af0; border-radius: 108px; background-position: center; background-size: cover;}
+            dl{width: 100%; height: 184px; padding-top: 30px; box-sizing: border-box; text-align: center; font-size: 18/16 +rem;
+              >dt{color:map-get($color,primary); font-weight: bold;}
+              >dd{margin-top: 20px;}
+            }
+          }//li
+        }//ul.list_book
+      }//.box_new
       //추천도서
-  .ad_book{width: 100%; height: 300px; background-color: #fa0;}
+      .box_recommend{background-position: center;
+      @for $i from 1 through 6{
+        .book_#{$i}{@include bgImg($f:'sub_abroad/recommend_book/reco_'+ $i +'.jpg');}
+      }//@for
+    }
+  .ad_book{width: 100%; height: 300px;
+    .box_ad{width: 50%; height: 100%;
+      &:nth-of-type(1){background-color: #bedd3d; float: left; transform: skew(-10deg); position: relative;
+        .book_78{width: 100%; height: 100%; transform:skew(10deg); @include bgImg($f:'sub_abroad/add_book/bg78.png'); background-position: 20% bottom; padding-top: 100px; box-sizing: border-box;
+          div{width: 480px; height: 100%; float: right;
+            p{width: 100%; height: auto; text-align: center; font-size: 36 / 16 + rem; font-weight: bold; }
+            .btn_more{font-size: 24 / 16 + rem;
+              a{width: auto; height: auto; padding: 8px 28px; display: inline-block; border: 1px solid map-get($color,black); margin-top: 22px;}
+            }//.btn_more
+          }//div
+        }//.book_78
+        &::before{@include pseudo($w:100%, $h:100%); top:0; left: -80%; transform:skew(10deg); background-color: inherit;}
+      }
+      &:nth-of-type(2){background-color: #c1e4f8; float: left; transform: skew(-10deg); position: relative;
+        .book_busy{width: 100%; height: 100%; transform:skew(10deg); @include bgImg($f:'sub_abroad/add_book/bgbusy.png'); background-position: 80% bottom; padding-top: 60px; box-sizing:border-box;
+           div{width: 480px; height: 100px; float: left;}
+            p{width: 100%; height: auto; text-align: center; font-size: 36 / 16 + rem; font-weight: bold;
+            line-height: 36 / 16 + rem; 
+              .font_z{font-size: 24/16 +rem;}
+              .pink{color: map-get($color,point2);}
+            }
+            .btn_more{font-size: 24 / 16 + rem;
+              a{width: auto; height: auto; padding: 8px 28px; display: inline-block; border: 1px solid map-get($color,black); margin-top: 22px;}
+            }//.btn_more
+        }//.book_busy
+        &::before{@include pseudo($w:100%, $h:100%); top:0; right: -80%; transform:skew(10deg); background-color: inherit;}
+      }
+    }
+  }//.ad_book
   
+  @media screen and (max-width:1300px){
+    .ad_book > .box_ad:nth-of-type(1) .book_78 , 
+    .ad_book > .box_ad:nth-of-type(2) .book_busy{background-image: url('none');}
+  }

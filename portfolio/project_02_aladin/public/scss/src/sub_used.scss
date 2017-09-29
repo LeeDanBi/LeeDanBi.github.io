@@ -8,12 +8,17 @@
     .aladin_info{width: 100%; height: 600px; @include bgImg($f:'sub_used/info_bg.png'); background-position: center; background-size: cover; background-attachment: fixed; padding-top: 92px; box-sizing: border-box;}
       .aladin_news{width: 940px; height: 60px; position: relative; border-radius: 30px; border: 2px solid map-get($color,primary); overflow: hidden; background-color: map-get($color,white);
         h4{width: 224px; height: 60px; float: left; background-color: map-get($color,primary); color:map-get($color,white); line-height: 60px; font-size: 28/16 +rem; text-align: center;}
-        ul{width: 640px; height: 100%; float: left; padding-left: 36px; box-sizing: border-box;
-          li{width: 100%; height: 56px; line-height: 56px; font-size: 20/16 + rem;}
+        ul{width: 600px; height: 100%; float: left; padding-left: 36px; box-sizing: border-box; position: relative;
+          &.active{>li{position:relative;}}
+          li{width: 100%; height: 56px; line-height: 56px; font-size: 20/16 + rem;  position: absolute; background-color:map-get($color,white); 
+            &.focus, &.active{z-index:10;}}
         }//ul
         .btn_more{width: 50px; height: 50px; border-radius: 25px; background-color: map-get($color,primary); float: right; position: absolute; top: 3px; right: 3px; text-align: center; line-height: 50px; color: map-get($color,white); font-size: 24/16 +rem;
         }//.btn_more
       }//.aladin_news
+      // ---
+      .newClone{width: 100%; height: 450px; position: absolute; top: 0; left: 0; background-color: map-get($color,white); z-index: 100; text-align: center;}
+      //---
       .used_info{width: 330px; height: auto; margin: 100px auto; 
         ul{width: 330px; height: auto;
           li{width: 100%; height: 40px; margin-bottom: 12px; text-align: center; color: map-get($color,white); font-size: 24/16 + rem; font-weight: bold; border: 1px solid map-get($color,white); line-height: 40px; border-radius: 10px; transition: all 300ms;
@@ -46,7 +51,9 @@
             }//form
           }//.search_used
           .purchase_info{width: 310px; height: 100%; float: right; border-radius: 30px; border: 2px dashed map-get($color,primary); overflow: hidden;
-            h5{font-size: 18/16 + rem; padding: 30px 0 0 30px; box-sizing: border-box;}
+            h5{font-size: 18/16 + rem; padding: 30px 0 0 30px; box-sizing: border-box; position: relative;
+              i{position: absolute; bottom: -110px; left: 50%; margin-left: -20px; color: map-get($color,primary); font-size: 40/16 +rem;}
+            }//h5
             dl{width: 120px; height: 60px; padding: 70px 0 0 20px; box-sizing: border-box; float: left; text-align: center; margin-right: 40px;
               &:last-of-type{margin-right: 0;}
               >dt{font-size: 18/16 + rem;}
@@ -74,7 +81,7 @@
       ul{width: 400%; height: 100%;
         li{width: 25%; height: 100%; float: left; position: relative; background-position: center; background-size: cover;
           @for $i from 1 through 4{
-            &.bn_#{$i}{@include bgImg($f:'main/event/event_' + $i + '.png');}
+            &.bn_#{$i}{@include bgImg($f:'sub_used/event/event_' + $i + '.png');}
           }//@for
         }//li
         a{width: 100%; height: 100%; display: block; position: absolute; z-index: 500;}
@@ -103,14 +110,14 @@
 //책 리스트 --------------------------------------
       .book_show{width: 100%; height: 750px; @include bgImg($f:'bg.png'); background-position: center; background-size: cover;
         .box_wrap{padding: 145px 10px 0; box-sizing:border-box; position: relative;}
-        h3{width: auto; height: 40px; margin-left: 390px; font-size: 40/16 +rem; margin-bottom: 60px; position: relative;
+        h3{width: auto; height: 40px; display: inline-block; margin-left: 390px; font-size: 40/16 +rem; margin-bottom: 60px; position: relative;
           &::before{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top:20px; left:-212px;}
-          &::after{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top: 20px; left: 175px; background-position: right;}
+          &::after{@include pseudo($w:192px, $h:14px); @include bgImg($f:'title_deco.png'); top: 20px; right: -212px; background-position: right;}
         }//h3
         .list_wrap{width: 950px; height: 330px; overflow: hidden; 
         }
         .list_book{width: 940 * 2 + 20 + px; height: 100%;
-          li{width: 300px; height: 330px; float: left; margin-right: 20px; box-shadow: 0.1rem 0.1rem 0.2rem rgba(map-get($color,shadow), 0.7); background-size: cover; background-position: center;
+          li{width: 300px; height: 330px; float: left; margin-right: 20px; box-shadow: 0.1rem 0.1rem 0.2rem rgba(map-get($color,shadow), 0.7); background-size: cover; background-position: center; border-radius: 150px;
             &:last-child{margin-right: 0;}
             a{width: 100%; height: 100%; display: block;}
           }//li
@@ -124,15 +131,16 @@
           .bnt_right_{background-position: -62px center; margin-right: 0;}
         }//.btn_book
       }//.book_show
-    // 추천, 신간
+    // 추천
     .box_recommend{background-position: center;
       @for $i from 1 through 6{
-        .book_#{$i}{@include bgImg($f:'main/recommend_book/reco_'+ $i +'.png');}
+        .book_#{$i}{@include bgImg($f:'sub_used/recommend_used/reco_'+ $i +'.jpg');}
       }//@for
     }
-    //신간
+    //신규등록
+    .box_new h3{left:50%; margin-left: -115px;}
     .box_new .list_book{background-position: center;
       @for $i from 1 through 6{
-        .book_#{$i}{@include bgImg($f:'main/new_book/new_'+ $i +'.png');}
+        .book_#{$i}{@include bgImg($f:'sub_used/new_used/new_'+ $i +'.jpg');}
       }//@for
     }//.box_new .list_book

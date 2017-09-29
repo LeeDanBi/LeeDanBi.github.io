@@ -70,18 +70,22 @@
               dd.box_price label{margin-right: 58px;}
               dd{width: 500px; height: 40px; position: relative; margin-left: 80px; margin-top: 2px;
                 &::before{@include pseudo($w:300px, $h:10px); position: absolute; top: -15px; left: 10px; background-color: map-get($color,white); border: 1px solid map-get($color,black);}
-                .box_check{float: left;}
+                .box_check{float: left;
+                  > input:checked + label::before{@include bgImg($f:'main/checked.png'); background-position: 0 0;}
+                  > input:focus + label{outline:1px solid map-get($color,point2);}
+                  > label{
+                    &::before{@include pseudo($w:26px, $h:20px); top: -2px; left: -24px; @include bgImg($f:'main/checked_none.png'); background-position: 4px 0;}
+                  }
+                }
                 .box_radio{float: left;}//.box_radio
                 input{display: block; float: left; opacity: 0; position: absolute; z-index: -5000;
-                  // &:checked + label::before{width: 26px; height: 26px; top: -23px; left: 50%; margin-left: -13px; border-radius: 13px;}
-                  // &:checked + label::after{@include pseudo($w:20px,$h:20px); position: absolute; top: -19px; left:50%; margin-left: -10px; background-color: map-get($color,point2); border-radius: 10px;}
-                  // &:focus +label:after{background-color: #fa0;}
+                  &:checked + label > i{width: 26px; height: 26px; top: -23px; left: 50%; margin-left: -13px; border-radius: 13px; padding:2px; box-sizing:border-box;}
+                  &:checked + label > i::before{background-color: map-get($color,point2); width: 100%; height: 100%; border-radius: 12px;}
+                  &:focus +label > i::before{background-color: map-get($color,point2);}
                 }
                 label{margin-right: 10px; position: relative;
-                  // &::before{@include pseudo($w:20px,$h:20px); position: absolute; top: -20px; left:50%; margin-left: -10px; background-color: map-get($color,white); border: 1px solid map-get($color,black); border-radius: 10px; transition: all 500ms;}
-                  // &::after{ @include pseudo($w:10px,$h:10px); position: absolute; top: -19px; left:50%; margin-left: -5px; background-color: map-get($color,white); border-radius: 5px; transition: all 500ms;}
-                  >i{@include pseudo($w:20px,$h:20px); position: absolute; top: -20px; left:50%; margin-left: -10px; background-color: map-get($color,white); border: 1px solid map-get($color,black); border-radius: 10px; transition: all 500ms; padding: 5px; box-sizing: border-box;
-                    &:before{@include pseudo($w:100%,$h:100%); background-color: map-get($color,white); border-radius: 5px;}
+                  >i{@include pseudo($w:20px,$h:20px); position: absolute; top: -20px; left:50%; margin-left: -10px; background-color: map-get($color,white); border: 1px solid map-get($color,black); border-radius: 10px; transition: all 500ms;
+                    &:before{content: " "; display: block; width: 100%; height: 100%; background-color: map-get($color,white); border-radius: 10px;}
                     }
                   >span{}
                 }//label
@@ -95,7 +99,7 @@
       }//.deatail_search
       .ranking_10{width: 470px; height: 100%; float: left; padding-top: 40px; padding-left: 145px; box-sizing: border-box; background-color: map-get($color,primary); margin-left: -50px;
         .box_ranking{width: 100%; height: 100%;
-          h3{font-size: 18 / 16 + rem; color: map-get($color,white); margin-bottom: 37px; position: relative;
+          h4{font-size: 18 / 16 + rem; color: map-get($color,white); margin-bottom: 37px; position: relative;
             .pink{color:#ECD8D9;}
             .top10{display: inline-block; width: 50px; height: 16px; text-transform: uppercase; background-color: map-get($color,point2); color: map-get($color,white); font-size: 12/16 +rem; text-align: center; line-height: 16px; margin-left: 10px;}
             &::before{content:" "; width: 262px; height: 4px; display: block; @include bgImg($f:'main/t_underline.png'); position: absolute; bottom: -16px; left: -12px;}
@@ -203,15 +207,29 @@
     }//.box_info_ebook
     .box_map_store{width: 100%; height: 600px; min-width: 960px;
       .box_map{width: 50%; height: 100%; float: left; background-color: #D6E8EA;
-        //bg어떻게 할지 고민...
-        .map{width: 480px; height: 100%; float: right; @include bgImg($f:'main/store/store_map.png');}
+        .map{width: 480px; height: 100%; float: right; @include bgImg($f:'main/store/store_map.png'); position: relative;}
+        .map_point{width: 60px; height: 70px; position: absolute; @include bgImg($f:'main/store/pinset.png'); transition:all 300ms;
+          &:hover{-webkit-transform:scale(1.2);}
+          > button:focus{outline: 0; @include bgImg($f:'main/store/pinset_act.png');}
+          button{width: 100%; height: 100%;}
+        }//.map_point
+        .actPoint{@include bgImg($f:'main/store/pinset_act.png'); transform:scale(1.2);} //자바스크립트 용도
+        #seoul{top: 14px; left: 130px;}
+        #gyungi{top: 66px; left: 182px;}
+        #deajun{top: 190px; left: 166px;}
+        #deagu{top: 132px; left: 326px;}
+        #busan{top: 288px; left: 295px;}
+        #gwangju{top: 338px; left: 106px;}
       }//.box_map
       .box_contents{width: 50%; height: 100%; float: left; background-color: map-get($color,primary); position: relative;
         &:before{content: " "; display: block; width: 67px; height: 96px; @include bgImg($f:'bg_arrow.png'); position: absolute; top: 390px; left: -65px; z-index: 100;}
         .store_info{width: 480px; height: 100%; float: left;
+          position: absolute; top:0; left: 0; background-color: map-get($color,primary);
           &:hover a:before{animation-name: example; animation-duration: 500ms; animation-iteration-count: infinite; animation-direction: alternate;}
-        }
-          .store_img{width: 390px; height: 266px; margin: 62px auto; margin-bottom: 24px;  border-radius: 30px; border: 1px solid map-get($color,black); @include bgImg($f:'main/store/store_garosu.png'); background-size: 150%; background-position: center; transition: all 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }//.store_info
+        .active{z-index: 100;}//자바스크립트 작성용
+
+          .store_img{width: 390px; height: 266px; margin: 62px auto; margin-bottom: 24px;  border-radius: 30px; border: 1px solid map-get($color,black); background-size: 150%; background-position: center; transition: all 300ms ease-out; //이미지는 자바스크립트로 넣음
             &:hover{background-size: 200%;}
           }//.store_img
           .store_info > dl{width: 336px; height: auto; color: map-get($color,white); margin-left: 60px; position: relative;
@@ -237,6 +255,14 @@
           @for $i from 1 through 3{
             &:nth-child(#{$i}) > .img_icon{@include bgImg($f:"main/icon/ebook_icon_" + $i + ".png"); background-position: center;}
           }//@for
+          &:nth-child(1) > .img_icon{position: relative;}
+          &:nth-child(1) > .img_icon::before{content: " "; width: 22px; height:88px; @include bgImg($f:"main/icon/ebook_icon_1_hover.png"); position: absolute; top:18px; left:176px; transform:rotate(-18deg);}
+
+          &:nth-child(2) > .img_icon{position: relative;}
+          &:nth-child(2) > .img_icon::before{content: " "; width: 100%; height: 100%; @include bgImg($f:"main/icon/ebook_icon_2_hover.png"); position: absolute; top:0; left:0; background-position: center;}
+          &:hover:nth-child(1)>.img_icon::before{animation: icon1 1000ms 1;  animation-direction: alternate;}
+          &:hover:nth-child(2)>.img_icon::before{animation: icon2 800ms 2;}
+          &:hover:nth-child(3)>.img_icon{animation: icon3 500ms 2;}
           .img_icon{width: 100%; height: 120px;}
           dl{width: 100%; height: 260 - 120 + px; text-align: center;
             dt{width: 100%;  height: auto; font-size: 24 / 16 + rem; font-weight: bold; margin-bottom: 25px;}
@@ -247,3 +273,7 @@
     }//.box_introduce
   // #contentBox _____________________________________
   
+  //반응형
+  @media screen and (max-width:1500px){
+    .effect_maple{display: none;}
+  }

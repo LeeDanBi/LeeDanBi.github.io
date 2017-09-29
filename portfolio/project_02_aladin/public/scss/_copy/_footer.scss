@@ -40,3 +40,8 @@
       }//.box_sns
     }//.box_foot
   // #footBox _____________________________________
+
+  @media screen and (max-width:1150px){
+    #inb > .box_wrap{width: 960px;}
+    #inb > .box_wrap li {font-size: 13/16 + rem;}
+  }
