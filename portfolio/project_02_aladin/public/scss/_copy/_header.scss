@@ -5,7 +5,7 @@
   #headBox{width: 100%; height: auto; background-color: map-get($color,white);}
     #unb{width: 100%; height: 35px; padding: 0 10px; box-sizing: border-box; border-bottom: 1px solid map-get($color,primary);
       ul{width: 400px; height: 100%; float: right;
-        > li {width: auto; height: 100%; float: left; margin-right: 25px; line-height: 35px; font-size: 20/16 + rem; font-weight: bold;
+        > li {width: auto; height: 100%; float: left; margin-right: 24px; line-height: 35px; font-size: 20/16 + rem; font-weight: bold;
           &:last-child{margin-right: 0;}
           a{width: 100%; height: 100%; display: block;}
         }//li
@@ -28,7 +28,7 @@
       &.move{transform:translateY(0)}
       .box_wrap{padding: 0 10px; box-sizing: border-box;}
       ul{width: 100%; height: 100%; position: relative;
-        li{width: auto; height: 100%; float: left; margin-right: 34px; color: map-get($color,white); font-size: 24/16 + rem; line-height: 60px; font-weight: bold;
+        li{width: auto; height: 100%; float: left; margin-right: 32px; color: map-get($color,white); font-size: 24/16 + rem; line-height: 60px; font-weight: bold;
           &:first-child{width: 152px; height: 62px; position: absolute; top: 60px; left: 50%; margin-left: -71px; z-index: 2000; @include bgImg($f:'gnb_menu.png'); cursor: pointer;  display: none; 
             button{width: 36px; height: 23px; border-bottom: 4px solid map-get($color,white); margin-left: 56px; position: relative; transition: all 500ms;
               &::before{content:" "; display: block; width: 36px; height: 4px; position: absolute; top:8px; left: 0; background-color: map-get($color,white); transition: all 500ms; }
