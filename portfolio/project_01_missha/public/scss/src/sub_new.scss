@@ -1,0 +1,89 @@
+// sub_new.scss
+/* ! sub_new.css */
+
+@import "../_base/base";
+@import "../_base/mixin";
+
+body{background-color: map-get($color,subDark);}
+h2{text-transform: uppercase;}
+#contentBox{width: 100%; height: auto; color: #fff;}
+
+  #adBannerBox{@include innerFull($h:395px, $f:"sub_new/mainBanner.png");}
+  
+  #goodsBox{width: 100%; height: auto; padding: 0px 10px; box-sizing:border-box; padding-top: map-get($margin,top);
+    position: relative;
+    >h2{width: 500px; height: 110px; text-align: center; color: map-get($color,white); position: relative; top:0; left:50%; margin-left: -250px; font-size: (70/16)+rem; margin-bottom: map-get($margin,bottom);
+      &::after{
+        content:" "; width: 340px; height: 0; border-bottom: 1px solid map-get($color,primary2); display: block; position: absolute; top:(70+40)+px; left: 50%; margin-left: -170px;
+      }
+    }//h2
+  }//#goodsBox
+    #selectOrder{width: 100%; height: auto; margin-bottom: 40px;
+      p{float: left; font-size: 34/16+rem;}
+      form{width: auto; height: auto; float: right;
+        fieldset{width: auto; height: auto;
+          select{width: 200px; height: 30px;}
+        }//fieldset
+      }//form
+    }//#selectOrder
+
+    #goodsMEnu{width: 100%; height: auto; margin-bottom: 74px;
+      >ul{width: 100%; height: 100%;
+        >li{width: 300px; height: 400px; float: left; margin: 45px 20px 0 0; color: map-get($color,black); 
+          @for $i from 1 through 12{
+          &:nth-child(#{$i})>.pro_img{@include bgImg($f:"sub_new/product/pro_"+ $i +".jpg"); background-size: 80%; background-position: center;}
+          }//@for
+          &:nth-child(1),&:nth-child(2),&:nth-child(3){margin-top: 0;}
+          &:nth-child(3n+1){margin-left: 0;}
+          &:nth-child(3n){margin-right: 0;}
+          .pro_img{width: 100%; height: 298px; background-color: #fff; position: relative;
+            .event_label{width: 180px; height: 24px; position: absolute; top:14px; right: 0; background-color: map-get($color,primary2); color: map-get($color,white); font-size: 14/16+rem; text-align: center; line-height:   24px; 
+            }//.event_label
+            >form{width: 100%; height: 298px; position: absolute; top:0; left: 0; background-color: rgba(map-get($color,black),0.6); display: none;
+               >fieldset{width: auto; height: auto; padding-top: 86px;
+                 >button{width: 200px; height: 60px; display: block; margin-left: 51px; text-align: center; line-height: 60px; background-color: #6d3e3e; color: map-get($color,white); font-size: 24/16+rem;
+                    &:first-of-type{margin-bottom: 14px;}
+                }//button
+              }//fieldset
+            }//form
+            &:hover>form{display: block;}
+          }//.pro_img
+          .pro_info{width: 100%; height: (400-298)+px; background-color: #aaa;}
+          dl{width: 100%; height: 100%; padding: 16px 20px; box-sizing:border-box;
+            dt{width: auto; height: auto; font-size:18/16+rem; font-weight: bold; margin-bottom: 10px;}
+            dd{width: auto; height: auto;
+              >ul{
+                >li{float: left; margin-right: 14px; font-size: 1rem;
+                  &:last-child{font-size:14/16+rem; color: map-get($color,primary2); margin-top: 2px;}
+                }//li
+              }//ul
+            }//dd
+          }//dl
+        }//li
+      }//ul
+    }//#goodsMEnu
+      .order_num{width: 380px; height: 30px; margin-left: 330px; margin-bottom: 120px;
+        >li{width: 20px; height: 20px; float: left; margin-right: 40px; line-height: 20px;
+          &:last-child>a{color: map-get($color,black); background-color: map-get($color,white);}
+          >a{@include innera(); text-align: center;}
+        }//li
+      }//.order_num
+
+      #sideBanner{width: 204px; height: auto; position: absolute; top:450px; left: 50%; margin-left: 480+60+px;  z-index: 1000;
+        #sbtop{width: 224px; height: 68px; background-color: map-get($color,primary2); margin-left: -10px; text-align: center; line-height: 68px; font-size: 30/16+rem;}
+        #sbBody{width: 100%; height: 446px; padding-top:22px; box-sizing:border-box;  position: relative; box-shadow: 0 2px 4px rgba(map-get($color,black),0.5) inset; background-color: map-get($color,white);
+          >a{width: 180px; height: 46px; display: block; color: map-get($color,primary2); border: 2px solid map-get($color,black); margin-left: 8px; line-height: 46px; text-align: center; font-size: 24/16+rem;
+            &:first-of-type{margin-bottom: 8px;}
+          }//a
+          #sawPro{width: 100%; height: auto; margin-top: 16px; text-align: center; color: map-get($color,black);
+            >h2{font-size: 24/16+rem;}
+            >.pro_img{width: 150px; height: 100px; background-color: #aaa; margin-left: 25px; margin-top: 16px;}
+            >.more{width: 32px; height: 32px; border-radius: 16px; background-color: map-get($color,subDark); position:absolute; z-index: 100; bottom: 65px; left: 26px;
+              >a{@include innera(); text-align: center; line-height: 32px; color: map-get($color,white);}
+            }//.more
+          }//#sawPro
+
+        }//#sbBody
+        #sbBottom{width: 233px; height: 183px; position: absolute;
+                  @include bgImg($f:"sub_new/sb_bottom.png"); bottom: 0; left: -16px; padding-top: 130px; box-sizing: border-box; text-align: right; padding-right: 54px; font-size:30/16+rem; font-weight: bold;}
+      }//#sideBanner
