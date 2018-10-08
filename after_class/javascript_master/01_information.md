@@ -30,7 +30,8 @@
 
 - 2000년대 후반 HTML5 등장
 	- JavaScript API를 강화
-	| 기능  | 개요 |
+    
+| 기능  | 개요 |
 |--------|--------|
 |   Geolocation API   |   사용자의 지리적인 위치를 취득한다      |
 |   Canvas  |   JavaScript로 동적인 이미지를 그린다      |
