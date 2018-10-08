@@ -1,11 +1,13 @@
-#1 소개
+# 1 소개
 
 ## 1.1 javaScript란?
+
 - Netscape Communication이 개발한 브라우저 전용의 스크립트 언어
 - Java와 javaScript는 언어 사양이 닮긴 했으나 전혀 다른 별개의 언어이며 서로 호환성도 없다.
 - Google Chrome, Firefox, Safari, Microsoft Edge 등 대부분의 주요 브라우저에 탑재
 
 ### 1.1.1 JavaScript의 역사
+
 1990년대 후반 JavaScript의 전성기 였으나 다음과 같은 문제점이 생겼다.
 - **과열 현상** : JavaScript를 과도하게 치장하여 사용하기에도 나쁘고 모양새도 안 좋은 웹 페이지가 대량으로 양산
 	- 이로인해 '모양새가 좋지 않은 웹 페이지를 작성하기 위한 언어', '프로그래밍 초보자나 사용하는 저속한 언어'라는 나쁜 이미지 형성
@@ -76,13 +78,31 @@
 
 ## 1.2 ECMAscript 2015란? (ECMAScript 6)
 
-표준화 단체 ECMA International이 표준화한 JavaScript다. (표준화된 자바스크립트)
-ES2015에서 새롭게 제공되는 사양은 다음과 같다
+표준화 단체 ECMA International이 표준화한 JavaScript다. (표준화된 자바스크립트) ES2015에서 새롭게 제공되는 사양은 다양하지만, 모든 브라우저가 ES2015에 대응하고 있는 것은 아니다.
 
-- class 명령의 도입으로 Java/C#과 같은 클래스 정의가 가능해졌다.
-- Import/export 명령으로 코드의 모듈화 지원
-- 
+### 1.2.1 브라우저별 대응 상황
 
+현시점 대응 상황 확인 링크 : [ECMAScript 6 compatiblity table](http://kangax.github.io/compat-table/es6/)
+
+모든 브라우저가 ES2015에 대응하는 것이 아니므로 현시점에서 ES2015를 이용하려면 트랜스 컴파일러의 도움이 필요하다.[^1]
+> ES2015의 소스코드 →``트랜스 컴파일러``→ 종래의 JavaScript코드 →``실행``→ 일반 브라우저에서 동작
+
+[^1]: [트랜스 컴파일러 Babel](https://babeljs.io/)
 
 
 ## 1.3 브라우저의 개발자 도구
+
+1.3.1 개발자 도구 시작하기
+
+Google Chorome 개발자 도구의 메뉴
+
+| 메뉴 | 개요 |
+|--------|--------|
+|Elements|HTML/CSS의 상태 확인|
+|Network|브라우저에서 발생한 통신 추적|
+|Sources|스크립트의 디버그(브레이크 포인트 설치 및 변수 감시 등)|
+|Timeline|성능 측정|
+|Profiles|JavasScript에서 사용하고 있는 CPU/메모리 등의 정보를 수집|
+|Application|쿠키/스토리지 등의 내용 확인|
+|Audits|웹 페이지를 분석하여 최적화를 위한 힌트를 리스트로 표시|
+|Console|콘솔(변수 정보의 확인, 에러 메시지 표시 등)|
