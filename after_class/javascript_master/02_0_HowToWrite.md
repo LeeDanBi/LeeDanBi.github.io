@@ -178,9 +178,3 @@ console.log(price * 1.08); // 결과 : 108
 	> var price = 100;
 	> console.log( price * TAX ); // 결과 : 108
 	> ```
-
-## 2-3 데이터형
-
-## 2-4 연산자
-
-## 2-5 제어 구문
